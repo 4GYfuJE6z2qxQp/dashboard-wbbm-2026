@@ -423,15 +423,17 @@ body::before {
 // ============================================================
 // DATA: ALL 6 SUBTIMS – COMPLETE FROM EXCEL
 // ============================================================
+// DATA: ALL 6 SUBTIMS – UPDATED 26/2/2026, 13.35.50
+// ============================================================
 const SUBTIMS = [
 {
   no:'I', nama:'Manajemen Perubahan', color:'#00d4ff',
   desc:'Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi',
   icon:'🔄',
   prioritas: [
-    {no:'1',nama:'Program Akselerasi "1 Agent 1 Innovation"',uraian:'Agen Perubahan merancang & mengimplementasikan satu proyek perubahan konkret dan terukur dampaknya pada kinerja/layanan.',output:'Dokumen Proposal & Laporan Implementasi Agen Perubahan',waktu:'Feb – Nov 2026',pic:'Agen Perubahan',status:'ongoing'},
-    {no:'2',nama:'Program "Leaders Serve" (Pimpinan Melayani)',uraian:'Pejabat Eselon IV/III turun langsung memberikan pelayanan di front desk selama 1 hari sebagai wujud keteladanan nyata.',output:'ND Usulan Program / Dokumentasi Pelaksanaan',waktu:'Berkala',pic:'Kepala Kantor / Pejabat',status:'upcoming'},
-    {no:'3',nama:'Kampanye "Family Integrity"',uraian:'Pesan integritas dari Kepala Kantor kepada keluarga pegawai untuk membangun benteng moral dari rumah.',output:'Dokumentasi Pelaksanaan Kegiatan',waktu:'sd Q1 2026',pic:'Subtim I & Subbagian Umum',status:'ongoing'},
+    {no:'1',nama:'Program Akselerasi "1 Agent 1 Innovation"',uraian:'Agen Perubahan merancang & mengimplementasikan satu proyek perubahan konkret dan terukur dampaknya pada kinerja/layanan.',output:'Dokumen Proposal & Laporan Implementasi Agen Perubahan',waktu:'Feb – Nov 2026',pic:'Agen Perubahan',status:'done'},
+    {no:'2',nama:'Program "Leaders Serve" (Pimpinan Melayani)',uraian:'Pejabat Eselon IV/III turun langsung memberikan pelayanan di front desk selama 1 hari sebagai wujud keteladanan nyata.',output:'ND Usulan Program / Dokumentasi Pelaksanaan',waktu:'Berkala',pic:'Kepala Kantor / Pejabat',status:'done'},
+    {no:'3',nama:'Kampanye "Family Integrity"',uraian:'Pesan integritas dari Kepala Kantor kepada keluarga pegawai untuk membangun benteng moral dari rumah.',output:'Dokumentasi Pelaksanaan Kegiatan',waktu:'sd Q1 2026',pic:'Subtim I & Subbagian Umum',status:'done'},
   ],
   kategori: [
     {
@@ -452,7 +454,7 @@ const SUBTIMS = [
     {
       nama:'Pemantauan & Evaluasi Pembangunan ZI', icon:'📊',
       items:[
-        {sub:'iii.a',uraian:'Menyusun laporan penyelesaian pembangunan ZI menuju WBK/WBBM',output:'1. ND Undangan Rapat Monev\n2. Daftar Hadir Rapat Monev\n3. Dokumentasi Rapat Monev\n4. Notula Rapat Monev\n5. Laporan Penyelesaian ZI',waktu:'Setiap bulan – Des 2026',pic:'Tim Kerja & Tim Monev',status:'ongoing'},
+        {sub:'iii.a',uraian:'Menyusun laporan penyelesaian pembangunan ZI menuju WBK/WBBM',output:'1. ND Undangan Rapat Monev\n2. Daftar Hadir\n3. Dokumentasi\n4. Notula Rapat\n5. Laporan Penyelesaian ZI',waktu:'Setiap bulan – Des 2026',pic:'Tim Kerja & Tim Monev',status:'ongoing'},
         {sub:'iii.b',uraian:'Monitoring dan evaluasi pembangunan ZI secara berkala',output:'1. ND Undangan Rapat Monev\n2. Daftar Hadir\n3. Dokumentasi\n4. Notula Rapat Monev',waktu:'Setiap bulan 2026',pic:'Tim Kerja & Tim Monev',status:'ongoing'},
         {sub:'iii.c',uraian:'Menindaklanjuti hasil Monitoring dan Evaluasi',output:'1. ND Undangan\n2. Daftar Hadir\n3. Dokumentasi\n4. Notula\n5. Matriks Tindak Lanjut Monev',waktu:'Setiap bulan 2026',pic:'Tim Kerja & Tim Monev',status:'ongoing'}
       ]
@@ -460,14 +462,14 @@ const SUBTIMS = [
     {
       nama:'Perubahan Pola Pikir & Budaya Kerja', icon:'💡',
       items:[
-        {sub:'iv.a',uraian:'Pengumpulan bukti pimpinan sebagai role model dalam WBK/WBBM',output:'1. Laporan LHKPN\n2. Laporan SPT\n3. Piagam Penghargaan Pimpinan\n4. Dokumentasi Pimpinan sebagai Role Model\n5. Dokumentasi Lainnya',waktu:'Jan – Feb, Setiap bulan',pic:'Subtim I & Subbagian Umum',status:'ongoing'},
+        {sub:'iv.a',uraian:'Pengumpulan bukti pimpinan sebagai role model dalam WBK/WBBM',output:'1. Laporan LHKPN\n2. Laporan SPT\n3. Piagam Penghargaan Pimpinan\n4. Dokumentasi Pimpinan sebagai Role Model',waktu:'Jan – Feb, Setiap bulan',pic:'Subtim I & Subbagian Umum',status:'ongoing'},
         {sub:'iv.b',uraian:'Menetapkan Agen Perubahan, rencana kerja dan laporan pelaksanaan',output:'1. SK Agen Perubahan\n2. ND Pengusulan Agen Perubahan',waktu:'Q1 – Q4 2026',pic:'Subtim I & Seksi KI',status:'ongoing'},
-        {sub:'iv.c',uraian:'Melaksanakan kegiatan pembangunan budaya kerja dan pola pikir:\n1. Laporan Kegiatan Bintal (>4x)\n2. Upacara Rutin dan Khusus\n3. Pelaksanaan P2KP dan peningkatan kehadiran\n4. Pelaksanaan CMC\n5. Pelatihan SLA\n7. Sosialisasi Surat Edaran Budaya Kerja',output:'Laporan masing-masing kegiatan',waktu:'Q1 – Q4 2026 / Bulanan',pic:'Subtim I, Subbagian Umum, Seksi KI',status:'ongoing'},
-        {sub:'iv.d',uraian:'Internalisasi ZI kepada seluruh Pejabat/Pegawai:\n1. Pencanangan ZI (Upacara)\n2. Pelatihan E-learning ZI bagi seluruh pegawai\n3. Internalisasi ZI bagi PPNPN\n4. Internalisasi ZI bagi keluarga Pegawai\n5. Survey ZI kepada seluruh Pejabat/Pegawai',output:'Dokumentasi dan laporan per kegiatan internalisasi',waktu:'Q1 – Q4 2026',pic:'Subtim I & Subbagian Umum',status:'ongoing'}
+        {sub:'iv.c',uraian:'Melaksanakan kegiatan pembangunan budaya kerja dan pola pikir',output:'Laporan masing-masing kegiatan',waktu:'Q1 – Q4 2026 / Bulanan',pic:'Subtim I, Subbagian Umum, Seksi KI',status:'ongoing'},
+        {sub:'iv.d',uraian:'Internalisasi ZI kepada seluruh Pejabat/Pegawai',output:'Dokumentasi dan laporan per kegiatan internalisasi',waktu:'Q1 – Q4 2026',pic:'Subtim I & Subbagian Umum',status:'ongoing'}
       ]
     },
   ],
-  done:4, ongoing:9, planned:1
+  done:7, ongoing:8, planned:0
 },
 {
   no:'II', nama:'Penataan Tatalaksana', color:'#a855f7',
