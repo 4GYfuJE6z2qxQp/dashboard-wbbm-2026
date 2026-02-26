@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Dashboard ZI WBK/WBBM – KPPBC TMP Tanjung Emas 2026</title>
+<title>Dashboard ZI WBK/WBBM â KPPBC TMP Tanjung Emas 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -315,10 +315,10 @@ body::before {
 <!-- HEADER -->
 <header class="site-header">
   <div class="site-logo">
-    <div class="logo-badge">🛡️</div>
+    <div class="logo-badge">ð¡ï¸</div>
     <div class="logo-text">
       <h1>Dashboard Zona Integritas WBK/WBBM</h1>
-      <p>KPPBC TMP TANJUNG EMAS · RENCANA KERJA 2026</p>
+      <p>KPPBC TMP TANJUNG EMAS Â· RENCANA KERJA 2026</p>
     </div>
   </div>
   <div class="header-meta">
@@ -331,34 +331,34 @@ body::before {
 <!-- OVERVIEW STATS -->
 <div class="overview-stats">
   <div class="ostat">
-    <div class="ostat-icon">📋</div>
+    <div class="ostat-icon">ð</div>
     <div class="ostat-val" style="color:#00d4ff">6</div>
     <div class="ostat-lbl">Total Subtim</div>
     <div class="ostat-sub">Tim Kerja Aktif</div>
   </div>
   <div class="ostat">
-    <div class="ostat-icon">📌</div>
+    <div class="ostat-icon">ð</div>
     <div class="ostat-val" style="color:#22c55e" id="total-kegiatan">94</div>
     <div class="ostat-lbl">Total Kegiatan</div>
     <div class="ostat-sub">Seluruh Subtim</div>
   </div>
   <div class="ostat">
-    <div class="ostat-icon">✅</div>
+    <div class="ostat-icon">â</div>
     <div class="ostat-val" style="color:#22c55e" id="total-done">12</div>
     <div class="ostat-lbl">Selesai</div>
     <div class="ostat-sub">Kegiatan tuntas</div>
   </div>
   <div class="ostat">
-    <div class="ostat-icon">🔥</div>
+    <div class="ostat-icon">ð¥</div>
     <div class="ostat-val" style="color:#00d4ff" id="total-ongoing">48</div>
     <div class="ostat-lbl">Berjalan</div>
     <div class="ostat-sub">On-track</div>
   </div>
   <div class="ostat">
-    <div class="ostat-icon">📅</div>
+    <div class="ostat-icon">ð</div>
     <div class="ostat-val" style="color:#f59e0b" id="total-planned">34</div>
     <div class="ostat-lbl">Direncanakan</div>
-    <div class="ostat-sub">Q2 – Q4 2026</div>
+    <div class="ostat-sub">Q2 â Q4 2026</div>
   </div>
 </div>
 
@@ -412,7 +412,7 @@ body::before {
           <p id="detail-subtitle"></p>
         </div>
       </div>
-      <button class="close-btn" onclick="closeDetail()">✕</button>
+      <button class="close-btn" onclick="closeDetail()">â</button>
     </div>
     <div class="detail-stats-bar" id="detail-stats"></div>
     <div class="detail-body" id="detail-body"></div>
@@ -429,41 +429,41 @@ const SUBTIMS = [
   desc:'Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi',
   icon:'🔄',
   prioritas: [
-    {no:'1', nama:'Program Akselerasi "1 Agent 1 Innovation"', uraian:'Agen Perubahan merancang & mengimplementasikan satu proyek perubahan konkret dan terukur dampaknya pada kinerja/layanan.', output:'Dokumen Proposal & Laporan Implementasi Agen Perubahan', waktu:'Feb – Nov 2026', pic:'Agen Perubahan', status:'ongoing'},
-    {no:'2', nama:'Program "Leaders Serve" (Pimpinan Melayani)', uraian:'Pejabat Eselon IV/III turun langsung memberikan pelayanan di front desk selama 1 hari sebagai wujud keteladanan nyata.', output:'ND Usulan Program / Dokumentasi Pelaksanaan', waktu:'Berkala', pic:'Kepala Kantor / Pejabat', status:'upcoming'},
-    {no:'3', nama:'Kampanye "Family Integrity"', uraian:'Pesan integritas dari Kepala Kantor kepada keluarga pegawai untuk membangun benteng moral dari rumah.', output:'Dokumentasi Pelaksanaan Kegiatan', waktu:'sd Q1 2026', pic:'Subtim I & Subbagian Umum', status:'ongoing'},
+    {no:'1',nama:'Program Akselerasi "1 Agent 1 Innovation"',uraian:'Agen Perubahan merancang & mengimplementasikan satu proyek perubahan konkret dan terukur dampaknya pada kinerja/layanan.',output:'Dokumen Proposal & Laporan Implementasi Agen Perubahan',waktu:'Feb – Nov 2026',pic:'Agen Perubahan',status:'ongoing'},
+    {no:'2',nama:'Program "Leaders Serve" (Pimpinan Melayani)',uraian:'Pejabat Eselon IV/III turun langsung memberikan pelayanan di front desk selama 1 hari sebagai wujud keteladanan nyata.',output:'ND Usulan Program / Dokumentasi Pelaksanaan',waktu:'Berkala',pic:'Kepala Kantor / Pejabat',status:'upcoming'},
+    {no:'3',nama:'Kampanye "Family Integrity"',uraian:'Pesan integritas dari Kepala Kantor kepada keluarga pegawai untuk membangun benteng moral dari rumah.',output:'Dokumentasi Pelaksanaan Kegiatan',waktu:'sd Q1 2026',pic:'Subtim I & Subbagian Umum',status:'ongoing'},
   ],
   kategori: [
     {
       nama:'Penyusunan Tim Kerja', icon:'👥',
       items:[
-        {sub:'i.a', uraian:'Menerbitkan SK Penetapan Tim Kerja ZI WBK/WBBM', output:'SK Kepala KPPBC TMP Tanjung Emas tentang Pembentukan Tim Kerja ZI 2026', waktu:'Januari 2026', pic:'Sekretariat Tim & Subtim I', status:'done'},
-        {sub:'i.b', uraian:'Rapat dan Penetapan Pembentukan Tim Kerja ZI dan Tim Monev', output:'1. ND Undangan Rapat\n2. Absensi Rapat\n3. Dokumentasi\n4. Notula Rapat\n5. SK Pembentukan Tim', waktu:'Januari 2026', pic:'Sekretariat Tim & Subtim I', status:'done'},
+        {sub:'i.a',uraian:'Menerbitkan SK Penetapan Tim Kerja ZI WBK/WBBM',output:'SK Kepala KPPBC TMP Tanjung Emas tentang Pembentukan Tim Kerja ZI 2026',waktu:'Januari 2026',pic:'Sekretariat Tim & Subtim I',status:'done'},
+        {sub:'i.b',uraian:'Rapat dan Penetapan Pembentukan Tim Kerja ZI dan Tim Monev',output:'1. ND Undangan Rapat\n2. Absensi Rapat\n3. Dokumentasi\n4. Notula Rapat\n5. SK Pembentukan Tim',waktu:'Januari 2026',pic:'Sekretariat Tim & Subtim I',status:'done'}
       ]
     },
     {
       nama:'Rencana Pembangunan ZI', icon:'📐',
       items:[
-        {sub:'ii.a', uraian:'Permintaan masukan rencana kerja kepada seluruh Ketua Sub Tim', output:'1. ND Permintaan RK\n2. ND Penyampaian RK masing-masing Subtim\n3. Rapat Pembahasan RK 2026\n4. ND Penyampaian RK 2026\n5. Dokumen RK 2026', waktu:'Jan – Feb 2026', pic:'Sekretariat Tim & Subtim I', status:'done'},
-        {sub:'ii.b', uraian:'Penyusunan rencana kerja dengan target prioritas relevan WBK/WBBM', output:'1. ND Penyampaian RK Prioritas\n2. Dokumen RK dan RK Prioritas\n3. Time Frame WBK/WBBM 2026', waktu:'Jan – Feb 2026', pic:'Sekretariat Tim & Subtim I', status:'done'},
-        {sub:'ii.c', uraian:'Sosialisasi pembangunan WBK/WBBM kepada pihak Internal dan Eksternal', output:'1. ND Pencanangan WBBM\n2. Dokumentasi Pencanangan\n3. Daftar Hadir\n4. Piagam Deklarasi\n5. Dokumentasi sosialisasi eksternal media sosial', waktu:'Q1 2026', pic:'Subbagian Umum & Subtim I', status:'ongoing'},
+        {sub:'ii.a',uraian:'Permintaan masukan rencana kerja kepada seluruh Ketua Sub Tim',output:'1. ND Permintaan RK\n2. ND Penyampaian RK masing-masing Subtim\n3. Rapat Pembahasan RK 2026\n4. ND Penyampaian RK 2026\n5. Dokumen RK 2026',waktu:'Jan – Feb 2026',pic:'Sekretariat Tim & Subtim I',status:'done'},
+        {sub:'ii.b',uraian:'Penyusunan rencana kerja dengan target prioritas relevan WBK/WBBM',output:'1. ND Penyampaian RK Prioritas\n2. Dokumen RK dan RK Prioritas\n3. Time Frame WBK/WBBM 2026',waktu:'Jan – Feb 2026',pic:'Sekretariat Tim & Subtim I',status:'done'},
+        {sub:'ii.c',uraian:'Sosialisasi pembangunan WBK/WBBM kepada pihak Internal dan Eksternal',output:'1. ND Pencanangan WBBM\n2. Dokumentasi Pencanangan\n3. Daftar Hadir\n4. Piagam Deklarasi\n5. Dokumentasi sosialisasi eksternal media sosial',waktu:'Q1 2026',pic:'Subbagian Umum & Subtim I',status:'ongoing'}
       ]
     },
     {
       nama:'Pemantauan & Evaluasi Pembangunan ZI', icon:'📊',
       items:[
-        {sub:'iii.a', uraian:'Menyusun laporan penyelesaian pembangunan ZI menuju WBK/WBBM', output:'1. ND Undangan Rapat Monev\n2. Daftar Hadir Rapat Monev\n3. Dokumentasi Rapat Monev\n4. Notula Rapat Monev\n5. Laporan Penyelesaian ZI', waktu:'Setiap bulan – Des 2026', pic:'Tim Kerja & Tim Monev', status:'ongoing'},
-        {sub:'iii.b', uraian:'Monitoring dan evaluasi pembangunan ZI secara berkala', output:'1. ND Undangan Rapat Monev\n2. Daftar Hadir\n3. Dokumentasi\n4. Notula Rapat Monev', waktu:'Setiap bulan 2026', pic:'Tim Kerja & Tim Monev', status:'ongoing'},
-        {sub:'iii.c', uraian:'Menindaklanjuti hasil Monitoring dan Evaluasi', output:'1. ND Undangan\n2. Daftar Hadir\n3. Dokumentasi\n4. Notula\n5. Matriks Tindak Lanjut Monev', waktu:'Setiap bulan 2026', pic:'Tim Kerja & Tim Monev', status:'ongoing'},
+        {sub:'iii.a',uraian:'Menyusun laporan penyelesaian pembangunan ZI menuju WBK/WBBM',output:'1. ND Undangan Rapat Monev\n2. Daftar Hadir Rapat Monev\n3. Dokumentasi Rapat Monev\n4. Notula Rapat Monev\n5. Laporan Penyelesaian ZI',waktu:'Setiap bulan – Des 2026',pic:'Tim Kerja & Tim Monev',status:'ongoing'},
+        {sub:'iii.b',uraian:'Monitoring dan evaluasi pembangunan ZI secara berkala',output:'1. ND Undangan Rapat Monev\n2. Daftar Hadir\n3. Dokumentasi\n4. Notula Rapat Monev',waktu:'Setiap bulan 2026',pic:'Tim Kerja & Tim Monev',status:'ongoing'},
+        {sub:'iii.c',uraian:'Menindaklanjuti hasil Monitoring dan Evaluasi',output:'1. ND Undangan\n2. Daftar Hadir\n3. Dokumentasi\n4. Notula\n5. Matriks Tindak Lanjut Monev',waktu:'Setiap bulan 2026',pic:'Tim Kerja & Tim Monev',status:'ongoing'}
       ]
     },
     {
       nama:'Perubahan Pola Pikir & Budaya Kerja', icon:'💡',
       items:[
-        {sub:'iv.a', uraian:'Pengumpulan bukti pimpinan sebagai role model dalam WBK/WBBM', output:'1. Laporan LHKPN\n2. Laporan SPT\n3. Piagam Penghargaan Pimpinan\n4. Dokumentasi Pimpinan sebagai Role Model\n5. Dokumentasi Lainnya', waktu:'Jan – Feb, Setiap bulan', pic:'Subtim I & Subbagian Umum', status:'ongoing'},
-        {sub:'iv.b', uraian:'Menetapkan Agen Perubahan, rencana kerja dan laporan pelaksanaan', output:'1. SK Agen Perubahan\n2. ND Pengusulan Agen Perubahan', waktu:'Q1 – Q4 2026', pic:'Subtim I & Seksi KI', status:'ongoing'},
-        {sub:'iv.c', uraian:'Melaksanakan kegiatan pembangunan budaya kerja dan pola pikir:\n1. Laporan Kegiatan Bintal (>4x)\n2. Upacara Rutin dan Khusus\n3. Pelaksanaan P2KP dan peningkatan kehadiran\n4. Pelaksanaan CMC\n5. Pelatihan SLA\n7. Sosialisasi Surat Edaran Budaya Kerja', output:'Laporan masing-masing kegiatan', waktu:'Q1 – Q4 2026 / Bulanan', pic:'Subtim I, Subbagian Umum, Seksi KI', status:'ongoing'},
-        {sub:'iv.d', uraian:'Internalisasi ZI kepada seluruh Pejabat/Pegawai:\n1. Pencanangan ZI (Upacara)\n2. Pelatihan E-learning ZI bagi seluruh pegawai\n3. Internalisasi ZI bagi PPNPN\n4. Internalisasi ZI bagi keluarga Pegawai\n5. Survey ZI kepada seluruh Pejabat/Pegawai', output:'Dokumentasi dan laporan per kegiatan internalisasi', waktu:'Q1 – Q4 2026', pic:'Subtim I & Subbagian Umum', status:'ongoing'},
+        {sub:'iv.a',uraian:'Pengumpulan bukti pimpinan sebagai role model dalam WBK/WBBM',output:'1. Laporan LHKPN\n2. Laporan SPT\n3. Piagam Penghargaan Pimpinan\n4. Dokumentasi Pimpinan sebagai Role Model\n5. Dokumentasi Lainnya',waktu:'Jan – Feb, Setiap bulan',pic:'Subtim I & Subbagian Umum',status:'ongoing'},
+        {sub:'iv.b',uraian:'Menetapkan Agen Perubahan, rencana kerja dan laporan pelaksanaan',output:'1. SK Agen Perubahan\n2. ND Pengusulan Agen Perubahan',waktu:'Q1 – Q4 2026',pic:'Subtim I & Seksi KI',status:'ongoing'},
+        {sub:'iv.c',uraian:'Melaksanakan kegiatan pembangunan budaya kerja dan pola pikir:\n1. Laporan Kegiatan Bintal (>4x)\n2. Upacara Rutin dan Khusus\n3. Pelaksanaan P2KP dan peningkatan kehadiran\n4. Pelaksanaan CMC\n5. Pelatihan SLA\n7. Sosialisasi Surat Edaran Budaya Kerja',output:'Laporan masing-masing kegiatan',waktu:'Q1 – Q4 2026 / Bulanan',pic:'Subtim I, Subbagian Umum, Seksi KI',status:'ongoing'},
+        {sub:'iv.d',uraian:'Internalisasi ZI kepada seluruh Pejabat/Pegawai:\n1. Pencanangan ZI (Upacara)\n2. Pelatihan E-learning ZI bagi seluruh pegawai\n3. Internalisasi ZI bagi PPNPN\n4. Internalisasi ZI bagi keluarga Pegawai\n5. Survey ZI kepada seluruh Pejabat/Pegawai',output:'Dokumentasi dan laporan per kegiatan internalisasi',waktu:'Q1 – Q4 2026',pic:'Subtim I & Subbagian Umum',status:'ongoing'}
       ]
     },
   ],
@@ -474,40 +474,40 @@ const SUBTIMS = [
   desc:'SOP, SPBE, e-government, keterbukaan informasi publik',
   icon:'📑',
   prioritas: [
-    {no:'1', nama:'Evaluasi Prosedur Operasional Tetap (SOP)', uraian:'Pelaksanaan Monitoring dan Evaluasi SOP dan/atau Instruksi Kerja. Review, rekapitulasi rekomendasi, dan usulan perbaikan SOP ke Kanwil atau Sekretariat DJBC.', output:'1. ND Laporan Monev yang telah ditindaklanjuti\n2. ND usulan perbaikan SOP ke Kanwil', waktu:'TW 2 & TW 4 2026', pic:'Seksi Kepatuhan Internal', status:'planned'},
+    {no:'1',nama:'Evaluasi Prosedur Operasional Tetap (SOP)',uraian:'Pelaksanaan Monitoring dan Evaluasi SOP dan/atau Instruksi Kerja. Review, rekapitulasi rekomendasi, dan usulan perbaikan SOP ke Kanwil atau Sekretariat DJBC.',output:'1. ND Laporan Monev yang telah ditindaklanjuti\n2. ND usulan perbaikan SOP ke Kanwil',waktu:'TW 2 & TW 4 2026',pic:'Seksi Kepatuhan Internal',status:'planned'},
   ],
   kategori: [
     {
       nama:'Prosedur Operasional Tetap (SOP)', icon:'📋',
       items:[
-        {sub:'i.a', uraian:'Pembinaan & pemantauan evaluasi Instruksi Kerja/SOP ke Kanwil DJBC Jateng DIY. Permintaan monev, tindak lanjut, dan permohonan penetapan SOP.', output:'ND Penyampaian Laporan Hasil Monitoring dan Evaluasi SOP Mandiri/Instruksi Kerja dari Kanwil DJBC Jateng DIY', waktu:'TW 4 2026', pic:'Seksi Kepatuhan Internal', status:'planned'},
-        {sub:'i.b', uraian:'Pelaksanaan pembinaan tindak lanjut & eskalasi inovasi instruksi kerja mandiri ke Kantor Pusat', output:'Nota Dinas instruksi kerja mandiri yang dieskalasi ke Kantor Pusat', waktu:'TW 4 2026', pic:'Seksi Kepatuhan Internal', status:'planned'},
-        {sub:'i.c', uraian:'Pelaksanaan Monitoring dan Evaluasi SOP:\n1. Pemberitahuan Monev SOP\n2. Review seluruh SOP utama\n3. Rekapitulasi rekomendasi Monev SOP\n4. Usulan perbaikan SOP ke Kanwil', output:'1. Laporan/ND yang berisi rekomendasi telah ditindaklanjuti\n2. ND usulan perbaikan SOP ke Kanwil/Sekretariat DJBC', waktu:'TW 2 2026', pic:'Seksi Kepatuhan Internal', status:'planned'},
+        {sub:'i.a',uraian:'Pembinaan & pemantauan evaluasi Instruksi Kerja/SOP ke Kanwil DJBC Jateng DIY. Permintaan monev, tindak lanjut, dan permohonan penetapan SOP.',output:'ND Penyampaian Laporan Hasil Monitoring dan Evaluasi SOP Mandiri/Instruksi Kerja dari Kanwil DJBC Jateng DIY',waktu:'TW 4 2026',pic:'Seksi Kepatuhan Internal',status:'planned'},
+        {sub:'i.b',uraian:'Pelaksanaan pembinaan tindak lanjut & eskalasi inovasi instruksi kerja mandiri ke Kantor Pusat',output:'Nota Dinas instruksi kerja mandiri yang dieskalasi ke Kantor Pusat',waktu:'TW 4 2026',pic:'Seksi Kepatuhan Internal',status:'planned'},
+        {sub:'i.c',uraian:'Pelaksanaan Monitoring dan Evaluasi SOP:\n1. Pemberitahuan Monev SOP\n2. Review seluruh SOP utama\n3. Rekapitulasi rekomendasi Monev SOP\n4. Usulan perbaikan SOP ke Kanwil',output:'1. Laporan/ND yang berisi rekomendasi telah ditindaklanjuti\n2. ND usulan perbaikan SOP ke Kanwil/Sekretariat DJBC',waktu:'TW 2 2026',pic:'Seksi Kepatuhan Internal',status:'planned'}
       ]
     },
     {
       nama:'Sistem Pemerintahan Berbasis Elektronik (SPBE)', icon:'💻',
       items:[
-        {sub:'ii.a', uraian:'Pengembangan Aplikasi DIKENAL menjadi DIKENAL 3.0 (sistem pengukuran kinerja berbasis TI)', output:'Nota Dinas Penerapan Aplikasi DIKENAL 3.0', waktu:'TW 2 – TW 4 2026', pic:'Seksi KI & Seksi PDAD', status:'planned'},
-        {sub:'ii.b', uraian:'Monitoring dan Evaluasi Aplikasi SILAT (operasionalisasi manajemen SDM berbasis TI)', output:'Nota Dinas Monitoring dan Evaluasi Inovasi Pelayanan', waktu:'TW 1 – TW 4 2026', pic:'Subbagian Umum & Seksi PDAD', status:'ongoing'},
-        {sub:'ii.c', uraian:'Monitoring dan Evaluasi Inovasi Pelayanan berbasis TI', output:'Nota Dinas Monitoring dan Evaluasi Inovasi Pelayanan', waktu:'TW 1 – TW 4 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'ii.d', uraian:'Monitoring dan evaluasi pemanfaatan TI dalam pengukuran kinerja, SDM, dan layanan publik secara berkala', output:'Nota Dinas monitoring dan evaluasi pemanfaatan teknologi informasi', waktu:'Jan – Des 2026 (per bulan)', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
+        {sub:'ii.a',uraian:'Pengembangan Aplikasi DIKENAL menjadi DIKENAL 3.0 (sistem pengukuran kinerja berbasis TI)',output:'Nota Dinas Penerapan Aplikasi DIKENAL 3.0',waktu:'TW 2 – TW 4 2026',pic:'Seksi KI & Seksi PDAD',status:'planned'},
+        {sub:'ii.b',uraian:'Monitoring dan Evaluasi Aplikasi SILAT (operasionalisasi manajemen SDM berbasis TI)',output:'Nota Dinas Monitoring dan Evaluasi Inovasi Pelayanan',waktu:'TW 1 – TW 4 2026',pic:'Subbagian Umum & Seksi PDAD',status:'ongoing'},
+        {sub:'ii.c',uraian:'Monitoring dan Evaluasi Inovasi Pelayanan berbasis TI',output:'Nota Dinas Monitoring dan Evaluasi Inovasi Pelayanan',waktu:'TW 1 – TW 4 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'ii.d',uraian:'Monitoring dan evaluasi pemanfaatan TI dalam pengukuran kinerja, SDM, dan layanan publik secara berkala',output:'Nota Dinas monitoring dan evaluasi pemanfaatan teknologi informasi',waktu:'Jan – Des 2026 (per bulan)',pic:'Seksi Kepatuhan Internal',status:'ongoing'}
       ]
     },
     {
       nama:'Keterbukaan Informasi Publik', icon:'📡',
       items:[
-        {sub:'iii.a', uraian:'Memperbarui dokumentasi saluran informasi, sarana prasarana media, dan kegiatan penyampaian informasi kepada masyarakat', output:'1. Dokumentasi seluruh saluran informasi\n2. Dokumentasi sarana prasarana\n3. Dokumentasi kegiatan penyampaian informasi', waktu:'Jan – Des 2026 (per bulan)', pic:'Seksi Penyuluhan & Layanan Informasi', status:'ongoing'},
-        {sub:'iii.b', uraian:'Monitoring dan evaluasi pelaksanaan keterbukaan informasi publik serta tindak lanjut Survey Kepuasan Masyarakat', output:'1. ND Monitoring keterbukaan informasi publik\n2. ND Monitoring analisis media massa\n3. ND Tindak lanjut SKM', waktu:'Jan – Des 2026 (per bulan)', pic:'Seksi KI & Seksi PLI', status:'ongoing'},
+        {sub:'iii.a',uraian:'Memperbarui dokumentasi saluran informasi, sarana prasarana media, dan kegiatan penyampaian informasi kepada masyarakat',output:'1. Dokumentasi seluruh saluran informasi\n2. Dokumentasi sarana prasarana\n3. Dokumentasi kegiatan penyampaian informasi',waktu:'Jan – Des 2026 (per bulan)',pic:'Seksi Penyuluhan & Layanan Informasi',status:'ongoing'},
+        {sub:'iii.b',uraian:'Monitoring dan evaluasi pelaksanaan keterbukaan informasi publik serta tindak lanjut Survey Kepuasan Masyarakat',output:'1. ND Monitoring keterbukaan informasi publik\n2. ND Monitoring analisis media massa\n3. ND Tindak lanjut SKM',waktu:'Jan – Des 2026 (per bulan)',pic:'Seksi KI & Seksi PLI',status:'ongoing'}
       ]
     },
     {
       nama:'Rencana Kerja Reform – Tatalaksana', icon:'🔧',
       items:[
-        {sub:'R-i', uraian:'Menyusun data perbandingan jumlah pejabat struktural dan fungsional sebelum dan sesudah delayering (Peta Proses Bisnis)', output:'ND Data perbandingan jumlah pegawai sebelum dan sesudah implementasi delayering', waktu:'TW 1 2026', pic:'Subbagian Umum', status:'ongoing'},
-        {sub:'R-ii.a', uraian:'Survei kepuasan masyarakat atas layanan (SPBE terintegrasi, layanan publik lebih cepat & efisien)', output:'ND hasil survei kepuasan Masyarakat atas layanan tersebut', waktu:'TW 1 – TW 4 2026', pic:'Seksi KI & Seksi PLI', status:'ongoing'},
-        {sub:'R-ii.b', uraian:'Survei ke pegawai atas kepuasan layanan perkantoran (SPBE internal)', output:'ND hasil survei kepuasan layanan perkantoran', waktu:'TW 1 – TW 4 2026', pic:'Subbagian Umum & Seksi PDAD', status:'ongoing'},
-        {sub:'R-iii', uraian:'Monitoring dan Evaluasi Inovasi Pelayanan, SKM, dan Pemanfaatan TI (Transformasi Digital nilai manfaat)', output:'1. ND Monev Inovasi Pelayanan\n2. ND Survey Kepuasan Masyarakat beserta TL\n3. Monev Teknologi Informasi', waktu:'Jan – Des 2026', pic:'Seksi KI & Seksi PLI', status:'ongoing'},
+        {sub:'R-i',uraian:'Menyusun data perbandingan jumlah pejabat struktural dan fungsional sebelum dan sesudah delayering (Peta Proses Bisnis)',output:'ND Data perbandingan jumlah pegawai sebelum dan sesudah implementasi delayering',waktu:'TW 1 2026',pic:'Subbagian Umum',status:'ongoing'},
+        {sub:'R-ii.a',uraian:'Survei kepuasan masyarakat atas layanan (SPBE terintegrasi, layanan publik lebih cepat & efisien)',output:'ND hasil survei kepuasan Masyarakat atas layanan tersebut',waktu:'TW 1 – TW 4 2026',pic:'Seksi KI & Seksi PLI',status:'ongoing'},
+        {sub:'R-ii.b',uraian:'Survei ke pegawai atas kepuasan layanan perkantoran (SPBE internal)',output:'ND hasil survei kepuasan layanan perkantoran',waktu:'TW 1 – TW 4 2026',pic:'Subbagian Umum & Seksi PDAD',status:'ongoing'},
+        {sub:'R-iii',uraian:'Monitoring dan Evaluasi Inovasi Pelayanan, SKM, dan Pemanfaatan TI (Transformasi Digital nilai manfaat)',output:'1. ND Monev Inovasi Pelayanan\n2. ND Survey Kepuasan Masyarakat beserta TL\n3. Monev Teknologi Informasi',waktu:'Jan – Des 2026',pic:'Seksi KI & Seksi PLI',status:'ongoing'}
       ]
     },
   ],
@@ -518,63 +518,63 @@ const SUBTIMS = [
   desc:'Perencanaan pegawai, mutasi, pengembangan kompetensi, kinerja individu, disiplin',
   icon:'👤',
   prioritas: [
-    {no:'1', nama:'Pembangunan & Pengelolaan Perpustakaan', uraian:'Pembangunan dan pengelolaan perpustakaan pada KPPBC TMP Tanjung Emas sebagai upaya pengembangan kompetensi pegawai.', output:'1. KEP Tim Pengelolaan Perpustakaan\n2. Laporan Monitoring dan Evaluasi Pengelolaan Perpustakaan', waktu:'Januari – Desember 2026', pic:'Sub Tim III', status:'ongoing'},
+    {no:'1',nama:'Pembangunan & Pengelolaan Perpustakaan',uraian:'Pembangunan dan pengelolaan perpustakaan pada KPPBC TMP Tanjung Emas sebagai upaya pengembangan kompetensi pegawai.',output:'1. KEP Tim Pengelolaan Perpustakaan\n2. Laporan Monitoring dan Evaluasi Pengelolaan Perpustakaan',waktu:'Januari – Desember 2026',pic:'Sub Tim III',status:'ongoing'},
   ],
   kategori: [
     {
       nama:'Perencanaan Kebutuhan Pegawai', icon:'🗂️',
       items:[
-        {sub:'i.a', uraian:'Penyusunan dokumen ABK dan permintaan kebutuhan pegawai', output:'1. Laporan ABK 2026\n2. ND Usulan kebutuhan pegawai ke Sekretaris DJBC', waktu:'Semester I, Sesuai Kebutuhan', pic:'Seksi KI & Subbagian Umum', status:'ongoing'},
-        {sub:'i.b', uraian:'Pelaksanaan Rolling/Mutasi Internal, Penempatan Pegawai Baru/Mutasi Masuk, Pemetaan dan sidang Grading', output:'1. ND Rapat Rolling/Mutasi\n2. ND Penyampaian Notula\n3. Naskah Dinas Penempatan/Pemindahan Pegawai\n4. SK Grading Pelaksana 2026', waktu:'TW I, Triwulanan, Setiap Mutasi DJBC', pic:'Subbagian Umum & Tim Pertimbangan Mutasi', status:'ongoing'},
-        {sub:'i.c', uraian:'Pemetaan & evaluasi penugasan, Penilaian Perilaku, Dialog Kinerja Individu, Penetapan Nilai Kinerja Pegawai', output:'1. ND Pemetaan & Evaluasi Penugasan\n2. ND Penilaian Perilaku\n3. ND Dialog Kinerja Individu\n4. SK Penetapan Hasil Penilaian Kinerja', waktu:'Triwulanan, Bulanan, TW I', pic:'Subbagian Umum & Seksi KI', status:'ongoing'},
+        {sub:'i.a',uraian:'Penyusunan dokumen ABK dan permintaan kebutuhan pegawai',output:'1. Laporan ABK 2026\n2. ND Usulan kebutuhan pegawai ke Sekretaris DJBC',waktu:'Semester I, Sesuai Kebutuhan',pic:'Seksi KI & Subbagian Umum',status:'ongoing'},
+        {sub:'i.b',uraian:'Pelaksanaan Rolling/Mutasi Internal, Penempatan Pegawai Baru/Mutasi Masuk, Pemetaan dan sidang Grading',output:'1. ND Rapat Rolling/Mutasi\n2. ND Penyampaian Notula\n3. Naskah Dinas Penempatan/Pemindahan Pegawai\n4. SK Grading Pelaksana 2026',waktu:'TW I, Triwulanan, Setiap Mutasi DJBC',pic:'Subbagian Umum & Tim Pertimbangan Mutasi',status:'ongoing'},
+        {sub:'i.c',uraian:'Pemetaan & evaluasi penugasan, Penilaian Perilaku, Dialog Kinerja Individu, Penetapan Nilai Kinerja Pegawai',output:'1. ND Pemetaan & Evaluasi Penugasan\n2. ND Penilaian Perilaku\n3. ND Dialog Kinerja Individu\n4. SK Penetapan Hasil Penilaian Kinerja',waktu:'Triwulanan, Bulanan, TW I',pic:'Subbagian Umum & Seksi KI',status:'ongoing'}
       ]
     },
     {
       nama:'Pola Mutasi Internal', icon:'🔀',
       items:[
-        {sub:'ii.a', uraian:'Membentuk Tim Pertimbangan Rolling/Mutasi Internal dan Pelaksanaan Rolling/Mutasi Internal', output:'1. SK Tim Pertimbangan Rolling/Mutasi Internal\n2. ND Rapat & Notula Mutasi\n3. Naskah Dinas Penempatan/Pemindahan Pegawai', waktu:'TW I, Triwulanan', pic:'Subbagian Umum', status:'ongoing'},
-        {sub:'ii.b', uraian:'Pembahasan Mutasi Internal dengan memperhatikan kompetensi, dan uji kompetensi Pemeriksa Fisik Barang', output:'1. ND Rapat Pembahasan\n2. ND Notula Rapat\n3. Naskah Dinas Penempatan\n4. SK Penugasan Pemeriksa Barang Impor', waktu:'Triwulanan', pic:'Subbagian Umum & Tim Pertimbangan Mutasi', status:'ongoing'},
-        {sub:'ii.c', uraian:'Pemetaan & evaluasi penugasan, Penilaian Perilaku, Dialog Kinerja Individu terkait perbaikan kinerja pasca mutasi', output:'1. ND Pemetaan & Evaluasi Penugasan\n2. ND Penilaian Perilaku\n3. ND Dialog Kinerja Individu\n4. SK Penetapan Hasil Penilaian Kinerja', waktu:'Triwulanan, Bulanan, TW I', pic:'Subbagian Umum', status:'ongoing'},
+        {sub:'ii.a',uraian:'Membentuk Tim Pertimbangan Rolling/Mutasi Internal dan Pelaksanaan Rolling/Mutasi Internal',output:'1. SK Tim Pertimbangan Rolling/Mutasi Internal\n2. ND Rapat & Notula Mutasi\n3. Naskah Dinas Penempatan/Pemindahan Pegawai',waktu:'TW I, Triwulanan',pic:'Subbagian Umum',status:'ongoing'},
+        {sub:'ii.b',uraian:'Pembahasan Mutasi Internal dengan memperhatikan kompetensi, dan uji kompetensi Pemeriksa Fisik Barang',output:'1. ND Rapat Pembahasan\n2. ND Notula Rapat\n3. Naskah Dinas Penempatan\n4. SK Penugasan Pemeriksa Barang Impor',waktu:'Triwulanan',pic:'Subbagian Umum & Tim Pertimbangan Mutasi',status:'ongoing'},
+        {sub:'ii.c',uraian:'Pemetaan & evaluasi penugasan, Penilaian Perilaku, Dialog Kinerja Individu terkait perbaikan kinerja pasca mutasi',output:'1. ND Pemetaan & Evaluasi Penugasan\n2. ND Penilaian Perilaku\n3. ND Dialog Kinerja Individu\n4. SK Penetapan Hasil Penilaian Kinerja',waktu:'Triwulanan, Bulanan, TW I',pic:'Subbagian Umum',status:'ongoing'}
       ]
     },
     {
       nama:'Pengembangan Pegawai Berbasis Kompetensi', icon:'📚',
       items:[
-        {sub:'iii.a', uraian:'Pemetaan AKP Organisasi dan permintaan pelatihan insidentil serta Penugasan Diklat', output:'1. ND Permintaan & Penyampaian AKP\n2. ND Penawaran & Usulan Pelatihan Insidentil\n3. ND Pemanggilan Peserta Diklat & ST Penugasan', waktu:'Semester I, Sesuai Kebutuhan, Bulanan', pic:'Subbagian Umum', status:'ongoing'},
-        {sub:'iii.b', uraian:'Dialog Kinerja Individu dan Monitoring Evaluasi DKI khususnya kebutuhan pengembangan kompetensi', output:'1. ND Pelaksanaan & Laporan DKI\n2. ND Monitoring & Evaluasi DKI\n3. ND Penyampaian Hasil Monev DKI', waktu:'Bulanan, Triwulanan', pic:'Subbagian Umum', status:'ongoing'},
-        {sub:'iii.c', uraian:'Pemetaan Kesenjangan Kompetensi dan Pengusulan Assessment Center', output:'1. Rekapitulasi perbandingan JPM pegawai vs standar jabatan\n2. ND Pengusulan Assessment Center', waktu:'Semester I & II', pic:'Subbagian Umum', status:'planned'},
-        {sub:'iii.d', uraian:'Seluruh pegawai memperoleh kesempatan diklat: Pemetaan AKP, pelatihan insidentil, penugasan diklat', output:'1. Laporan Rekapitulasi usulan kebutuhan diklat\n2. ND Penyampaian Hasil AKP\n3. ST Penugasan Diklat', waktu:'Semester I, Sesuai Kebutuhan, Bulanan', pic:'Subbagian Umum', status:'ongoing'},
-        {sub:'iii.e', uraian:'P2KP minimal 7x/tahun, CMC bulanan, Pemetaan AKP, Penugasan Diklat', output:'1. ND & Presensi P2KP (Notulen, Foto)\n2. ND Pelaksanaan & Laporan CMC\n3. ND Usulan Diklat\n4. ND Pemanggilan & ST Diklat', waktu:'Bulanan', pic:'Subbagian Umum', status:'ongoing'},
-        {sub:'iii.f', uraian:'Monitoring dan evaluasi hasil pengembangan kompetensi dalam kaitannya dengan perbaikan kinerja', output:'1. ND Monev pasca diklat/PPKP/CMC\n2. Kuesioner pasca diklat\n3. ND Hasil Monev', waktu:'Triwulanan', pic:'Subbagian Umum', status:'upcoming'},
+        {sub:'iii.a',uraian:'Pemetaan AKP Organisasi dan permintaan pelatihan insidentil serta Penugasan Diklat',output:'1. ND Permintaan & Penyampaian AKP\n2. ND Penawaran & Usulan Pelatihan Insidentil\n3. ND Pemanggilan Peserta Diklat & ST Penugasan',waktu:'Semester I, Sesuai Kebutuhan, Bulanan',pic:'Subbagian Umum',status:'ongoing'},
+        {sub:'iii.b',uraian:'Dialog Kinerja Individu dan Monitoring Evaluasi DKI khususnya kebutuhan pengembangan kompetensi',output:'1. ND Pelaksanaan & Laporan DKI\n2. ND Monitoring & Evaluasi DKI\n3. ND Penyampaian Hasil Monev DKI',waktu:'Bulanan, Triwulanan',pic:'Subbagian Umum',status:'ongoing'},
+        {sub:'iii.c',uraian:'Pemetaan Kesenjangan Kompetensi dan Pengusulan Assessment Center',output:'1. Rekapitulasi perbandingan JPM pegawai vs standar jabatan\n2. ND Pengusulan Assessment Center',waktu:'Semester I & II',pic:'Subbagian Umum',status:'planned'},
+        {sub:'iii.d',uraian:'Seluruh pegawai memperoleh kesempatan diklat: Pemetaan AKP, pelatihan insidentil, penugasan diklat',output:'1. Laporan Rekapitulasi usulan kebutuhan diklat\n2. ND Penyampaian Hasil AKP\n3. ST Penugasan Diklat',waktu:'Semester I, Sesuai Kebutuhan, Bulanan',pic:'Subbagian Umum',status:'ongoing'},
+        {sub:'iii.e',uraian:'P2KP minimal 7x/tahun, CMC bulanan, Pemetaan AKP, Penugasan Diklat',output:'1. ND & Presensi P2KP (Notulen, Foto)\n2. ND Pelaksanaan & Laporan CMC\n3. ND Usulan Diklat\n4. ND Pemanggilan & ST Diklat',waktu:'Bulanan',pic:'Subbagian Umum',status:'ongoing'},
+        {sub:'iii.f',uraian:'Monitoring dan evaluasi hasil pengembangan kompetensi dalam kaitannya dengan perbaikan kinerja',output:'1. ND Monev pasca diklat/PPKP/CMC\n2. Kuesioner pasca diklat\n3. ND Hasil Monev',waktu:'Triwulanan',pic:'Subbagian Umum',status:'upcoming'}
       ]
     },
     {
       nama:'Penetapan Kinerja Individu', icon:'🎯',
       items:[
-        {sub:'iv.a', uraian:'Penetapan Perjanjian Kinerja (PK) dan Sasaran Kinerja Pegawai (SKP) terintegrasi DIKENAL', output:'1. PK & SKP Kepala Kantor\n2. SKP seluruh Pejabat/Pegawai\n3. Manual IKU\n4. Matriks Cascading\n5. Administrasi dokumen kinerja DIKENAL', waktu:'TW I', pic:'Subbagian Umum & Seksi KI', status:'done'},
-        {sub:'iv.b', uraian:'Membuat matriks cascading kinerja dan reviu kualitas Kontrak Kinerja', output:'1. KK Pimpinan beserta Peta Strategi\n2. SKP seluruh pejabat/pegawai\n3. Manual IKU\n4. Matriks Cascading\n5. Reviu Kualitas Kontrak Kinerja', waktu:'TW II, Triwulanan', pic:'Subbagian Umum & Seksi KI', status:'upcoming'},
-        {sub:'iv.c', uraian:'Laporan Capaian Kinerja Bulanan, Logbook, IPR, Dialog Kinerja Individu', output:'1. LCK Bulanan Kepala Kantor & Pejabat Pengawas\n2. Logbook seluruh Pejabat/Pegawai\n3. IPR seluruh pejabat/pegawai\n4. ND Pelaksanaan & Laporan DKI', waktu:'Bulanan', pic:'Subbagian Umum & Seksi KI', status:'ongoing'},
-        {sub:'iv.d', uraian:'Pemberian reward berdasarkan kinerja: Employee of the Month, Pegawai Berprestasi, Grading, PPNPN of The Month, Daycare', output:'1. ND Usulan Employee of the Month\n2. SK Penghargaan Pegawai\n3. ND Usulan Grading\n4. SK Grading\n5. SK PPNPN of The Month\n6. Laporan Monev Daycare', waktu:'Bulanan, TW I', pic:'Subbagian Umum', status:'ongoing'},
+        {sub:'iv.a',uraian:'Penetapan Perjanjian Kinerja (PK) dan Sasaran Kinerja Pegawai (SKP) terintegrasi DIKENAL',output:'1. PK & SKP Kepala Kantor\n2. SKP seluruh Pejabat/Pegawai\n3. Manual IKU\n4. Matriks Cascading\n5. Administrasi dokumen kinerja DIKENAL',waktu:'TW I',pic:'Subbagian Umum & Seksi KI',status:'done'},
+        {sub:'iv.b',uraian:'Membuat matriks cascading kinerja dan reviu kualitas Kontrak Kinerja',output:'1. KK Pimpinan beserta Peta Strategi\n2. SKP seluruh pejabat/pegawai\n3. Manual IKU\n4. Matriks Cascading\n5. Reviu Kualitas Kontrak Kinerja',waktu:'TW II, Triwulanan',pic:'Subbagian Umum & Seksi KI',status:'upcoming'},
+        {sub:'iv.c',uraian:'Laporan Capaian Kinerja Bulanan, Logbook, IPR, Dialog Kinerja Individu',output:'1. LCK Bulanan Kepala Kantor & Pejabat Pengawas\n2. Logbook seluruh Pejabat/Pegawai\n3. IPR seluruh pejabat/pegawai\n4. ND Pelaksanaan & Laporan DKI',waktu:'Bulanan',pic:'Subbagian Umum & Seksi KI',status:'ongoing'},
+        {sub:'iv.d',uraian:'Pemberian reward berdasarkan kinerja: Employee of the Month, Pegawai Berprestasi, Grading, PPNPN of The Month, Daycare',output:'1. ND Usulan Employee of the Month\n2. SK Penghargaan Pegawai\n3. ND Usulan Grading\n4. SK Grading\n5. SK PPNPN of The Month\n6. Laporan Monev Daycare',waktu:'Bulanan, TW I',pic:'Subbagian Umum',status:'ongoing'}
       ]
     },
     {
       nama:'Penegakan Aturan Disiplin / Kode Etik', icon:'⚖️',
       items:[
-        {sub:'v.a', uraian:'Penegakan kode etik, monitoring ketertiban pegawai, Pakta Integritas, banner/poster, pelaporan SPT & LHKPN, Pelatihan SLA, Sosialisasi Anti Gratifikasi, Pemeriksaan Mendadak, SELASAR, Publikasi Saluran Pengaduan, Integrity Sharing, Integrity Game', output:'1. Laporan Pemantauan Kode Etik\n2. Laporan Ketertiban Pegawai\n3. Pakta Integritas\n4. Banner/Poster/Video\n5. Laporan SPT & LHK/LHKPN\n6. Laporan SLA, Anti Gratifikasi, Pemeriksaan Mendadak\n7. Laporan SELASAR\n8. Laporan Integrity Sharing & Game', waktu:'Semesteran, Bulanan, Setiap ada pegawai baru', pic:'Subbagian Umum & Seksi KI', status:'ongoing'},
+        {sub:'v.a',uraian:'Penegakan kode etik, monitoring ketertiban pegawai, Pakta Integritas, banner/poster, pelaporan SPT & LHKPN, Pelatihan SLA, Sosialisasi Anti Gratifikasi, Pemeriksaan Mendadak, SELASAR, Publikasi Saluran Pengaduan, Integrity Sharing, Integrity Game',output:'1. Laporan Pemantauan Kode Etik\n2. Laporan Ketertiban Pegawai\n3. Pakta Integritas\n4. Banner/Poster/Video\n5. Laporan SPT & LHK/LHKPN\n6. Laporan SLA, Anti Gratifikasi, Pemeriksaan Mendadak\n7. Laporan SELASAR\n8. Laporan Integrity Sharing & Game',waktu:'Semesteran, Bulanan, Setiap ada pegawai baru',pic:'Subbagian Umum & Seksi KI',status:'ongoing'}
       ]
     },
     {
       nama:'Sistem Informasi Kepegawaian', icon:'🖥️',
       items:[
-        {sub:'vi.a', uraian:'Updating data kepegawaian secara berkala di HRIS setiap ada perubahan data. Pengajuan perubahan data pegawai melalui Layanan Subbagian Umum Satu Pintu.', output:'1. BA Akurasi Data HRIS\n2. Rekapitulasi perubahan data HRIS\n3. Mekanisme pengajuan perubahan data one-stop service', waktu:'Bulanan, Sesuai Kebutuhan', pic:'Subbagian Umum', status:'ongoing'},
+        {sub:'vi.a',uraian:'Updating data kepegawaian secara berkala di HRIS setiap ada perubahan data. Pengajuan perubahan data pegawai melalui Layanan Subbagian Umum Satu Pintu.',output:'1. BA Akurasi Data HRIS\n2. Rekapitulasi perubahan data HRIS\n3. Mekanisme pengajuan perubahan data one-stop service',waktu:'Bulanan, Sesuai Kebutuhan',pic:'Subbagian Umum',status:'ongoing'}
       ]
     },
     {
       nama:'Rencana Kerja Reform – SDM', icon:'🔬',
       items:[
-        {sub:'R-i', uraian:'Penandatanganan, penetapan, dan penilaian kualitas Perjanjian Kerja berorientasi hasil (outcome)', output:'1. Dokumen PK dan SKP\n2. Narasi SMART-C IKU Kepala Kantor\n3. Dokumen hasil reviu kualitas SKP\n4. Matriks Cascading 2026', waktu:'TW I, Triwulanan', pic:'Subbagian Umum & Seksi KI', status:'done'},
-        {sub:'R-ii', uraian:'Pemetaan Kesenjangan Kompetensi, Pengusulan Assessment Center, Uji Kompetensi Internal Pemeriksa Barang Impor, Rapat Pembahasan Rolling/Mutasi mempertimbangkan hasil penilaian', output:'1. Rekapitulasi JPM vs standar jabatan\n2. ND Assessment Center\n3. SK Penugasan Pemeriksa Barang\n4. Dokumen Pelaksanaan dan Hasil Penilaian Pegawai', waktu:'Semester I & II, Triwulanan', pic:'Subbagian Umum & Tim Pertimbangan Mutasi', status:'upcoming'},
-        {sub:'R-iii', uraian:'Melaksanakan pelaporan pemberian penghargaan dan penjatuhan hukuman disiplin, pemrosesan pemeriksaan, Integrity Sharing', output:'1. Laporan Pemberian Penghargaan & Hukuman Disiplin\n2. Dokumen Penjatuhan Hukuman Disiplin\n3. Laporan Pelaksanaan Integrity Sharing', waktu:'Bulanan, Ketika terjadi pelanggaran', pic:'Subbagian Umum & Seksi KI', status:'ongoing'},
+        {sub:'R-i',uraian:'Penandatanganan, penetapan, dan penilaian kualitas Perjanjian Kerja berorientasi hasil (outcome)',output:'1. Dokumen PK dan SKP\n2. Narasi SMART-C IKU Kepala Kantor\n3. Dokumen hasil reviu kualitas SKP\n4. Matriks Cascading 2026',waktu:'TW I, Triwulanan',pic:'Subbagian Umum & Seksi KI',status:'done'},
+        {sub:'R-ii',uraian:'Pemetaan Kesenjangan Kompetensi, Pengusulan Assessment Center, Uji Kompetensi Internal Pemeriksa Barang Impor, Rapat Pembahasan Rolling/Mutasi mempertimbangkan hasil penilaian',output:'1. Rekapitulasi JPM vs standar jabatan\n2. ND Assessment Center\n3. SK Penugasan Pemeriksa Barang\n4. Dokumen Pelaksanaan dan Hasil Penilaian Pegawai',waktu:'Semester I & II, Triwulanan',pic:'Subbagian Umum & Tim Pertimbangan Mutasi',status:'upcoming'},
+        {sub:'R-iii',uraian:'Melaksanakan pelaporan pemberian penghargaan dan penjatuhan hukuman disiplin, pemrosesan pemeriksaan, Integrity Sharing',output:'1. Laporan Pemberian Penghargaan & Hukuman Disiplin\n2. Dokumen Penjatuhan Hukuman Disiplin\n3. Laporan Pelaksanaan Integrity Sharing',waktu:'Bulanan, Ketika terjadi pelanggaran',pic:'Subbagian Umum & Seksi KI',status:'ongoing'}
       ]
     },
   ],
@@ -585,36 +585,36 @@ const SUBTIMS = [
   desc:'Keterlibatan pimpinan, dokumen perencanaan kinerja, IKU, SAKIP, LAKIN',
   icon:'📈',
   prioritas: [
-    {no:'1', nama:'Meningkatkan Kapasitas SDM Pengelola Kinerja', uraian:'Pengusulan diklat/pelatihan bagi pengelola kinerja untuk meningkatkan kapasitas SDM yang menangani akuntabilitas kinerja.', output:'ND Usulan Diklat / Sertifikat Pelatihan', waktu:'Januari – Desember 2026', pic:'Subtim IV & Subbagian Umum', status:'ongoing'},
+    {no:'1',nama:'Meningkatkan Kapasitas SDM Pengelola Kinerja',uraian:'Pengusulan diklat/pelatihan bagi pengelola kinerja untuk meningkatkan kapasitas SDM yang menangani akuntabilitas kinerja.',output:'ND Usulan Diklat / Sertifikat Pelatihan',waktu:'Januari – Desember 2026',pic:'Subtim IV & Subbagian Umum',status:'ongoing'},
   ],
   kategori: [
     {
       nama:'Keterlibatan Pimpinan', icon:'👑',
       items:[
-        {sub:'i.a', uraian:'Pimpinan terlibat langsung dalam penyusunan perencanaan: matriks kerangka kinerja, RKA-KL, IKI, profil dan peta risiko', output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen RKA-KL\n3. ND Pembahasan IKI\n4. PK, SKP, Pakta Integritas\n5. ND Rapat Pembahasan ZI WBBM\n6. Profil dan Peta Risiko', waktu:'Jan – Feb 2026', pic:'Subtim IV, Subbagian Umum & Seksi KI', status:'done'},
-        {sub:'i.b', uraian:'Pimpinan terlibat langsung dalam penetapan kinerja: penyusunan SKP, IKI, penandatanganan, penyampaian', output:'1. ND Penyusunan SKP\n2. ND Pembahasan IKI\n3. Penandatanganan SKP\n4. ND Penyampaian SKP', waktu:'Jan – Feb 2026', pic:'Subtim IV, Subbagian Umum & Seksi KI', status:'done'},
-        {sub:'i.c', uraian:'Pimpinan memantau capaian kinerja setiap bulan dan menindaklanjuti hasil pemantauan', output:'1. ND Penyusunan LAKIN 2025\n2. ND Pelaksanaan DKO, LCK\n3. Penyampaian Hasil DKO', waktu:'Jan – Des 2026', pic:'Subtim IV & Seksi KI', status:'ongoing'},
+        {sub:'i.a',uraian:'Pimpinan terlibat langsung dalam penyusunan perencanaan: matriks kerangka kinerja, RKA-KL, IKI, profil dan peta risiko',output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen RKA-KL\n3. ND Pembahasan IKI\n4. PK, SKP, Pakta Integritas\n5. ND Rapat Pembahasan ZI WBBM\n6. Profil dan Peta Risiko',waktu:'Jan – Feb 2026',pic:'Subtim IV, Subbagian Umum & Seksi KI',status:'done'},
+        {sub:'i.b',uraian:'Pimpinan terlibat langsung dalam penetapan kinerja: penyusunan SKP, IKI, penandatanganan, penyampaian',output:'1. ND Penyusunan SKP\n2. ND Pembahasan IKI\n3. Penandatanganan SKP\n4. ND Penyampaian SKP',waktu:'Jan – Feb 2026',pic:'Subtim IV, Subbagian Umum & Seksi KI',status:'done'},
+        {sub:'i.c',uraian:'Pimpinan memantau capaian kinerja setiap bulan dan menindaklanjuti hasil pemantauan',output:'1. ND Penyusunan LAKIN 2025\n2. ND Pelaksanaan DKO, LCK\n3. Penyampaian Hasil DKO',waktu:'Jan – Des 2026',pic:'Subtim IV & Seksi KI',status:'ongoing'}
       ]
     },
     {
       nama:'Pengelolaan Akuntabilitas Kinerja', icon:'📊',
       items:[
-        {sub:'ii.a', uraian:'Penyusunan matriks penyelarasan kerangka kinerja dan Perjanjian Kinerja (PK) / SKP', output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen PK dan SKP', waktu:'Jan – Mar 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'ii.b', uraian:'Perencanaan kinerja berorientasi hasil: matriks cascading, PK/SKP, KEP Tujuan Spesifik Unit', output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen PK dan SKP\n3. Dokumen KEP Tujuan Spesifik', waktu:'Jan – Mar 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'ii.c', uraian:'Penyusunan Indikator Kinerja Utama (IKU): SKP, Manual IKU, LPMI', output:'1. SKP, IKI\n2. Manual IKU dan LPMI', waktu:'Jan – Mar 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'ii.d', uraian:'Penyusunan IKI yang memenuhi kriteria SMART', output:'SKP, IKI, Matriks Cascading', waktu:'Jan – Feb 2026', pic:'Subtim IV, Subbagian Umum & Seksi KI', status:'done'},
-        {sub:'ii.e', uraian:'Penyusunan Laporan Capaian Kinerja (LCK) dan LAKIN tepat waktu', output:'1. Laporan Capaian Kinerja\n2. ND Penyusunan LAKIN 2025\n3. LAKIN 2025', waktu:'Jan – Des 2026', pic:'Subtim IV & Seksi KI', status:'ongoing'},
-        {sub:'ii.f', uraian:'Laporan kinerja memberikan informasi kinerja yang lengkap: LCK, LAKIN, KEP NKO 2025', output:'1. Laporan Capaian Kinerja\n2. ND LAKIN 2025\n3. KEP NKO 2025', waktu:'Jan – Des 2026', pic:'Subtim IV & Seksi KI', status:'ongoing'},
-        {sub:'ii.g', uraian:'Sistem informasi kinerja: Satu Kemenkeu, Cehris G-1, Update database DIKENAL', output:'1. Screenshot Satu Kemenkeu & Cehris G-1\n2. Database DIKENAL', waktu:'Jan – Feb 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'ii.h', uraian:'Meningkatkan kapasitas SDM pengelola akuntabilitas kinerja melalui diklat/PPKP', output:'1. Usulan diklat\n2. Sertifikat/lencana diklat/seminar', waktu:'Jan – Des 2026', pic:'Subtim IV & Seksi KI', status:'ongoing'},
+        {sub:'ii.a',uraian:'Penyusunan matriks penyelarasan kerangka kinerja dan Perjanjian Kinerja (PK) / SKP',output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen PK dan SKP',waktu:'Jan – Mar 2026',pic:'Subtim IV & Seksi KI',status:'done'},
+        {sub:'ii.b',uraian:'Perencanaan kinerja berorientasi hasil: matriks cascading, PK/SKP, KEP Tujuan Spesifik Unit',output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen PK dan SKP\n3. Dokumen KEP Tujuan Spesifik',waktu:'Jan – Mar 2026',pic:'Subtim IV & Seksi KI',status:'done'},
+        {sub:'ii.c',uraian:'Penyusunan Indikator Kinerja Utama (IKU): SKP, Manual IKU, LPMI',output:'1. SKP, IKI\n2. Manual IKU dan LPMI',waktu:'Jan – Mar 2026',pic:'Subtim IV & Seksi KI',status:'done'},
+        {sub:'ii.d',uraian:'Penyusunan IKI yang memenuhi kriteria SMART',output:'SKP, IKI, Matriks Cascading',waktu:'Jan – Feb 2026',pic:'Subtim IV, Subbagian Umum & Seksi KI',status:'done'},
+        {sub:'ii.e',uraian:'Penyusunan Laporan Capaian Kinerja (LCK) dan LAKIN tepat waktu',output:'1. Laporan Capaian Kinerja\n2. ND Penyusunan LAKIN 2025\n3. LAKIN 2025',waktu:'Jan – Des 2026',pic:'Subtim IV & Seksi KI',status:'ongoing'},
+        {sub:'ii.f',uraian:'Laporan kinerja memberikan informasi kinerja yang lengkap: LCK, LAKIN, KEP NKO 2025',output:'1. Laporan Capaian Kinerja\n2. ND LAKIN 2025\n3. KEP NKO 2025',waktu:'Jan – Des 2026',pic:'Subtim IV & Seksi KI',status:'ongoing'},
+        {sub:'ii.g',uraian:'Sistem informasi kinerja: Satu Kemenkeu, Cehris G-1, Update database DIKENAL',output:'1. Screenshot Satu Kemenkeu & Cehris G-1\n2. Database DIKENAL',waktu:'Jan – Feb 2026',pic:'Subtim IV & Seksi KI',status:'done'},
+        {sub:'ii.h',uraian:'Meningkatkan kapasitas SDM pengelola akuntabilitas kinerja melalui diklat/PPKP',output:'1. Usulan diklat\n2. Sertifikat/lencana diklat/seminar',waktu:'Jan – Des 2026',pic:'Subtim IV & Seksi KI',status:'ongoing'}
       ]
     },
     {
       nama:'Rencana Kerja Reform – Akuntabilitas', icon:'🏆',
       items:[
-        {sub:'R-i', uraian:'Mencapai sasaran kinerja 100% atau lebih (20 dari 20 Sasaran Kinerja)', output:'Laporan Kinerja 2025', waktu:'Januari 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'R-ii', uraian:'Memberikan reward and punishment kepada pegawai sesuai capaian kinerja', output:'Penghargaan Pegawai Terbaik', waktu:'Jan – Des 2026', pic:'Subtim IV & Subbagian Umum', status:'ongoing'},
-        {sub:'R-iii', uraian:'Melakukan penjenjangan kinerja mengacu pada kinerja utama organisasi (Kerangka Logis Kinerja)', output:'1. Dokumen PK Kemenkeu Two\n2. Dokumen PK Kemenkeu Three\n3. Matriks Cascading', waktu:'Jan – Feb 2026', pic:'Subtim IV & Seksi KI', status:'done'},
+        {sub:'R-i',uraian:'Mencapai sasaran kinerja 100% atau lebih (20 dari 20 Sasaran Kinerja)',output:'Laporan Kinerja 2025',waktu:'Januari 2026',pic:'Subtim IV & Seksi KI',status:'done'},
+        {sub:'R-ii',uraian:'Memberikan reward and punishment kepada pegawai sesuai capaian kinerja',output:'Penghargaan Pegawai Terbaik',waktu:'Jan – Des 2026',pic:'Subtim IV & Subbagian Umum',status:'ongoing'},
+        {sub:'R-iii',uraian:'Melakukan penjenjangan kinerja mengacu pada kinerja utama organisasi (Kerangka Logis Kinerja)',output:'1. Dokumen PK Kemenkeu Two\n2. Dokumen PK Kemenkeu Three\n3. Matriks Cascading',waktu:'Jan – Feb 2026',pic:'Subtim IV & Seksi KI',status:'done'}
       ]
     },
   ],
@@ -625,59 +625,59 @@ const SUBTIMS = [
   desc:'Pengendalian gratifikasi, SPIP, pengaduan masyarakat, WBS, benturan kepentingan',
   icon:'🔍',
   prioritas: [
-    {no:'1', nama:'Telah Dibangun Lingkungan Pengendalian (PKPT)', uraian:'Pelaksanaan Program Kerja Pengawasan Tahunan (PKPT) sesuai KEP-284/BC/2026 dan Monitoring Tingkat Pelaporan LHKPN dan LHK 100% secara tepat waktu.', output:'1. Laporan Kegiatan PKPT 2026\n2. ND Pelaporan LHKPN/LHKASN 2026', waktu:'Sesuai Jadwal PKPT, Februari 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-    {no:'2', nama:'Pencegahan Pelanggaran melalui CMC', uraian:'Pelaksanaan CMC (Coaching, Mentoring, Counseling) untuk pencegahan fraud di lingkungan KPPBC TMP Tanjung Emas.', output:'Nota Dinas Rekapitulasi CMC', waktu:'Bulanan', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
+    {no:'1',nama:'Telah Dibangun Lingkungan Pengendalian (PKPT)',uraian:'Pelaksanaan Program Kerja Pengawasan Tahunan (PKPT) sesuai KEP-284/BC/2026 dan Monitoring Tingkat Pelaporan LHKPN dan LHK 100% secara tepat waktu.',output:'1. Laporan Kegiatan PKPT 2026\n2. ND Pelaporan LHKPN/LHKASN 2026',waktu:'Sesuai Jadwal PKPT, Februari 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+    {no:'2',nama:'Pencegahan Pelanggaran melalui CMC',uraian:'Pelaksanaan CMC (Coaching, Mentoring, Counseling) untuk pencegahan fraud di lingkungan KPPBC TMP Tanjung Emas.',output:'Nota Dinas Rekapitulasi CMC',waktu:'Bulanan',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
   ],
   kategori: [
     {
       nama:'Pengendalian Gratifikasi', icon:'🎁',
       items:[
-        {sub:'i.a', uraian:'Public campaign anti gratifikasi: sisipkan pesan pada event, sosialisasi ke pengguna jasa & internal, edukasi budaya integritas, himbauan tidak menerima parcel, posting "TOLAK dan LAPOR gratifikasi"', output:'1. Laporan Pelaksanaan Sosialisasi\n2. Postingan Sosmed\n3. ND Himbauan Hari Raya', waktu:'Sesuai jadwal sosialisasi, Triwulanan, Jelang Lebaran & Nataru', pic:'Subtim V / Seksi KI', status:'ongoing'},
-        {sub:'i.b', uraian:'Penetapan Unit Pengendali Gratifikasi (UPG) sebagai bagian dari prosedur pengendalian', output:'SKEP Penetapan Pengelola UPG / Laporan Gratifikasi', waktu:'Januari 2026', pic:'Subtim V / Seksi KI', status:'done'},
+        {sub:'i.a',uraian:'Public campaign anti gratifikasi: sisipkan pesan pada event, sosialisasi ke pengguna jasa & internal, edukasi budaya integritas, himbauan tidak menerima parcel, posting "TOLAK dan LAPOR gratifikasi"',output:'1. Laporan Pelaksanaan Sosialisasi\n2. Postingan Sosmed\n3. ND Himbauan Hari Raya',waktu:'Sesuai jadwal sosialisasi, Triwulanan, Jelang Lebaran & Nataru',pic:'Subtim V / Seksi KI',status:'ongoing'},
+        {sub:'i.b',uraian:'Penetapan Unit Pengendali Gratifikasi (UPG) sebagai bagian dari prosedur pengendalian',output:'SKEP Penetapan Pengelola UPG / Laporan Gratifikasi',waktu:'Januari 2026',pic:'Subtim V / Seksi KI',status:'done'}
       ]
     },
     {
       nama:'Sistem Pengendalian Intern Pemerintah (SPIP)', icon:'🛡️',
       items:[
-        {sub:'ii.a', uraian:'Membangun lingkungan pengendalian: Pakta integritas, Pemantauan PPKEPP, Monitoring LHKPN/LHK, Pelaksanaan DKRO', output:'1. Pakta Integritas & Banner\n2. Laporan PPKEPP\n3. ND Monitoring LHKPN & LHK\n4. ND Ikhtisar DKRO', waktu:'Feb 2026, Maret/Juni/Sep/Des 2026, Setiap Bulan', pic:'Seksi KI & Subbagian Umum', status:'ongoing'},
-        {sub:'ii.b', uraian:'Penilaian risiko: RCM, Penyusunan Tim PPIP, Pemetaan Titik Rawan, Rencana Aksi PPIP', output:'1. Laporan Pelaksanaan RCM\n2. ND Rencana Aksi & Pemetaan Titik Rawan PPIP\n3. Dokumen Pembentukan Satgas PPIP 2026', waktu:'Maret 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
-        {sub:'ii.c', uraian:'Kegiatan pengendalian: PKPT DJBC 2026 (PPKEKP, Profiling, RCM, Tematik, PUTIK), Monitoring MR, Pemeriksaan Mendadak', output:'1. Laporan Pelaksanaan Kegiatan PKPT\n2. Laporan Implementasi Manajemen Risiko\n3. Laporan Pemeriksaan Mendadak', waktu:'TW I 2026, TW I-IV, 6x setahun', pic:'Seksi KI & Subbagian Umum', status:'ongoing'},
-        {sub:'ii.d', uraian:'SPI dikomunikasikan ke semua pihak: penyampaian materi SPI sebelum PPKEKP dan dalam entry meeting PKPT Tematik 2026', output:'Laporan Pelaksanaan', waktu:'Feb 2026, Mar 2026', pic:'Seksi Kepatuhan Internal', status:'done'},
+        {sub:'ii.a',uraian:'Membangun lingkungan pengendalian: Pakta integritas, Pemantauan PPKEPP, Monitoring LHKPN/LHK, Pelaksanaan DKRO',output:'1. Pakta Integritas & Banner\n2. Laporan PPKEPP\n3. ND Monitoring LHKPN & LHK\n4. ND Ikhtisar DKRO',waktu:'Feb 2026, Maret/Juni/Sep/Des 2026, Setiap Bulan',pic:'Seksi KI & Subbagian Umum',status:'ongoing'},
+        {sub:'ii.b',uraian:'Penilaian risiko: RCM, Penyusunan Tim PPIP, Pemetaan Titik Rawan, Rencana Aksi PPIP',output:'1. Laporan Pelaksanaan RCM\n2. ND Rencana Aksi & Pemetaan Titik Rawan PPIP\n3. Dokumen Pembentukan Satgas PPIP 2026',waktu:'Maret 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'},
+        {sub:'ii.c',uraian:'Kegiatan pengendalian: PKPT DJBC 2026 (PPKEKP, Profiling, RCM, Tematik, PUTIK), Monitoring MR, Pemeriksaan Mendadak',output:'1. Laporan Pelaksanaan Kegiatan PKPT\n2. Laporan Implementasi Manajemen Risiko\n3. Laporan Pemeriksaan Mendadak',waktu:'TW I 2026, TW I-IV, 6x setahun',pic:'Seksi KI & Subbagian Umum',status:'ongoing'},
+        {sub:'ii.d',uraian:'SPI dikomunikasikan ke semua pihak: penyampaian materi SPI sebelum PPKEKP dan dalam entry meeting PKPT Tematik 2026',output:'Laporan Pelaksanaan',waktu:'Feb 2026, Mar 2026',pic:'Seksi Kepatuhan Internal',status:'done'}
       ]
     },
     {
       nama:'Pengaduan Masyarakat', icon:'📣',
       items:[
-        {sub:'iii.a', uraian:'Mengimplementasikan kebijakan pengaduan masyarakat: penunjukan PIC, saluran pengaduan, posting sosmed', output:'1. ND Penunjukan PIC Pengaduan\n2. Saluran Pengaduan tersedia\n3. Postingan sosmed saluran pengaduan', waktu:'Bulanan 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'iii.b', uraian:'Monitoring dan Tindak lanjut Pengaduan Masyarakat dan Whistle Blowing secara berkala', output:'Laporan Monitoring, Evaluasi, dan Matriks TL Pengaduan Masyarakat & Whistleblowing', waktu:'Bulanan 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'iii.c', uraian:'Monitoring dan evaluasi penanganan pengaduan masyarakat secara berkala', output:'Laporan Monitoring, Evaluasi, dan Matriks TL Pengaduan', waktu:'Triwulanan 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
-        {sub:'iii.d', uraian:'Menindaklanjuti seluruh hasil evaluasi atas penanganan pengaduan masyarakat', output:'Laporan Monitoring, Evaluasi, dan Matriks TL Pengaduan', waktu:'Triwulanan 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
+        {sub:'iii.a',uraian:'Mengimplementasikan kebijakan pengaduan masyarakat: penunjukan PIC, saluran pengaduan, posting sosmed',output:'1. ND Penunjukan PIC Pengaduan\n2. Saluran Pengaduan tersedia\n3. Postingan sosmed saluran pengaduan',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'iii.b',uraian:'Monitoring dan Tindak lanjut Pengaduan Masyarakat dan Whistle Blowing secara berkala',output:'Laporan Monitoring, Evaluasi, dan Matriks TL Pengaduan Masyarakat & Whistleblowing',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'iii.c',uraian:'Monitoring dan evaluasi penanganan pengaduan masyarakat secara berkala',output:'Laporan Monitoring, Evaluasi, dan Matriks TL Pengaduan',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'},
+        {sub:'iii.d',uraian:'Menindaklanjuti seluruh hasil evaluasi atas penanganan pengaduan masyarakat',output:'Laporan Monitoring, Evaluasi, dan Matriks TL Pengaduan',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'}
       ]
     },
     {
       nama:'Whistle-Blowing System (WBS)', icon:'📢',
       items:[
-        {sub:'iv.a', uraian:'Menerapkan seluruh kebijakan Whistle Blowing System dan monitoring tindak lanjut WBS secara berkala', output:'Laporan Monitoring, Evaluasi, dan Matriks TL Pengaduan & Whistleblowing', waktu:'Bulanan 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'iv.b', uraian:'Monitoring dan evaluasi penerapan WBS secara berkala', output:'Laporan Monitoring, Evaluasi, dan Matriks TL Whistleblowing', waktu:'Triwulanan 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
-        {sub:'iv.c', uraian:'Menindaklanjuti seluruh hasil evaluasi penerapan WBS', output:'Laporan Monitoring, Evaluasi, dan Matriks TL Whistleblowing', waktu:'Triwulanan 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
+        {sub:'iv.a',uraian:'Menerapkan seluruh kebijakan Whistle Blowing System dan monitoring tindak lanjut WBS secara berkala',output:'Laporan Monitoring, Evaluasi, dan Matriks TL Pengaduan & Whistleblowing',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'iv.b',uraian:'Monitoring dan evaluasi penerapan WBS secara berkala',output:'Laporan Monitoring, Evaluasi, dan Matriks TL Whistleblowing',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'},
+        {sub:'iv.c',uraian:'Menindaklanjuti seluruh hasil evaluasi penerapan WBS',output:'Laporan Monitoring, Evaluasi, dan Matriks TL Whistleblowing',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'}
       ]
     },
     {
       nama:'Penanganan Benturan Kepentingan', icon:'⚡',
       items:[
-        {sub:'v.a', uraian:'Identifikasi/pemetaan benturan kepentingan pada seluruh tugas fungsi utama melalui laporan benturan kepentingan tiap seksi', output:'Laporan benturan kepentingan oleh setiap seksi', waktu:'Bulanan 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'v.b', uraian:'Internalisasi benturan kepentingan dan permintaan laporan penanganan ke tiap seksi', output:'ND Permintaan laporan benturan kepentingan', waktu:'TW III, Setiap bulan', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
-        {sub:'v.c', uraian:'Mengimplementasikan penanganan benturan kepentingan ke seluruh layanan', output:'Laporan benturan kepentingan oleh setiap seksi', waktu:'Bulanan 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'v.d', uraian:'Monitoring dan Evaluasi penanganan benturan kepentingan secara berkala', output:'Laporan Monev Benturan Kepentingan', waktu:'Triwulanan 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
-        {sub:'v.e', uraian:'Menindaklanjuti seluruh hasil evaluasi penanganan benturan kepentingan', output:'Laporan Monev Benturan Kepentingan', waktu:'Triwulanan 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
+        {sub:'v.a',uraian:'Identifikasi/pemetaan benturan kepentingan pada seluruh tugas fungsi utama melalui laporan benturan kepentingan tiap seksi',output:'Laporan benturan kepentingan oleh setiap seksi',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'v.b',uraian:'Internalisasi benturan kepentingan dan permintaan laporan penanganan ke tiap seksi',output:'ND Permintaan laporan benturan kepentingan',waktu:'TW III, Setiap bulan',pic:'Seksi Kepatuhan Internal',status:'upcoming'},
+        {sub:'v.c',uraian:'Mengimplementasikan penanganan benturan kepentingan ke seluruh layanan',output:'Laporan benturan kepentingan oleh setiap seksi',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'v.d',uraian:'Monitoring dan Evaluasi penanganan benturan kepentingan secara berkala',output:'Laporan Monev Benturan Kepentingan',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'},
+        {sub:'v.e',uraian:'Menindaklanjuti seluruh hasil evaluasi penanganan benturan kepentingan',output:'Laporan Monev Benturan Kepentingan',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'}
       ]
     },
     {
       nama:'Rencana Kerja Reform – Pengawasan', icon:'🔐',
       items:[
-        {sub:'R-i', uraian:'Melaksanakan mekanisme pengendalian aktivitas berjenjang: PKPT dan Manajemen Risiko (profil risiko, piagam MR, pelaporan ke Dit. KI)', output:'1. Laporan Pelaksanaan PKPT\n2. Laporan Implementasi MR', waktu:'TW I 2026, Triwulanan', pic:'Seksi KI & Subbagian Umum', status:'ongoing'},
-        {sub:'R-ii', uraian:'Monitoring pengaduan masyarakat pada saluran pengaduan yang tersedia', output:'1. Laporan Monitoring & TL Pengaduan Masyarakat & WBS', waktu:'Bulanan', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'R-iii', uraian:'Monitoring pembuatan LHKPN dan LHKASN oleh pegawai yang diwajibkan', output:'1. ND Penegasan Kewajiban LHKPN & LHK 2026\n2. ND Penyampaian Laporan Harta Kekayaan', waktu:'Februari 2026, Maret 2026', pic:'Seksi Kepatuhan Internal', status:'done'},
+        {sub:'R-i',uraian:'Melaksanakan mekanisme pengendalian aktivitas berjenjang: PKPT dan Manajemen Risiko (profil risiko, piagam MR, pelaporan ke Dit. KI)',output:'1. Laporan Pelaksanaan PKPT\n2. Laporan Implementasi MR',waktu:'TW I 2026, Triwulanan',pic:'Seksi KI & Subbagian Umum',status:'ongoing'},
+        {sub:'R-ii',uraian:'Monitoring pengaduan masyarakat pada saluran pengaduan yang tersedia',output:'1. Laporan Monitoring & TL Pengaduan Masyarakat & WBS',waktu:'Bulanan',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'R-iii',uraian:'Monitoring pembuatan LHKPN dan LHKASN oleh pegawai yang diwajibkan',output:'1. ND Penegasan Kewajiban LHKPN & LHK 2026\n2. ND Penyampaian Laporan Harta Kekayaan',waktu:'Februari 2026, Maret 2026',pic:'Seksi Kepatuhan Internal',status:'done'}
       ]
     },
   ],
@@ -688,63 +688,63 @@ const SUBTIMS = [
   desc:'Standar pelayanan, budaya prima, pengelolaan pengaduan, survei kepuasan, TI',
   icon:'⭐',
   prioritas: [
-    {no:'1', nama:'Transformasi Contact Center – Benchmarking Strategis', uraian:'Internalisasi Budaya Pelayanan Unggul melalui Benchmarking Strategis ke Contact Center berkelas.', output:'ND Pelaksanaan Benchmarking Pelayanan Contact Center dan Service Level Agreement', waktu:'Januari – Desember 2026', pic:'Sub Tim VI', status:'upcoming'},
+    {no:'1',nama:'Transformasi Contact Center – Benchmarking Strategis',uraian:'Internalisasi Budaya Pelayanan Unggul melalui Benchmarking Strategis ke Contact Center berkelas.',output:'ND Pelaksanaan Benchmarking Pelayanan Contact Center dan Service Level Agreement',waktu:'Januari – Desember 2026',pic:'Sub Tim VI',status:'ongoing'},
   ],
   kategori: [
     {
       nama:'Standar Pelayanan', icon:'📝',
       items:[
-        {sub:'i.a', uraian:'Menginventarisasi Standar Pelayanan yang berlaku pada KPPBC TMP Tanjung Emas', output:'ND Kepala KPPBC tentang Penyampaian Standar Pelayanan yang berlaku', waktu:'Jan – Des 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'i.b', uraian:'Menyusun dan menetapkan Maklumat Pelayanan', output:'SK Kepala KPPBC tentang Maklumat Pelayanan', waktu:'Jan – Des 2026 (setiap ada pergantian pimpinan)', pic:'Seksi Penyuluhan & Layanan Informasi', status:'ongoing'},
-        {sub:'i.c', uraian:'Monitoring dan evaluasi Standar Pelayanan dan SOP', output:'Laporan Monitoring dan Evaluasi Standar Pelayanan dan SOP', waktu:'Jul – Des 2026', pic:'Seksi Kepatuhan Internal', status:'planned'},
-        {sub:'i.d', uraian:'Melakukan publikasi Standar Pelayanan dan Maklumat Pelayanan', output:'Dokumentasi publikasi Standar Pelayanan dan Maklumat Pelayanan', waktu:'Jan – Jun 2026', pic:'Seksi Penyuluhan & Layanan Informasi', status:'ongoing'},
+        {sub:'i.a',uraian:'Menginventarisasi Standar Pelayanan yang berlaku pada KPPBC TMP Tanjung Emas',output:'ND Kepala KPPBC tentang Penyampaian Standar Pelayanan yang berlaku',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'i.b',uraian:'Menyusun dan menetapkan Maklumat Pelayanan',output:'SK Kepala KPPBC tentang Maklumat Pelayanan',waktu:'Jan – Des 2026 (setiap ada pergantian pimpinan)',pic:'Seksi Penyuluhan & Layanan Informasi',status:'ongoing'},
+        {sub:'i.c',uraian:'Monitoring dan evaluasi Standar Pelayanan dan SOP',output:'Laporan Monitoring dan Evaluasi Standar Pelayanan dan SOP',waktu:'Jul – Des 2026',pic:'Seksi Kepatuhan Internal',status:'planned'},
+        {sub:'i.d',uraian:'Melakukan publikasi Standar Pelayanan dan Maklumat Pelayanan',output:'Dokumentasi publikasi Standar Pelayanan dan Maklumat Pelayanan',waktu:'Jan – Jun 2026',pic:'Seksi Penyuluhan & Layanan Informasi',status:'ongoing'}
       ]
     },
     {
       nama:'Budaya Pelayanan Prima', icon:'🌟',
       items:[
-        {sub:'ii.a', uraian:'Pelatihan SLA, Briefing Pegawai Layanan Publik, PPKP, Pembentukan Duta Transformasi', output:'1. ND Pelatihan SLA\n2. ND Briefing Pegawai Layanan Publik\n3. ND PPKP\n4. SK Pembentukan Duta Transformasi', waktu:'Jan – Des 2026', pic:'Seksi PLI, Seksi KI, Subbagian Umum', status:'ongoing'},
-        {sub:'ii.b', uraian:'Publikasi informasi pelayanan melalui berbagai media (website, sosmed, dll)', output:'Dokumentasi publikasi informasi pelayanan', waktu:'Jan – Des 2026', pic:'Seksi Penyuluhan & Layanan Informasi', status:'ongoing'},
-        {sub:'ii.c', uraian:'Sistem penghargaan dan sanksi bagi petugas pelayanan berbasis disiplin, kinerja, penilaian pengguna', output:'SK Penghargaan Pegawai (Employee of the Month)', waktu:'Jan – Des 2026', pic:'Subbagian Umum', status:'ongoing'},
-        {sub:'ii.d', uraian:'Sistem kompensasi kepada penerima layanan bila layanan tidak sesuai standar', output:'Dokumentasi publikasi sistem kompensasi', waktu:'Jan – Jun 2026', pic:'Seksi Penyuluhan & Layanan Informasi', status:'ongoing'},
-        {sub:'ii.e', uraian:'Integrasi Layanan Informasi melalui aplikasi Gendis Legi (sarana layanan terpadu/terintegrasi)', output:'SK Kepala KPPBC tentang Layanan Informasi Terpadu (Gendis Legi)', waktu:'Jan – Jun 2026', pic:'Seksi PDAD & Seksi PLI', status:'ongoing'},
-        {sub:'ii.f', uraian:'Inovasi Posko KI Reborn – Pos Kepatuhan Internal KPPBC TMP Tanjung Emas', output:'Pemberitahuan kembali Pos KI kepada Pengguna Jasa', waktu:'Jan – Des 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
+        {sub:'ii.a',uraian:'Pelatihan SLA, Briefing Pegawai Layanan Publik, PPKP, Pembentukan Duta Transformasi',output:'1. ND Pelatihan SLA\n2. ND Briefing Pegawai Layanan Publik\n3. ND PPKP\n4. SK Pembentukan Duta Transformasi',waktu:'Jan – Des 2026',pic:'Seksi PLI, Seksi KI, Subbagian Umum',status:'ongoing'},
+        {sub:'ii.b',uraian:'Publikasi informasi pelayanan melalui berbagai media (website, sosmed, dll)',output:'Dokumentasi publikasi informasi pelayanan',waktu:'Jan – Des 2026',pic:'Seksi Penyuluhan & Layanan Informasi',status:'ongoing'},
+        {sub:'ii.c',uraian:'Sistem penghargaan dan sanksi bagi petugas pelayanan berbasis disiplin, kinerja, penilaian pengguna',output:'SK Penghargaan Pegawai (Employee of the Month)',waktu:'Jan – Des 2026',pic:'Subbagian Umum',status:'ongoing'},
+        {sub:'ii.d',uraian:'Sistem kompensasi kepada penerima layanan bila layanan tidak sesuai standar',output:'Dokumentasi publikasi sistem kompensasi',waktu:'Jan – Jun 2026',pic:'Seksi Penyuluhan & Layanan Informasi',status:'ongoing'},
+        {sub:'ii.e',uraian:'Integrasi Layanan Informasi melalui aplikasi Gendis Legi (sarana layanan terpadu/terintegrasi)',output:'SK Kepala KPPBC tentang Layanan Informasi Terpadu (Gendis Legi)',waktu:'Jan – Jun 2026',pic:'Seksi PDAD & Seksi PLI',status:'ongoing'},
+        {sub:'ii.f',uraian:'Inovasi Posko KI Reborn – Pos Kepatuhan Internal KPPBC TMP Tanjung Emas',output:'Pemberitahuan kembali Pos KI kepada Pengguna Jasa',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'}
       ]
     },
     {
       nama:'Pengelolaan Pengaduan Pelayanan', icon:'📬',
       items:[
-        {sub:'iii.a', uraian:'Media pengaduan terintegrasi SP4N-LAPOR!: SK unit & petugas, saluran online/offline, petugas khusus', output:'SK tentang unit dan petugas pengaduan termasuk SP4N-LAPOR', waktu:'Jan – Des 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'iii.b', uraian:'Penunjukan unit dan petugas pengaduan (SK Unit Pengelola khusus konsultasi dan pengaduan)', output:'SK Unit dan Petugas Pengaduan', waktu:'Jan – Des 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
-        {sub:'iii.c', uraian:'Monitoring penanganan pengaduan dan konsultasi secara berkala', output:'1. ND Laporan Monitoring Pengaduan & WBS (Bulanan)\n2. ND Laporan Monitoring Layanan Informasi & Konsultasi (Bulanan)', waktu:'Jan – Des 2026', pic:'Seksi PLI, Seksi KI, Subbagian Umum', status:'ongoing'},
+        {sub:'iii.a',uraian:'Media pengaduan terintegrasi SP4N-LAPOR!: SK unit & petugas, saluran online/offline, petugas khusus',output:'SK tentang unit dan petugas pengaduan termasuk SP4N-LAPOR',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'iii.b',uraian:'Penunjukan unit dan petugas pengaduan (SK Unit Pengelola khusus konsultasi dan pengaduan)',output:'SK Unit dan Petugas Pengaduan',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'},
+        {sub:'iii.c',uraian:'Monitoring penanganan pengaduan dan konsultasi secara berkala',output:'1. ND Laporan Monitoring Pengaduan & WBS (Bulanan)\n2. ND Laporan Monitoring Layanan Informasi & Konsultasi (Bulanan)',waktu:'Jan – Des 2026',pic:'Seksi PLI, Seksi KI, Subbagian Umum',status:'ongoing'}
       ]
     },
     {
       nama:'Penilaian Kepuasan Masyarakat', icon:'💬',
       items:[
-        {sub:'iv.a', uraian:'Pelaksanaan Survei Kepuasan Masyarakat (SKM) Triwulanan', output:'ND Penyampaian Hasil SKM Setiap Triwulan', waktu:'Apr – Des 2026', pic:'Seksi PLI, Seksi KI, Subbagian Umum', status:'upcoming'},
-        {sub:'iv.b', uraian:'Publikasi hasil SKM secara online (website, sosmed) dan offline', output:'Dokumentasi publikasi hasil SKM', waktu:'Apr – Des 2026', pic:'Seksi Penyuluhan & Layanan Informasi', status:'upcoming'},
-        {sub:'iv.c', uraian:'Tindak lanjut Rekomendasi Hasil SKM Triwulanan', output:'Laporan TL Rekomendasi Hasil SKM Setiap Triwulan', waktu:'Apr – Des 2026', pic:'Seksi PLI, Seksi KI, Subbagian Umum', status:'upcoming'},
+        {sub:'iv.a',uraian:'Pelaksanaan Survei Kepuasan Masyarakat (SKM) Triwulanan',output:'ND Penyampaian Hasil SKM Setiap Triwulan',waktu:'Apr – Des 2026',pic:'Seksi PLI, Seksi KI, Subbagian Umum',status:'upcoming'},
+        {sub:'iv.b',uraian:'Publikasi hasil SKM secara online (website, sosmed) dan offline',output:'Dokumentasi publikasi hasil SKM',waktu:'Apr – Des 2026',pic:'Seksi Penyuluhan & Layanan Informasi',status:'upcoming'},
+        {sub:'iv.c',uraian:'Tindak lanjut Rekomendasi Hasil SKM Triwulanan',output:'Laporan TL Rekomendasi Hasil SKM Setiap Triwulan',waktu:'Apr – Des 2026',pic:'Seksi PLI, Seksi KI, Subbagian Umum',status:'upcoming'}
       ]
     },
     {
       nama:'Pemanfaatan Teknologi Informasi', icon:'📱',
       items:[
-        {sub:'v.a', uraian:'Integrasi layanan melalui aplikasi Gendis Legi pada seluruh proses pemberian layanan', output:'SK Kepala KPPBC tentang Layanan Informasi Terpadu di Lingkungan KPPBC TMP Tanjung Emas', waktu:'Jan – Mar 2026', pic:'Seksi PDAD & Seksi PLI', status:'ongoing'},
-        {sub:'v.b', uraian:'Pembangunan Database atas Layanan Informasi Terpadu pada aplikasi SPLIT', output:'Laporan Capaian Standar Pelayanan pada Seksi PLI', waktu:'Jan – Des 2026', pic:'Seksi Penyuluhan & Layanan Informasi', status:'ongoing'},
-        {sub:'v.c', uraian:'Monitoring atas Pemanfaatan Teknologi Informasi secara berkala', output:'ND Monitoring atas Pemanfaatan TI (tiap bulan)', waktu:'Jan – Des 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
+        {sub:'v.a',uraian:'Integrasi layanan melalui aplikasi Gendis Legi pada seluruh proses pemberian layanan',output:'SK Kepala KPPBC tentang Layanan Informasi Terpadu di Lingkungan KPPBC TMP Tanjung Emas',waktu:'Jan – Mar 2026',pic:'Seksi PDAD & Seksi PLI',status:'ongoing'},
+        {sub:'v.b',uraian:'Pembangunan Database atas Layanan Informasi Terpadu pada aplikasi SPLIT',output:'Laporan Capaian Standar Pelayanan pada Seksi PLI',waktu:'Jan – Des 2026',pic:'Seksi Penyuluhan & Layanan Informasi',status:'ongoing'},
+        {sub:'v.c',uraian:'Monitoring atas Pemanfaatan Teknologi Informasi secara berkala',output:'ND Monitoring atas Pemanfaatan TI (tiap bulan)',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'}
       ]
     },
     {
       nama:'Rencana Kerja Reform – Pelayanan Publik', icon:'🚀',
       items:[
-        {sub:'R-i', uraian:'Monitoring dan evaluasi penerapan inovasi pelayanan yang mendorong perbaikan seluruh layanan publik (Triwulanan)', output:'ND Monev Penerapan Inovasi Pelayanan Setiap Triwulan', waktu:'Apr – Des 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
-        {sub:'R-ii', uraian:'Monitoring dan evaluasi penerapan inovasi perijinan/pelayanan yang telah dipermudah', output:'ND Monev Inovasi Pelayanan Setiap Triwulan', waktu:'Apr – Des 2026', pic:'Seksi Kepatuhan Internal', status:'upcoming'},
-        {sub:'R-iii', uraian:'SK Penetapan Saluran Pengaduan dan penanganan pengaduan pelayanan melalui berbagai kanal secara responsif', output:'SK Penetapan Saluran Pengaduan KPPBC TMP Tanjung Emas', waktu:'Jan – Des 2026', pic:'Seksi Kepatuhan Internal', status:'ongoing'},
+        {sub:'R-i',uraian:'Monitoring dan evaluasi penerapan inovasi pelayanan yang mendorong perbaikan seluruh layanan publik (Triwulanan)',output:'ND Monev Penerapan Inovasi Pelayanan Setiap Triwulan',waktu:'Apr – Des 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'},
+        {sub:'R-ii',uraian:'Monitoring dan evaluasi penerapan inovasi perijinan/pelayanan yang telah dipermudah',output:'ND Monev Inovasi Pelayanan Setiap Triwulan',waktu:'Apr – Des 2026',pic:'Seksi Kepatuhan Internal',status:'upcoming'},
+        {sub:'R-iii',uraian:'SK Penetapan Saluran Pengaduan dan penanganan pengaduan pelayanan melalui berbagai kanal secara responsif',output:'SK Penetapan Saluran Pengaduan KPPBC TMP Tanjung Emas',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal',status:'ongoing'}
       ]
     },
   ],
-  done:0, ongoing:14, planned:5
+  done:0, ongoing:17, planned:6
 }
 ];
 
@@ -791,7 +791,7 @@ function renderCards() {
         '<div class="cp-label"><span>Progress</span><span style="color:'+s.color+'">'+pct+'%</span></div>' +
         '<div class="cp-bar" style="--c:'+s.color+'"><div class="cp-fill" style="width:'+pct+'%;background:'+s.color+'"></div></div>' +
       '</div>' +
-      '<div class="card-arrow" style="color:'+s.color+'">Lihat Detail →</div>';
+      '<div class="card-arrow" style="color:'+s.color+'">Lihat Detail â</div>';
     grid.appendChild(div);
     setTimeout(function(){ drawMiniDonut('donut-'+idx, s.done, s.ongoing, s.planned, s.color); }, 100);
   });
@@ -909,8 +909,8 @@ function openDetail(idx) {
   badge.style.border = '1px solid color-mix(in srgb, '+s.color+' 35%, transparent)';
 
   // Title
-  document.getElementById('detail-title').textContent = 'Subtim '+s.no+' – '+s.nama;
-  document.getElementById('detail-subtitle').textContent = s.desc+' · KPPBC TMP Tanjung Emas 2026';
+  document.getElementById('detail-title').textContent = 'Subtim '+s.no+' â '+s.nama;
+  document.getElementById('detail-subtitle').textContent = s.desc+' Â· KPPBC TMP Tanjung Emas 2026';
 
   // Stats
   var total = s.done + s.ongoing + s.planned;
@@ -927,7 +927,7 @@ function openDetail(idx) {
 
   // Prioritas
   if(s.prioritas && s.prioritas.length > 0) {
-    html += '<div class="section-label">🎯 Rencana Kerja Prioritas '+s.nama+'</div>';
+    html += '<div class="section-label">ð¯ Rencana Kerja Prioritas '+s.nama+'</div>';
     html += '<div class="prioritas-grid">';
     s.prioritas.forEach(function(p){
       html += '<div class="pcard" style="--c:'+s.color+'">' +
@@ -935,8 +935,8 @@ function openDetail(idx) {
         '<h4>'+esc(p.nama)+'</h4>' +
         '<p>'+esc(p.uraian)+'</p>' +
         '<div class="pcard-meta">' +
-          '<span class="ptag">⏱ '+esc(p.waktu)+'</span>' +
-          '<span class="ptag">👤 '+esc(p.pic)+'</span>' +
+          '<span class="ptag">â± '+esc(p.waktu)+'</span>' +
+          '<span class="ptag">ð¤ '+esc(p.pic)+'</span>' +
           sbTag(p.status) +
         '</div>' +
       '</div>';
@@ -945,7 +945,7 @@ function openDetail(idx) {
   }
 
   // Kategori
-  html += '<div class="section-label" style="margin-top:4px">📋 Rincian Rencana Kerja 2026</div>';
+  html += '<div class="section-label" style="margin-top:4px">ð Rincian Rencana Kerja 2026</div>';
   s.kategori.forEach(function(k, ki) {
     var kid = 'kat-'+idx+'-'+ki;
     html += '<div class="kat-item">' +
@@ -955,7 +955,7 @@ function openDetail(idx) {
           '<span class="kat-name">'+esc(k.nama)+'</span>' +
           '<span class="kat-count" style="--c:'+s.color+'">'+k.items.length+' item</span>' +
         '</div>' +
-        '<span class="kat-arr">▼</span>' +
+        '<span class="kat-arr">â¼</span>' +
       '</div>' +
       '<div class="kat-body" id="kb-'+kid+'">' +
         '<table class="kat-table">' +
@@ -988,8 +988,8 @@ function stat(val, lbl, color) {
   return '<div class="ds-item"><div class="ds-val" style="color:'+color+'">'+val+'</div><div class="ds-lbl">'+lbl+'</div></div>';
 }
 function sbTag(status) {
-  var map = {done:['sb-done','✅ Selesai'], ongoing:['sb-ongoing','🔥 Berjalan'], upcoming:['sb-upcoming','⏳ Segera'], planned:['sb-planned','📅 Planned']};
-  var r = map[status] || ['sb-planned','📅 Planned'];
+  var map = {done:['sb-done','â Selesai'], ongoing:['sb-ongoing','ð¥ Berjalan'], upcoming:['sb-upcoming','â³ Segera'], planned:['sb-planned','ð Planned']};
+  var r = map[status] || ['sb-planned','ð Planned'];
   return '<span class="sb '+r[0]+'">'+r[1]+'</span>';
 }
 function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
