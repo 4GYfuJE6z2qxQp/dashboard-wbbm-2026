@@ -442,8 +442,11 @@ body::before {
 // Generator ZI WBBM 2026 – Subtim I diperbarui
 // DATA: ALL 6 SUBTIMS – UPDATED 26/2/2026, 14.39.38
 // Generator ZI WBBM 2026 – Subtim I diperbarui
+// DATA: ALL 6 SUBTIMS – UPDATED 26/2/2026, 14.41.26
+// Generator ZI WBBM 2026 – Subtim IV diperbarui
 // ============================================================
 const SUBTIMS = [
+
 
 
 
@@ -605,43 +608,37 @@ const SUBTIMS = [
 },
 {
   no:'IV', nama:'Penguatan Akuntabilitas Kinerja', color:'#f59e0b',
-  desc:'Keterlibatan pimpinan, dokumen perencanaan kinerja, IKU, SAKIP, LAKIN',
-  icon:'📈',
+  desc:'SAKIP, Renstra, RKT, pengukuran kinerja berbasis hasil',
+  icon:'📊',
   prioritas: [
-    {no:'1', nama:'Meningkatkan Kapasitas SDM Pengelola Kinerja', uraian:'Pengusulan diklat/pelatihan bagi pengelola kinerja untuk meningkatkan kapasitas SDM yang menangani akuntabilitas kinerja.', output:'ND Usulan Diklat / Sertifikat Pelatihan', waktu:'Januari – Desember 2026', pic:'Subtim IV & Subbagian Umum', status:'ongoing'},
+    {no:'1',nama:'Penyusunan Dokumen SAKIP Berkualitas',uraian:'Penyelesaian Renstra, RKT, PK, dan LKJIP tepat waktu dan berkualitas sesuai standar Kemenkeu.',output:'1. Renstra 2025-2029\n2. RKT 2026\n3. PK 2026\n4. LKJIP 2025',waktu:'Q1 2026',pic:'Subtim IV & Seksi KI',status:'planned'},
+    {no:'2',nama:'Implementasi Cascading Kinerja Menyeluruh',uraian:'Penjenjangan kinerja dari tingkat kantor hingga individu pegawai secara penuh dan terukur.',output:'Matriks Cascading Kinerja & Manual IKU Pegawai',waktu:'Jan – Feb 2026',pic:'Subtim IV',status:'planned'},
   ],
   kategori: [
     {
-      nama:'Keterlibatan Pimpinan', icon:'👑',
+      nama:'Perencanaan Kinerja', icon:'📋',
       items:[
-        {sub:'i.a', uraian:'Pimpinan terlibat langsung dalam penyusunan perencanaan: matriks kerangka kinerja, RKA-KL, IKI, profil dan peta risiko', output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen RKA-KL\n3. ND Pembahasan IKI\n4. PK, SKP, Pakta Integritas\n5. ND Rapat Pembahasan ZI WBBM\n6. Profil dan Peta Risiko', waktu:'Jan – Feb 2026', pic:'Subtim IV, Subbagian Umum & Seksi KI', status:'done'},
-        {sub:'i.b', uraian:'Pimpinan terlibat langsung dalam penetapan kinerja: penyusunan SKP, IKI, penandatanganan, penyampaian', output:'1. ND Penyusunan SKP\n2. ND Pembahasan IKI\n3. Penandatanganan SKP\n4. ND Penyampaian SKP', waktu:'Jan – Feb 2026', pic:'Subtim IV, Subbagian Umum & Seksi KI', status:'done'},
-        {sub:'i.c', uraian:'Pimpinan memantau capaian kinerja setiap bulan dan menindaklanjuti hasil pemantauan', output:'1. ND Penyusunan LAKIN 2025\n2. ND Pelaksanaan DKO, LCK\n3. Penyampaian Hasil DKO', waktu:'Jan – Des 2026', pic:'Subtim IV & Seksi KI', status:'ongoing'},
+        {sub:'i.a',uraian:'Penyusunan Renstra 2025-2029',output:'Dokumen Renstra 2025-2029',waktu:'Januari 2026',pic:'Subtim IV & Seksi KI',status:'done'},
+        {sub:'i.b',uraian:'Penyusunan Rencana Kerja Tahunan (RKT) 2026',output:'Dokumen RKT 2026',waktu:'Januari 2026',pic:'Subtim IV',status:'done'},
+        {sub:'i.c',uraian:'Penyusunan Perjanjian Kinerja (PK) 2026',output:'Dokumen PK Kemenkeu One, Two, Three & Matriks Cascading',waktu:'Jan – Feb 2026',pic:'Subtim IV & Seksi KI',status:'done'}
       ]
     },
     {
-      nama:'Pengelolaan Akuntabilitas Kinerja', icon:'📊',
+      nama:'Pengukuran Kinerja', icon:'📊',
       items:[
-        {sub:'ii.a', uraian:'Penyusunan matriks penyelarasan kerangka kinerja dan Perjanjian Kinerja (PK) / SKP', output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen PK dan SKP', waktu:'Jan – Mar 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'ii.b', uraian:'Perencanaan kinerja berorientasi hasil: matriks cascading, PK/SKP, KEP Tujuan Spesifik Unit', output:'1. Matriks penyelarasan kerangka kinerja\n2. Dokumen PK dan SKP\n3. Dokumen KEP Tujuan Spesifik', waktu:'Jan – Mar 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'ii.c', uraian:'Penyusunan Indikator Kinerja Utama (IKU): SKP, Manual IKU, LPMI', output:'1. SKP, IKI\n2. Manual IKU dan LPMI', waktu:'Jan – Mar 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'ii.d', uraian:'Penyusunan IKI yang memenuhi kriteria SMART', output:'SKP, IKI, Matriks Cascading', waktu:'Jan – Feb 2026', pic:'Subtim IV, Subbagian Umum & Seksi KI', status:'done'},
-        {sub:'ii.e', uraian:'Penyusunan Laporan Capaian Kinerja (LCK) dan LAKIN tepat waktu', output:'1. Laporan Capaian Kinerja\n2. ND Penyusunan LAKIN 2025\n3. LAKIN 2025', waktu:'Jan – Des 2026', pic:'Subtim IV & Seksi KI', status:'ongoing'},
-        {sub:'ii.f', uraian:'Laporan kinerja memberikan informasi kinerja yang lengkap: LCK, LAKIN, KEP NKO 2025', output:'1. Laporan Capaian Kinerja\n2. ND LAKIN 2025\n3. KEP NKO 2025', waktu:'Jan – Des 2026', pic:'Subtim IV & Seksi KI', status:'ongoing'},
-        {sub:'ii.g', uraian:'Sistem informasi kinerja: Satu Kemenkeu, Cehris G-1, Update database DIKENAL', output:'1. Screenshot Satu Kemenkeu & Cehris G-1\n2. Database DIKENAL', waktu:'Jan – Feb 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'ii.h', uraian:'Meningkatkan kapasitas SDM pengelola akuntabilitas kinerja melalui diklat/PPKP', output:'1. Usulan diklat\n2. Sertifikat/lencana diklat/seminar', waktu:'Jan – Des 2026', pic:'Subtim IV & Seksi KI', status:'ongoing'},
+        {sub:'ii.a',uraian:'Pengukuran kinerja berbasis aplikasi (DIKENAL 3.0/Kemenkeu-One)',output:'Laporan Capaian Kinerja Bulanan',waktu:'Setiap bulan 2026',pic:'Seksi KI & Subtim IV',status:'ongoing'},
+        {sub:'ii.b',uraian:'Analisis capaian kinerja dan tindak lanjut perbaikan',output:'Laporan Analisis Kinerja Triwulanan',waktu:'Triwulanan 2026',pic:'Subtim IV',status:'ongoing'}
       ]
     },
     {
-      nama:'Rencana Kerja Reform – Akuntabilitas', icon:'🏆',
+      nama:'Pelaporan Kinerja', icon:'📄',
       items:[
-        {sub:'R-i', uraian:'Mencapai sasaran kinerja 100% atau lebih (20 dari 20 Sasaran Kinerja)', output:'Laporan Kinerja 2025', waktu:'Januari 2026', pic:'Subtim IV & Seksi KI', status:'done'},
-        {sub:'R-ii', uraian:'Memberikan reward and punishment kepada pegawai sesuai capaian kinerja', output:'Penghargaan Pegawai Terbaik', waktu:'Jan – Des 2026', pic:'Subtim IV & Subbagian Umum', status:'ongoing'},
-        {sub:'R-iii', uraian:'Melakukan penjenjangan kinerja mengacu pada kinerja utama organisasi (Kerangka Logis Kinerja)', output:'1. Dokumen PK Kemenkeu Two\n2. Dokumen PK Kemenkeu Three\n3. Matriks Cascading', waktu:'Jan – Feb 2026', pic:'Subtim IV & Seksi KI', status:'done'},
+        {sub:'iii.a',uraian:'Penyusunan LKJIP 2025 tepat waktu',output:'Dokumen LKJIP 2025',waktu:'Januari – Februari 2026',pic:'Subtim IV & Seksi KI',status:'done'},
+        {sub:'iii.b',uraian:'Penyusunan Laporan Capaian Kinerja (LCK) periodik',output:'LCK Triwulanan & LCK Tahunan',waktu:'Triwulanan 2026',pic:'Subtim IV',status:'ongoing'}
       ]
     },
   ],
-  done:7, ongoing:4, planned:0
+  done:4, ongoing:3, planned:2
 },
 {
   no:'V', nama:'Penguatan Pengawasan', color:'#f43f5e',
@@ -769,6 +766,7 @@ const SUBTIMS = [
   ],
   done:0, ongoing:14, planned:5
 }
+
 
 
 
