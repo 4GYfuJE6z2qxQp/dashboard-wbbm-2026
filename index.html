@@ -1182,21 +1182,40 @@ function applyLiveData(liveData) {
       if (typeof live.done === 'number')    subtim.done    = live.done;
       if (typeof live.ongoing === 'number') subtim.ongoing = live.ongoing;
       if (typeof live.planned === 'number') subtim.planned = live.planned;
-      // Update prioritas statuses
-      if (live.prioritas && subtim.prioritas) {
-        live.prioritas.forEach(function(lp) {
-          var p = subtim.prioritas.find(function(x){ return x.no === lp.no; });
-          if (p && lp.status) p.status = lp.status;
+      // Update prioritas — teks + status + tambah/hapus
+      if (live.prioritas) {
+        // Replace seluruh array prioritas dari JSON (support tambah/hapus)
+        subtim.prioritas = live.prioritas.map(function(lp, pi) {
+          var base = (subtim.prioritas && subtim.prioritas[pi]) ? subtim.prioritas[pi] : {};
+          return {
+            no:     lp.no     || base.no     || String(pi+1),
+            nama:   lp.nama   || base.nama   || '',
+            uraian: lp.uraian || base.uraian || '',
+            output: lp.output || base.output || '',
+            waktu:  lp.waktu  || base.waktu  || '',
+            pic:    lp.pic    || base.pic    || '',
+            status: lp.status || base.status || 'planned'
+          };
         });
       }
-      // Update kategori item statuses
+      // Update kategori — teks + status + tambah/hapus item
       if (live.kategori) {
         live.kategori.forEach(function(lk, ki) {
           if (!subtim.kategori[ki]) return;
+          // Update nama kategori
+          if (lk.nama) subtim.kategori[ki].nama = lk.nama;
+          // Replace items dari JSON (support tambah/hapus)
           if (lk.items) {
-            lk.items.forEach(function(li, ii) {
-              if (subtim.kategori[ki].items[ii] && li.status)
-                subtim.kategori[ki].items[ii].status = li.status;
+            subtim.kategori[ki].items = lk.items.map(function(li, ii) {
+              var base = (subtim.kategori[ki].items && subtim.kategori[ki].items[ii]) ? subtim.kategori[ki].items[ii] : {};
+              return {
+                sub:    li.sub    || base.sub    || '',
+                uraian: li.uraian || base.uraian || '',
+                output: li.output || base.output || '',
+                waktu:  li.waktu  || base.waktu  || '',
+                pic:    li.pic    || base.pic    || '',
+                status: li.status || base.status || 'planned'
+              };
             });
           }
         });
@@ -1206,9 +1225,7 @@ function applyLiveData(liveData) {
 }
 
 async function fetchLiveData() {
-  // Coba metode 1: GitHub Contents API (punya CORS header yg benar)
   var success = await tryGitHubAPI();
-  // Fallback metode 2: raw URL
   if (!success) await tryRawURL();
 }
 
