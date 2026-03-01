@@ -619,6 +619,15 @@ const SUBTIMS = [
         {sub:'iv.d', uraian:'Internalisasi ZI kepada seluruh Pejabat/Pegawai:\n1. Pencanangan ZI (Upacara)\n2. Pelatihan E-learning ZI bagi seluruh pegawai\n3. Internalisasi ZI bagi PPNPN\n4. Internalisasi ZI bagi keluarga Pegawai\n5. Survey ZI kepada seluruh Pejabat/Pegawai', output:'Dokumentasi dan laporan per kegiatan internalisasi', waktu:'Q1 – Q4 2026', pic:'Subtim I & Subbagian Umum', status:'ongoing'},
       ]
     },
+    {
+      nama:'Rencana Kerja Reform – Manajemen Perubahan', icon:'🔄',
+      items:[
+        {sub:'R-i', uraian:'Menerapkan kebijakan "One Agent One Innovation" di mana setiap Agen Perubahan merancang satu proyek perubahan konkret dan terukur', output:'1. ND Penyampaian Rencana Kerja Agen Perubahan\n2. Laporan Implementasi Agen Perubahan', waktu:'Feb – Nov 2026', pic:'Agen Perubahan', status:'planned'},
+        {sub:'R-ii', uraian:'Melakukan pelembagaan inovasi Agen Perubahan ke dalam Standar Prosedur atau sistem yang berlaku', output:'Dokumen SOP / Fitur Aplikasi / SK Penetapan Inovasi', waktu:'November 2026', pic:'Subtim I & Seksi KI', status:'planned'},
+        {sub:'R-iii', uraian:'Melakukan monitoring berkala untuk memastikan capaian kinerja WBK/WBBM', output:'Laporan Capaian Kinerja (LCK) WBK WBBM', waktu:'Desember 2026', pic:'Sekretariat Tim & Subtim I', status:'planned'},
+        {sub:'R-iv', uraian:'Melakukan internalisasi budaya kerja dan nilai-nilai organisasi secara berkala', output:'1. Laporan Internalisasi / CMC setiap bulan\n2. Standar Perilaku Pegawai', waktu:'Jan – Des 2026', pic:'Subtim I & Seksi KI', status:'planned'},
+      ]
+    },
   ],
   done:4, ongoing:9, planned:1
 },
@@ -1178,13 +1187,11 @@ function applyLiveData(liveData) {
     liveData.subtims.forEach(function(live) {
       var subtim = SUBTIMS.find(function(s){ return s.no === live.no; });
       if (!subtim) return;
-      // Update counts
       if (typeof live.done === 'number')    subtim.done    = live.done;
       if (typeof live.ongoing === 'number') subtim.ongoing = live.ongoing;
       if (typeof live.planned === 'number') subtim.planned = live.planned;
-      // Update prioritas — teks + status + tambah/hapus
+      // Update prioritas — full text + status + support tambah/hapus
       if (live.prioritas) {
-        // Replace seluruh array prioritas dari JSON (support tambah/hapus)
         subtim.prioritas = live.prioritas.map(function(lp, pi) {
           var base = (subtim.prioritas && subtim.prioritas[pi]) ? subtim.prioritas[pi] : {};
           return {
@@ -1198,13 +1205,11 @@ function applyLiveData(liveData) {
           };
         });
       }
-      // Update kategori — teks + status + tambah/hapus item
+      // Update kategori — full text + status + support tambah/hapus item
       if (live.kategori) {
         live.kategori.forEach(function(lk, ki) {
           if (!subtim.kategori[ki]) return;
-          // Update nama kategori
           if (lk.nama) subtim.kategori[ki].nama = lk.nama;
-          // Replace items dari JSON (support tambah/hapus)
           if (lk.items) {
             subtim.kategori[ki].items = lk.items.map(function(li, ii) {
               var base = (subtim.kategori[ki].items && subtim.kategori[ki].items[ii]) ? subtim.kategori[ki].items[ii] : {};
@@ -1228,47 +1233,36 @@ async function fetchLiveData() {
   var success = await tryGitHubAPI();
   if (!success) await tryRawURL();
 }
-
 async function tryGitHubAPI() {
   try {
     var url = 'https://api.github.com/repos/'
-      + DASH_CONFIG.GITHUB_OWNER + '/'
-      + DASH_CONFIG.GITHUB_REPO  + '/contents/'
-      + DASH_CONFIG.DATA_FILE
-      + '?ref=' + DASH_CONFIG.GITHUB_BRANCH
-      + '&t=' + Date.now();
+      + DASH_CONFIG.GITHUB_OWNER + '/' + DASH_CONFIG.GITHUB_REPO
+      + '/contents/' + DASH_CONFIG.DATA_FILE
+      + '?ref=' + DASH_CONFIG.GITHUB_BRANCH + '&t=' + Date.now();
     var res = await fetch(url, { headers: { 'Accept': 'application/vnd.github.v3.raw' } });
     if (res.ok) {
       var data = await res.json();
-      applyLiveData(data);
-      showUpdatedBadge(data);
-      console.log('✅ Data loaded via GitHub API');
-      return true;
+      applyLiveData(data); showUpdatedBadge(data);
+      console.log('✅ Data loaded via GitHub API'); return true;
     }
   } catch(e) { console.log('GitHub API gagal, coba raw URL...'); }
   return false;
 }
-
 async function tryRawURL() {
   try {
     var url = 'https://raw.githubusercontent.com/'
-      + DASH_CONFIG.GITHUB_OWNER + '/'
-      + DASH_CONFIG.GITHUB_REPO  + '/'
-      + DASH_CONFIG.GITHUB_BRANCH + '/'
-      + DASH_CONFIG.DATA_FILE
+      + DASH_CONFIG.GITHUB_OWNER + '/' + DASH_CONFIG.GITHUB_REPO
+      + '/' + DASH_CONFIG.GITHUB_BRANCH + '/' + DASH_CONFIG.DATA_FILE
       + '?nocache=' + Date.now();
     var res = await fetch(url);
     if (res.ok) {
       var data = await res.json();
-      applyLiveData(data);
-      showUpdatedBadge(data);
-      console.log('✅ Data loaded via raw URL');
-      return true;
+      applyLiveData(data); showUpdatedBadge(data);
+      console.log('✅ Data loaded via raw URL'); return true;
     }
   } catch(e) { console.log('Menggunakan data offline/bawaan.'); }
   return false;
 }
-
 function showUpdatedBadge(data) {
   if (data.lastUpdated) {
     var el = document.getElementById('last-updated-badge');
