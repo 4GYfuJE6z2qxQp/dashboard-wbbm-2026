@@ -1,7 +1,7 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-01T09:58:48.547Z",
-  "updatedBy": "Subtim V",
+  "lastUpdated": "2026-03-01T10:19:18.963Z",
+  "updatedBy": "Subtim I",
   "subtims": [
     {
       "no": "II",
@@ -975,14 +975,13 @@
     },
     {
       "no": "I",
-      "nama": "Manajemen Perubahan",
-      "color": "#0099cc",
-      "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ",
-      "desc": "Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi",
+      "done": 4,
+      "ongoing": 14,
+      "planned": 1,
       "prioritas": [
         {
           "no": "1",
-          "nama": "Program Akselerasi \"1 Agent 1 Innovation\"",
+          "nama": "Program Akselerasi ",
           "uraian": "Agen Perubahan merancang & mengimplementasikan satu proyek perubahan yang konkret dan terukur dampaknya pada kinerja/layanan.",
           "output": "Dokumen Proposal & Laporan Implementasi Agen Perubahan",
           "waktu": "Feb - Nov",
@@ -991,16 +990,16 @@
         },
         {
           "no": "2",
-          "nama": "Program \"Leaders Serve\" (Pimpinan Melayani)",
+          "nama": "Program ",
           "uraian": "Pejabat Eselon IV/III  turun langsung memberikan pelayanan di front desk/lapangan selama 1 hari dalam periode tertentu sebagai wujud keteladanan nyata.",
-          "output": "ND Usulan Program \"Leaders Serve\" / dokumentasi pelaksanaan",
+          "output": "ND Usulan Program ",
           "waktu": "Berkala",
           "pic": "Kepala Kantor / Pejabat",
           "status": "upcoming"
         },
         {
           "no": "3",
-          "nama": "Kampanye \"Family Integrity\"",
+          "nama": "Kampanye ",
           "uraian": "Penyampaian pesan integritas dari Kepala Kantor kepada keluarga pegawai untuk membangun benteng moral dari rumah.",
           "output": "Dokumentasi pelaksanaan kegiatan",
           "waktu": "sd Q1",
@@ -1011,7 +1010,6 @@
       "kategori": [
         {
           "nama": "Penyusunan Tim Kerja",
-          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¥",
           "items": [
             {
               "sub": "i.a",
@@ -1033,7 +1031,6 @@
         },
         {
           "nama": "Rencana Pembangunan Zona Integritas",
-          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -1063,7 +1060,6 @@
         },
         {
           "nama": "Pemantauan dan Evaluasi Pembangunan WBK/WBBM",
-          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "iii.a",
@@ -1093,7 +1089,6 @@
         },
         {
           "nama": "Perubahan pola pikir dan budaya kerja",
-          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡",
           "items": [
             {
               "sub": "iv.a",
@@ -1130,8 +1125,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Manajemen Perubahan",
-          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ",
+          "nama": "Rencana Kerja Reform 2026 Manajemen Perubahan",
           "items": [
             {
               "sub": "R-i",
@@ -1167,10 +1161,7 @@
             }
           ]
         }
-      ],
-      "done": 4,
-      "ongoing": 12,
-      "planned": 0
+      ]
     }
   ]
 }
