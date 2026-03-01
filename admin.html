@@ -12,8 +12,8 @@
 // ================================================================
 // ✅ AMAN: tidak ada token di sini — token diinput browser & simpan di localStorage
 const CONFIG = {
-  GITHUB_OWNER  : '4GYfuJE6z2qxQp',   // ← ganti
-  GITHUB_REPO   : '4J77843jkoB7rK',   // ← ganti
+  GITHUB_OWNER  : '4GYfuJE6z2qxQp',
+  GITHUB_REPO   : 'dashboard-wbbm-2026',
   GITHUB_BRANCH : 'main',
   DATA_FILE     : 'data.json',
   PINS: {
@@ -266,6 +266,65 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   display:inline-block;margin-right:4px;display:none;}
 .has-changes .unsaved-dot{display:inline-block;}
 
+/* ── EDITABLE FIELDS ── */
+.field-edit{width:100%;padding:6px 10px;border:1.5px solid var(--bd);border-radius:8px;
+  font-size:12px;font-family:'Bricolage Grotesque',sans-serif;background:#fff;
+  color:var(--tx);outline:none;transition:border-color .2s;resize:vertical;}
+.field-edit:focus{border-color:#0099cc;background:#f0f9ff;}
+.field-edit.f-uraian{min-height:56px;}
+.field-edit.f-output{min-height:56px;}
+.field-label{font-size:10px;font-weight:700;color:var(--mt);text-transform:uppercase;
+  letter-spacing:.5px;margin-bottom:4px;}
+.field-group{margin-bottom:8px;}
+.item-row-edit{background:#f8fafc;border:1px solid var(--bd);border-radius:10px;
+  padding:12px;margin-bottom:10px;position:relative;}
+.item-row-edit:last-child{margin-bottom:0;}
+.item-edit-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.item-sub-badge{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;
+  color:#0099cc;background:#e0f2fe;border:1px solid #7dd3fc;
+  padding:3px 8px;border-radius:5px;flex-shrink:0;}
+.item-sub-input{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;
+  color:#0099cc;background:#e0f2fe;border:1.5px solid #7dd3fc;
+  padding:3px 8px;border-radius:5px;width:70px;outline:none;}
+.item-sub-input:focus{border-color:#0099cc;}
+.btn-del-item{margin-left:auto;background:var(--red-bg);color:var(--red);
+  border:1px solid var(--red-bd);border-radius:7px;padding:4px 10px;
+  font-size:11px;font-weight:700;cursor:pointer;flex-shrink:0;transition:all .2s;}
+.btn-del-item:hover{background:#fecaca;}
+.btn-add-item{width:100%;padding:8px;background:#f0fdf4;color:var(--green);
+  border:1.5px dashed var(--green-bd);border-radius:8px;
+  font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;
+  transition:all .2s;font-family:'Bricolage Grotesque',sans-serif;}
+.btn-add-item:hover{background:var(--green-bg);}
+.item-fields-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.item-fields-grid .field-group:first-child{grid-column:1/-1;}
+
+/* ── PRIO EDIT ── */
+.prio-card-edit{background:#f8fafc;border:1.5px solid var(--bd);border-radius:10px;
+  padding:12px 14px;margin-bottom:10px;position:relative;overflow:hidden;}
+.prio-card-edit::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:var(--c,#0099cc);}
+.btn-del-prio{background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd);
+  border-radius:7px;padding:4px 10px;font-size:11px;font-weight:700;
+  cursor:pointer;transition:all .2s;}
+.btn-del-prio:hover{background:#fecaca;}
+.btn-add-prio{width:100%;padding:8px;background:#eff6ff;color:#2563eb;
+  border:1.5px dashed #93c5fd;border-radius:8px;
+  font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;
+  transition:all .2s;font-family:'Bricolage Grotesque',sans-serif;}
+.btn-add-prio:hover{background:#dbeafe;}
+
+/* ── SECTION EDIT HEADER ── */
+.section-head-edit{display:flex;align-items:center;gap:8px;padding:10px 14px;
+  background:#f1f5f9;border-bottom:1px solid var(--bd);}
+.section-name-input{flex:1;font-size:13px;font-weight:700;padding:4px 8px;
+  border:1.5px solid transparent;border-radius:7px;background:transparent;
+  outline:none;transition:all .2s;font-family:'Bricolage Grotesque',sans-serif;}
+.section-name-input:focus{border-color:#0099cc;background:#fff;}
+.btn-toggle-section{background:none;border:none;cursor:pointer;color:var(--mt);
+  font-size:12px;padding:4px 8px;border-radius:6px;transition:all .2s;}
+.btn-toggle-section:hover{background:#e2e8f0;}
+
 /* ── RESPONSIVE ── */
 @media(max-width:600px){
   .stats-grid{grid-template-columns:repeat(2,1fr);}
@@ -330,18 +389,6 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
     <div class="setup-logo">🔑</div>
     <h2>Setup GitHub Token</h2>
     <p class="setup-subtitle">Token hanya tersimpan di browser Anda.<br>Tidak pernah ada di kode atau server.</p>
-
-    <div class="steps-box">
-      <div class="steps-title">Cara membuat token:</div>
-      <ol>
-        <li>Buka <code>github.com</code> → login akun repo ZI</li>
-        <li>Klik foto profil → <code>Settings</code></li>
-        <li><code>Developer settings</code> → <code>Personal access tokens</code> → <code>Fine-grained</code></li>
-        <li>Klik <code>Generate new token</code></li>
-        <li>Pilih repo ZI → <code>Contents: Read and Write</code></li>
-        <li>Klik <code>Generate</code> → copy token</li>
-      </ol>
-    </div>
 
     <div class="form-group">
       <label>Paste Token di sini</label>
@@ -410,7 +457,7 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
       </div>
       <div class="hdr-right">
         <div id="tok-status-chip" class="tok-chip" onclick="showChangeToken()" title="Klik untuk ganti token"></div>
-        <button class="btn btn-outline btn-sm" onclick="refreshData()">↻ Refresh</button>
+        <button class="btn btn-outline btn-sm" onclick="refreshData()">↻ Ambil Data Terbaru</button>
         <button class="btn btn-danger btn-sm" onclick="doLogout()">Keluar</button>
       </div>
     </div>
@@ -995,86 +1042,293 @@ function updateStats(subtimNo){
 }
 
 // ============================================================
-// RENDER FORM
+// RENDER FORM — FULL EDITABLE (status + teks + tambah/hapus)
 // ============================================================
 function renderForm(subtimNo){
   var schema = SUBTIMS_SCHEMA.find(s=>s.no===subtimNo);
   if(!schema) return;
   var current = getCurrentStatuses(subtimNo);
+  // Merge teks dari liveData jika ada
+  var merged = getMergedSchema(subtimNo);
   var color = schema.color;
   var html='';
 
   // --- PRIORITAS ---
-  if(schema.prioritas && schema.prioritas.length>0){
+  if(merged.prioritas && merged.prioritas.length >= 0){
     html+=`<div class="section-card" style="border-top:4px solid ${color}">`;
     html+=`<div class="section-head open" onclick="toggleSection(this)">
       <span class="section-icon">🎯</span>
       <span class="section-title">Rencana Kerja Prioritas</span>
-      <span class="section-count" style="background:${color}22;color:${color};border-color:${color}55">${schema.prioritas.length} prioritas</span>
+      <span class="section-count" style="background:${color}22;color:${color};border-color:${color}55" id="prio-count-badge">${merged.prioritas.length} prioritas</span>
       <span class="section-arr">▼</span>
     </div>`;
     html+=`<div class="section-body open" id="sec-prio-${subtimNo}">`;
-    schema.prioritas.forEach((p,pi)=>{
-      var curStatus = current.prioritas[pi]?.status||'planned';
-      html+=`<div class="prio-card" style="--c:${color}">
-        <div class="prio-no">Prioritas #${p.no}</div>
-        <div class="prio-nama">${esc(p.nama)}</div>
-        <div class="prio-row">
-          <div class="prio-label">⏱ ${esc(p.waktu)} · 👤 ${esc(p.pic)}</div>
-          <select class="status-select item-status-sel ${statusClass(curStatus)}"
-            data-type="prio" data-subtim="${subtimNo}" data-pi="${pi}"
-            onchange="onStatusChange(this)">
-            ${STATUS_OPTIONS.map(o=>`<option value="${o.value}" ${curStatus===o.value?'selected':''}>${o.label}</option>`).join('')}
-          </select>
-        </div>
-      </div>`;
+    html+=`<div id="prio-list">`;
+    merged.prioritas.forEach((p,pi)=>{
+      html += renderPrioCard(p, pi, color, subtimNo);
     });
+    html+=`</div>`;
+    html+=`<button class="btn-add-prio" onclick="addPrio('${subtimNo}','${color}')">+ Tambah Prioritas</button>`;
     html+='</div></div>';
   }
 
   // --- KATEGORI ---
-  schema.kategori.forEach((kat,ki)=>{
-    var katColor=color;
-    html+=`<div class="section-card" style="border-top:4px solid ${katColor}">`;
-    html+=`<div class="section-head" onclick="toggleSection(this)">
-      <span class="section-icon">${kat.icon}</span>
-      <span class="section-title">${esc(kat.nama)}</span>
-      <span class="section-count" style="background:${katColor}22;color:${katColor};border-color:${katColor}55">${kat.items.length} item</span>
-      <span class="section-arr">▼</span>
+  merged.kategori.forEach((kat,ki)=>{
+    html+=`<div class="section-card" style="border-top:4px solid ${color}" id="kat-card-${ki}">`;
+    html+=`<div class="section-head-edit">
+      <span class="section-icon">${kat.icon||'📋'}</span>
+      <input class="section-name-input" value="${esc(kat.nama)}" data-ki="${ki}"
+        placeholder="Nama kategori..." onchange="onSectionNameChange(this)" oninput="markChanged()">
+      <button class="btn-toggle-section" onclick="toggleSectionByKi(${ki})">▼</button>
     </div>`;
     html+=`<div class="section-body" id="sec-${subtimNo}-${ki}">`;
+    html+=`<div id="items-list-${ki}">`;
     kat.items.forEach((item,ii)=>{
-      var curStatus = current.kategori[ki]?.items[ii]?.status || 'planned';
-      html+=`<div class="item-row">
-        <div class="item-sub">${esc(item.sub)}</div>
-        <div class="item-info">
-          <div class="item-uraian">${esc(item.uraian)}</div>
-          <div class="item-meta">
-            <span>⏱ ${esc(item.waktu)}</span>
-            <span>👤 ${esc(item.pic)}</span>
-          </div>
-        </div>
-        <div class="item-status-wrap">
-          <select class="status-select item-status-sel ${statusClass(curStatus)}"
-            data-type="item" data-subtim="${subtimNo}" data-ki="${ki}" data-ii="${ii}"
-            onchange="onStatusChange(this)">
-            ${STATUS_OPTIONS.map(o=>`<option value="${o.value}" ${curStatus===o.value?'selected':''}>${o.label}</option>`).join('')}
-          </select>
-        </div>
-      </div>`;
+      var curStatus = current.kategori[ki]?.items[ii]?.status || item.status || 'planned';
+      html += renderItemRow(item, ki, ii, curStatus, color, subtimNo);
     });
+    html+=`</div>`;
+    html+=`<button class="btn-add-item" onclick="addItem(${ki},'${subtimNo}','${color}')">+ Tambah Kegiatan</button>`;
     html+='</div></div>';
   });
 
   document.getElementById('form-content').innerHTML=html;
   updateStats(subtimNo);
-  // Open first section
-  var firstHead=document.querySelector('.section-head');
-  var firstBody=document.querySelector('.section-body');
-  if(firstHead&&firstBody){ firstHead.classList.add('open'); firstBody.classList.add('open'); }
+}
+
+function renderPrioCard(p, pi, color, subtimNo){
+  var curStatus = p.status || 'planned';
+  return `<div class="prio-card-edit" style="--c:${color}" id="prio-item-${pi}">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+      <span style="font-size:10px;font-family:'IBM Plex Mono';color:var(--mt)">Prioritas #${pi+1}</span>
+      <button class="btn-del-prio" onclick="delPrio(${pi})">🗑 Hapus</button>
+    </div>
+    <div class="field-group">
+      <div class="field-label">Nama Program</div>
+      <input class="field-edit" type="text" value="${esc(p.nama)}"
+        data-pfield="nama" data-pi="${pi}" placeholder="Nama program prioritas..."
+        oninput="markChanged()">
+    </div>
+    <div class="field-group">
+      <div class="field-label">Uraian / Deskripsi</div>
+      <textarea class="field-edit f-uraian" data-pfield="uraian" data-pi="${pi}"
+        placeholder="Deskripsi singkat program..." oninput="markChanged()">${esc(p.uraian||'')}</textarea>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div class="field-group">
+        <div class="field-label">Output / Bukti</div>
+        <input class="field-edit" type="text" value="${esc(p.output||'')}"
+          data-pfield="output" data-pi="${pi}" placeholder="Dokumen output..."
+          oninput="markChanged()">
+      </div>
+      <div class="field-group">
+        <div class="field-label">Waktu</div>
+        <input class="field-edit" type="text" value="${esc(p.waktu||'')}"
+          data-pfield="waktu" data-pi="${pi}" placeholder="Periode waktu..."
+          oninput="markChanged()">
+      </div>
+      <div class="field-group">
+        <div class="field-label">PIC</div>
+        <input class="field-edit" type="text" value="${esc(p.pic||'')}"
+          data-pfield="pic" data-pi="${pi}" placeholder="Penanggung jawab..."
+          oninput="markChanged()">
+      </div>
+    </div>
+    <div class="field-group" style="margin-top:4px">
+      <div class="field-label">Status</div>
+      <select class="status-select item-status-sel ${statusClass(curStatus)}"
+        data-type="prio" data-subtim="${subtimNo}" data-pi="${pi}"
+        onchange="onStatusChange(this)">
+        ${STATUS_OPTIONS.map(o=>`<option value="${o.value}" ${curStatus===o.value?'selected':''}>${o.label}</option>`).join('')}
+      </select>
+    </div>
+  </div>`;
+}
+
+function renderItemRow(item, ki, ii, curStatus, color, subtimNo){
+  return `<div class="item-row-edit" id="item-${ki}-${ii}">
+    <div class="item-edit-header">
+      <input class="item-sub-input" type="text" value="${esc(item.sub)}"
+        data-field="sub" data-ki="${ki}" data-ii="${ii}"
+        placeholder="sub" oninput="markChanged()">
+      <button class="btn-del-item" onclick="delItem(${ki},${ii})">🗑 Hapus</button>
+    </div>
+    <div class="item-fields-grid">
+      <div class="field-group" style="grid-column:1/-1">
+        <div class="field-label">Uraian / Kegiatan</div>
+        <textarea class="field-edit f-uraian" data-field="uraian" data-ki="${ki}" data-ii="${ii}"
+          placeholder="Uraian kegiatan..." oninput="markChanged()">${esc(item.uraian||'')}</textarea>
+      </div>
+      <div class="field-group" style="grid-column:1/-1">
+        <div class="field-label">Output / Dokumen Bukti</div>
+        <textarea class="field-edit f-output" data-field="output" data-ki="${ki}" data-ii="${ii}"
+          placeholder="Output atau dokumen bukti..." oninput="markChanged()">${esc(item.output||'')}</textarea>
+      </div>
+      <div class="field-group">
+        <div class="field-label">Waktu</div>
+        <input class="field-edit" type="text" value="${esc(item.waktu||'')}"
+          data-field="waktu" data-ki="${ki}" data-ii="${ii}"
+          placeholder="Periode waktu..." oninput="markChanged()">
+      </div>
+      <div class="field-group">
+        <div class="field-label">PIC</div>
+        <input class="field-edit" type="text" value="${esc(item.pic||'')}"
+          data-field="pic" data-ki="${ki}" data-ii="${ii}"
+          placeholder="Penanggung jawab..." oninput="markChanged()">
+      </div>
+    </div>
+    <div class="field-group" style="margin-top:4px">
+      <div class="field-label">Status</div>
+      <select class="status-select item-status-sel ${statusClass(curStatus)}"
+        data-type="item" data-subtim="${subtimNo}" data-ki="${ki}" data-ii="${ii}"
+        onchange="onStatusChange(this)">
+        ${STATUS_OPTIONS.map(o=>`<option value="${o.value}" ${curStatus===o.value?'selected':''}>${o.label}</option>`).join('')}
+      </select>
+    </div>
+  </div>`;
+}
+
+function toggleSectionByKi(ki){
+  var head = document.querySelector(`#kat-card-${ki} .section-head-edit`);
+  var body = document.getElementById(`sec-${currentSubtimNo}-${ki}`);
+  if(!body) return;
+  var isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+}
+
+function onSectionNameChange(input){ markChanged(); }
+
+function markChanged(){
+  hasChanges=true;
+  document.getElementById('unsaved-dot').style.display='inline-block';
+}
+
+// ============================================================
+// ADD / DELETE ITEMS & PRIORITAS
+// ============================================================
+function addItem(ki, subtimNo, color){
+  var list = document.getElementById(`items-list-${ki}`);
+  var existing = list.querySelectorAll('.item-row-edit');
+  var ii = existing.length;
+  var newItem = {sub:`${ki+1}.${String.fromCharCode(97+ii)}`, uraian:'', output:'', waktu:'', pic:'', status:'planned'};
+  var div = document.createElement('div');
+  div.innerHTML = renderItemRow(newItem, ki, ii, 'planned', color, subtimNo);
+  list.appendChild(div.firstElementChild);
+  markChanged();
+  updateStats(subtimNo);
+}
+
+function delItem(ki, ii){
+  if(!confirm('Hapus kegiatan ini?')) return;
+  var el = document.getElementById(`item-${ki}-${ii}`);
+  if(el){ el.remove(); markChanged(); updateStats(currentSubtimNo); }
+  reindexItems(ki);
+}
+
+function reindexItems(ki){
+  var list = document.getElementById(`items-list-${ki}`);
+  if(!list) return;
+  list.querySelectorAll('.item-row-edit').forEach((row, newii)=>{
+    row.id = `item-${ki}-${newii}`;
+    row.querySelectorAll('[data-ii]').forEach(el=>el.dataset.ii=newii);
+  });
+}
+
+function addPrio(subtimNo, color){
+  var schema = SUBTIMS_SCHEMA.find(s=>s.no===subtimNo);
+  var list = document.getElementById('prio-list');
+  var pi = list.querySelectorAll('.prio-card-edit').length;
+  var newPrio = {no:String(pi+1), nama:'', uraian:'', output:'', waktu:'', pic:'', status:'planned'};
+  var div = document.createElement('div');
+  div.innerHTML = renderPrioCard(newPrio, pi, color, subtimNo);
+  list.appendChild(div.firstElementChild);
+  // Update badge count
+  var badge = document.getElementById('prio-count-badge');
+  if(badge) badge.textContent = (pi+1) + ' prioritas';
+  markChanged();
+}
+
+function delPrio(pi){
+  if(!confirm('Hapus prioritas ini?')) return;
+  var el = document.getElementById(`prio-item-${pi}`);
+  if(el){ el.remove(); markChanged(); }
+  reindexPrio();
+}
+
+function reindexPrio(){
+  var list = document.getElementById('prio-list');
+  if(!list) return;
+  list.querySelectorAll('.prio-card-edit').forEach((card, newpi)=>{
+    card.id = `prio-item-${newpi}`;
+    card.querySelectorAll('[data-pi]').forEach(el=>el.dataset.pi=newpi);
+    // update label
+    var label = card.querySelector('span[style*="Prioritas"]');
+    if(label) label.textContent = `Prioritas #${newpi+1}`;
+  });
+  var badge = document.getElementById('prio-count-badge');
+  if(badge){
+    var count = list.querySelectorAll('.prio-card-edit').length;
+    badge.textContent = count + ' prioritas';
+  }
+}
+
+// ============================================================
+// GET MERGED SCHEMA (schema + liveData teks)
+// ============================================================
+function getMergedSchema(subtimNo){
+  var schema = SUBTIMS_SCHEMA.find(s=>s.no===subtimNo);
+  if(!schema) return null;
+  // Deep clone schema
+  var merged = JSON.parse(JSON.stringify(schema));
+  if(!liveData || !liveData.subtims) return merged;
+  var live = liveData.subtims.find(s=>s.no===subtimNo);
+  if(!live) return merged;
+  // Merge prioritas teks dari liveData
+  if(live.prioritas){
+    live.prioritas.forEach((lp,pi)=>{
+      if(merged.prioritas[pi]){
+        if(lp.nama)   merged.prioritas[pi].nama   = lp.nama;
+        if(lp.uraian) merged.prioritas[pi].uraian = lp.uraian;
+        if(lp.output) merged.prioritas[pi].output = lp.output;
+        if(lp.waktu)  merged.prioritas[pi].waktu  = lp.waktu;
+        if(lp.pic)    merged.prioritas[pi].pic    = lp.pic;
+        if(lp.status) merged.prioritas[pi].status = lp.status;
+      } else if(pi >= merged.prioritas.length){
+        merged.prioritas.push(lp); // tambahan dari admin
+      }
+    });
+    // Jika liveData punya lebih sedikit, truncate tidak dilakukan — biarkan schema
+  }
+  // Merge kategori teks dari liveData
+  if(live.kategori){
+    live.kategori.forEach((lk,ki)=>{
+      if(!merged.kategori[ki]) return;
+      if(lk.nama) merged.kategori[ki].nama = lk.nama;
+      if(lk.items){
+        lk.items.forEach((li,ii)=>{
+          if(merged.kategori[ki].items[ii]){
+            if(li.sub)    merged.kategori[ki].items[ii].sub    = li.sub;
+            if(li.uraian) merged.kategori[ki].items[ii].uraian = li.uraian;
+            if(li.output) merged.kategori[ki].items[ii].output = li.output;
+            if(li.waktu)  merged.kategori[ki].items[ii].waktu  = li.waktu;
+            if(li.pic)    merged.kategori[ki].items[ii].pic    = li.pic;
+            if(li.status) merged.kategori[ki].items[ii].status = li.status;
+          } else if(ii >= merged.kategori[ki].items.length){
+            merged.kategori[ki].items.push(li); // item tambahan
+          }
+        });
+        // Jika liveData punya lebih sedikit item, sync ke jumlah liveData
+        if(lk.items.length < merged.kategori[ki].items.length){
+          merged.kategori[ki].items = merged.kategori[ki].items.slice(0, lk.items.length);
+        }
+      }
+    });
+  }
+  return merged;
 }
 
 function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function unesc(s){ return (s||'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>'); }
 
 function toggleSection(head){
   var bodyId=head.nextElementSibling?.id;
@@ -1090,7 +1344,6 @@ function toggleSection(head){
 // STATUS CHANGE
 // ============================================================
 function onStatusChange(sel){
-  // Update visual class
   sel.className='status-select item-status-sel '+statusClass(sel.value);
   hasChanges=true;
   document.getElementById('unsaved-dot').style.display='inline-block';
@@ -1098,44 +1351,77 @@ function onStatusChange(sel){
 }
 
 // ============================================================
-// COLLECT FORM DATA
+// COLLECT FORM DATA — includes teks, tambah/hapus item
 // ============================================================
 function collectFormData(subtimNo){
   var schema=SUBTIMS_SCHEMA.find(s=>s.no===subtimNo);
   var sels=document.querySelectorAll('.item-status-sel');
   var prioStatuses={};
   var katStatuses={};
-  var done=0,ongoing=0,planned=0;
+  var done=0,ongoing=0,planned=0,upcoming=0;
 
   sels.forEach(sel=>{
-    var type=sel.dataset.type;
     var st=sel.value;
     if(st==='done') done++;
     else if(st==='ongoing') ongoing++;
+    else if(st==='upcoming') upcoming++;
     else planned++;
-
-    if(type==='prio'){
-      prioStatuses[sel.dataset.pi]=st;
-    } else if(type==='item'){
-      var ki=parseInt(sel.dataset.ki);
-      var ii=parseInt(sel.dataset.ii);
-      if(!katStatuses[ki]) katStatuses[ki]=[];
-      katStatuses[ki][ii]=st;
-    }
+    if(sel.dataset.type==='prio') prioStatuses[sel.dataset.pi]=st;
   });
 
-  var result={
+  // Collect prioritas dari DOM
+  var prioCards = document.querySelectorAll('#prio-list .prio-card-edit');
+  var prioResult = [];
+  prioCards.forEach((card,pi)=>{
+    var get = (field) => card.querySelector(`[data-pfield="${field}"]`)?.value || '';
+    prioResult.push({
+      no: String(pi+1),
+      nama:   get('nama'),
+      uraian: get('uraian'),
+      output: get('output'),
+      waktu:  get('waktu'),
+      pic:    get('pic'),
+      status: prioStatuses[pi] || 'planned'
+    });
+  });
+
+  // Collect kategori dari DOM
+  var katResult = [];
+  var schema = SUBTIMS_SCHEMA.find(s=>s.no===subtimNo);
+  schema.kategori.forEach((kat,ki)=>{
+    // Nama kategori
+    var nameInput = document.querySelector(`#kat-card-${ki} .section-name-input`);
+    var katNama = nameInput ? nameInput.value : kat.nama;
+
+    // Items dalam kategori ini
+    var itemRows = document.querySelectorAll(`#items-list-${ki} .item-row-edit`);
+    var itemsResult = [];
+    itemRows.forEach((row,ii)=>{
+      var get = (field) => {
+        var el = row.querySelector(`[data-field="${field}"][data-ki="${ki}"]`);
+        return el ? (el.tagName==='TEXTAREA' ? el.value : el.value) : '';
+      };
+      var statusSel = row.querySelector('.item-status-sel');
+      itemsResult.push({
+        sub:    get('sub') || `${ki+1}.${String.fromCharCode(97+ii)}`,
+        uraian: get('uraian'),
+        output: get('output'),
+        waktu:  get('waktu'),
+        pic:    get('pic'),
+        status: statusSel ? statusSel.value : 'planned'
+      });
+    });
+    katResult.push({ nama: katNama, items: itemsResult });
+  });
+
+  return {
     no: subtimNo,
     done: done,
     ongoing: ongoing,
-    planned: planned,
-    prioritas: (schema.prioritas||[]).map((p,pi)=>({no:p.no, status:prioStatuses[pi]||'planned'})),
-    kategori: schema.kategori.map((kat,ki)=>({
-      nama: kat.nama,
-      items: kat.items.map((item,ii)=>({sub:item.sub, status:(katStatuses[ki]&&katStatuses[ki][ii])||'planned'}))
-    }))
+    planned: planned + upcoming,
+    prioritas: prioResult,
+    kategori: katResult
   };
-  return result;
 }
 
 // ============================================================
