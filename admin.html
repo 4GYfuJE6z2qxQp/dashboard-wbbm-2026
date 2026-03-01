@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+<title>Admin Input ZI – KPPBC TMP Tanjung Emas 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>
+// ================================================================
+// ⚙️  KONFIGURASI — EDIT BAGIAN INI SEBELUM DEPLOY
+// ================================================================
+// ✅ AMAN: tidak ada token di sini — token diinput browser & simpan di localStorage
+const CONFIG = {
+  GITHUB_OWNER  : 'username-github-anda',   // ← ganti
+  GITHUB_REPO   : 'nama-repository-anda',   // ← ganti
+  GITHUB_BRANCH : 'main',
+  DATA_FILE     : 'data.json',
+  PINS: {
+    'I'    : '1111',
+    'II'   : '2222',
+    'III'  : '3333',
+    'IV'   : '4444',
+    'V'    : '5555',
+    'VI'   : '6666',
+    'ADMIN': 'admin999'
+  }
+};
+
+// Token helper — disimpan di localStorage browser, TIDAK di kode
+const TOKEN_KEY = 'zi_gh_token';
+function getToken(){ return localStorage.getItem(TOKEN_KEY) || ''; }
+function saveToken(t){ localStorage.setItem(TOKEN_KEY, t.trim()); }
+function clearToken(){ localStorage.removeItem(TOKEN_KEY); }
+// ================================================================
+</script>
+
+<style>
+:root{
+  --bg:#f4f6fa;--card:#ffffff;--bd:#e2e8f0;--bd2:#cbd5e1;
+  --tx:#0f172a;--mt:#64748b;--mt2:#94a3b8;
+  --green:#16a34a;--green-bg:#dcfce7;--green-bd:#86efac;
+  --blue:#0369a1;--blue-bg:#e0f2fe;--blue-bd:#7dd3fc;
+  --amber:#b45309;--amber-bg:#fef3c7;--amber-bd:#fcd34d;
+  --red:#dc2626;--red-bg:#fee2e2;--red-bd:#fca5a5;
+  --gray:#64748b;--gray-bg:#f1f5f9;--gray-bd:#cbd5e1;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--tx);font-family:'Bricolage Grotesque',sans-serif;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:radial-gradient(circle,#cbd5e1 1px,transparent 1px);
+  background-size:28px 28px;opacity:.45;}
+
+/* ── LAYOUT ── */
+.wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:24px 16px 60px;}
+
+/* ── CARD ── */
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);}
+
+/* ── HEADER ── */
+.app-header{display:flex;align-items:center;justify-content:space-between;
+  padding:16px 20px;background:var(--card);border:1px solid var(--bd);
+  border-radius:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:20px;gap:12px;flex-wrap:wrap;}
+.hdr-left{display:flex;align-items:center;gap:12px;}
+.hdr-logo{width:42px;height:42px;border-radius:10px;
+  background:linear-gradient(135deg,#0099cc,#7c3aed);
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+  box-shadow:0 3px 10px rgba(0,153,204,.25);}
+.hdr-title h1{font-size:15px;font-weight:800;color:#0f172a;}
+.hdr-title p{font-size:10px;color:var(--mt);font-family:'IBM Plex Mono',monospace;}
+.hdr-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:9px;
+  font-size:12px;font-weight:700;cursor:pointer;border:none;transition:all .2s;
+  font-family:'Bricolage Grotesque',sans-serif;}
+.btn-primary{background:linear-gradient(135deg,#0099cc,#7c3aed);color:#fff;
+  box-shadow:0 2px 8px rgba(0,153,204,.3);}
+.btn-primary:hover{opacity:.9;transform:translateY(-1px);}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.btn-outline{background:#fff;color:var(--tx);border:1px solid var(--bd);}
+.btn-outline:hover{border-color:var(--bd2);background:#f8fafc;}
+.btn-danger{background:#fff;color:var(--red);border:1px solid var(--red-bd);}
+.btn-danger:hover{background:var(--red-bg);}
+.btn-green{background:var(--green-bg);color:var(--green);border:1px solid var(--green-bd);}
+.btn-green:hover{background:#bbf7d0;}
+.btn-sm{padding:5px 11px;font-size:11px;}
+
+/* ── SETUP TOKEN ── */
+#setup-screen{display:none;flex-direction:column;align-items:center;
+  justify-content:center;min-height:100vh;padding:20px;}
+.setup-card{background:var(--card);border:1px solid var(--bd);border-radius:20px;
+  padding:32px 28px;max-width:480px;width:100%;
+  box-shadow:0 8px 40px rgba(0,0,0,.08);}
+.setup-card .setup-logo{width:52px;height:52px;border-radius:13px;
+  background:linear-gradient(135deg,#0099cc,#7c3aed);
+  display:flex;align-items:center;justify-content:center;font-size:24px;
+  margin:0 auto 14px;box-shadow:0 4px 14px rgba(0,153,204,.3);}
+.setup-card h2{text-align:center;font-size:18px;font-weight:800;margin-bottom:4px;}
+.setup-subtitle{text-align:center;font-size:12px;color:var(--mt);margin-bottom:24px;line-height:1.6;}
+.steps-box{background:#f8fafc;border:1px solid var(--bd);border-radius:10px;
+  padding:14px 16px;margin-bottom:20px;}
+.steps-box .steps-title{font-size:11px;font-weight:700;color:var(--mt);
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+.steps-box ol{padding-left:16px;}
+.steps-box li{font-size:12px;color:#475569;line-height:1.9;}
+.steps-box code{background:#e2e8f0;padding:1px 5px;border-radius:4px;
+  font-family:'IBM Plex Mono',monospace;font-size:11px;color:#0f172a;}
+.tok-wrap{position:relative;}
+.tok-wrap input{width:100%;padding:10px 42px 10px 14px;border:1.5px solid var(--bd);
+  border-radius:10px;font-size:12px;font-family:'IBM Plex Mono',monospace;
+  background:#fff;color:var(--tx);outline:none;transition:border-color .2s;letter-spacing:1px;}
+.tok-wrap input:focus{border-color:#0099cc;}
+.tok-vis{position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  background:none;border:none;cursor:pointer;color:var(--mt);font-size:15px;padding:4px;}
+.warn-box{display:flex;align-items:flex-start;gap:8px;background:#fef3c7;
+  border:1px solid #fcd34d;border-radius:8px;padding:10px 12px;margin-top:12px;}
+.warn-box .wi{font-size:16px;flex-shrink:0;}
+.warn-box p{font-size:11px;color:#92400e;line-height:1.5;}
+.setup-btn{width:100%;padding:12px;background:linear-gradient(135deg,#0099cc,#7c3aed);
+  color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;
+  cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;margin-top:16px;
+  transition:opacity .2s,transform .2s;}
+.setup-btn:hover{opacity:.9;transform:translateY(-1px);}
+.setup-err{background:var(--red-bg);border:1px solid var(--red-bd);color:var(--red);
+  border-radius:8px;padding:10px 14px;font-size:12px;margin-top:10px;display:none;}
+/* Token chip di header */
+.tok-chip{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;
+  border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;
+  background:var(--green-bg);color:var(--green);border:1px solid var(--green-bd);}
+.tok-chip:hover{background:#bbf7d0;}
+.tok-chip.tok-missing{background:var(--red-bg);color:var(--red);border-color:var(--red-bd);}
+
+/* ── LOGIN ── */
+#login-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:70vh;padding:20px;}
+.login-card{background:var(--card);border:1px solid var(--bd);border-radius:20px;
+  padding:36px 32px;max-width:400px;width:100%;
+  box-shadow:0 8px 40px rgba(0,0,0,.08);}
+.login-logo{width:64px;height:64px;border-radius:16px;
+  background:linear-gradient(135deg,#0099cc,#7c3aed);
+  display:flex;align-items:center;justify-content:center;font-size:30px;
+  margin:0 auto 16px;box-shadow:0 4px 16px rgba(0,153,204,.3);}
+.login-card h2{text-align:center;font-size:20px;font-weight:800;margin-bottom:4px;}
+.login-card .sub{text-align:center;font-size:12px;color:var(--mt);margin-bottom:28px;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:12px;font-weight:700;color:var(--mt);
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;}
+.form-group select,.form-group input{width:100%;padding:10px 14px;border:1.5px solid var(--bd);
+  border-radius:10px;font-size:14px;font-family:'Bricolage Grotesque',sans-serif;
+  background:#fff;color:var(--tx);outline:none;transition:border-color .2s;}
+.form-group select:focus,.form-group input:focus{border-color:#0099cc;}
+.pin-wrap{position:relative;}
+.pin-wrap input{padding-right:42px;letter-spacing:4px;}
+.pin-toggle{position:absolute;right:12px;top:50%;transform:translateY(-50%);
+  background:none;border:none;cursor:pointer;color:var(--mt);font-size:16px;padding:4px;}
+.login-btn{width:100%;padding:12px;background:linear-gradient(135deg,#0099cc,#7c3aed);
+  color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;
+  cursor:pointer;font-family:'Bricolage Grotesque',sans-serif;
+  transition:opacity .2s,transform .2s;}
+.login-btn:hover{opacity:.9;transform:translateY(-1px);}
+.login-err{background:var(--red-bg);border:1px solid var(--red-bd);color:var(--red);
+  border-radius:8px;padding:10px 14px;font-size:12px;margin-top:12px;display:none;}
+
+/* ── MAIN SCREEN ── */
+#main-screen{display:none;}
+
+/* ── STATUS SUMMARY ── */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;}
+.stat-item{background:var(--card);border:1px solid var(--bd);border-radius:12px;
+  padding:14px 12px;text-align:center;position:relative;overflow:hidden;}
+.stat-item::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.stat-item.s-total::before{background:linear-gradient(90deg,#0099cc,#7c3aed);}
+.stat-item.s-done::before{background:linear-gradient(90deg,#16a34a,#22c55e);}
+.stat-item.s-ongoing::before{background:linear-gradient(90deg,#0099cc,#0ea5e9);}
+.stat-item.s-planned::before{background:linear-gradient(90deg,#d97706,#f59e0b);}
+.stat-val{font-size:26px;font-weight:800;font-family:'IBM Plex Mono',monospace;line-height:1;}
+.stat-lbl{font-size:9px;font-weight:700;color:var(--mt);text-transform:uppercase;
+  letter-spacing:.5px;margin-top:4px;}
+
+/* ── SECTION ── */
+.section-card{margin-bottom:14px;border:1px solid var(--bd);border-radius:14px;overflow:hidden;
+  background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.section-head{padding:14px 18px;background:#f8fafc;border-bottom:1px solid var(--bd);
+  display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none;}
+.section-head:hover{background:#f1f5f9;}
+.section-icon{font-size:16px;}
+.section-title{font-size:13px;font-weight:700;flex:1;}
+.section-count{font-size:10px;font-weight:600;font-family:'IBM Plex Mono',monospace;
+  padding:2px 8px;border-radius:6px;background:var(--blue-bg);color:var(--blue);
+  border:1px solid var(--blue-bd);}
+.section-arr{font-size:10px;color:var(--mt);transition:transform .2s;}
+.section-head.open .section-arr{transform:rotate(180deg);}
+.section-body{display:none;padding:14px 18px;}
+.section-body.open{display:block;}
+
+/* ── ITEM ROW ── */
+.item-row{display:flex;align-items:flex-start;gap:10px;padding:10px 0;
+  border-bottom:1px solid #f1f5f9;}
+.item-row:last-child{border-bottom:none;padding-bottom:0;}
+.item-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;
+  color:#0099cc;min-width:40px;flex-shrink:0;padding-top:2px;}
+.item-info{flex:1;min-width:0;}
+.item-uraian{font-size:12px;font-weight:600;color:#0f172a;line-height:1.5;margin-bottom:4px;}
+.item-meta{font-size:10px;color:var(--mt);display:flex;gap:10px;flex-wrap:wrap;}
+.item-status-wrap{flex-shrink:0;min-width:140px;}
+.status-select{width:100%;padding:6px 10px;border:1.5px solid var(--bd);border-radius:8px;
+  font-size:11px;font-weight:700;font-family:'IBM Plex Mono',monospace;
+  cursor:pointer;outline:none;background:#fff;transition:border-color .2s;}
+.status-select:focus{border-color:#0099cc;}
+.status-select.s-done{background:var(--green-bg);color:var(--green);border-color:var(--green-bd);}
+.status-select.s-ongoing{background:var(--blue-bg);color:var(--blue);border-color:var(--blue-bd);}
+.status-select.s-upcoming{background:var(--amber-bg);color:var(--amber);border-color:var(--amber-bd);}
+.status-select.s-planned{background:var(--gray-bg);color:var(--gray);border-color:var(--gray-bd);}
+
+/* ── PRIORITAS ── */
+.prio-card{background:#f8fafc;border:1.5px solid var(--bd);border-radius:10px;
+  padding:12px 14px;margin-bottom:10px;position:relative;overflow:hidden;}
+.prio-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:var(--c,#0099cc);}
+.prio-no{font-size:10px;font-family:'IBM Plex Mono',monospace;color:var(--mt);margin-bottom:3px;}
+.prio-nama{font-size:12px;font-weight:700;color:#0f172a;margin-bottom:8px;}
+.prio-row{display:flex;align-items:center;gap:10px;}
+.prio-label{font-size:11px;color:var(--mt);flex:1;}
+
+/* ── SAVE BAR ── */
+.save-bar{position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
+  border-top:1px solid var(--bd);padding:12px 16px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.save-info{font-size:11px;color:var(--mt);}
+.save-info strong{color:#0f172a;}
+#save-status{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:600;}
+
+/* ── TOAST ── */
+#toast{position:fixed;top:20px;right:20px;z-index:999;padding:12px 18px;border-radius:10px;
+  font-size:13px;font-weight:700;display:none;align-items:center;gap:8px;
+  box-shadow:0 4px 20px rgba(0,0,0,.12);}
+#toast.success{background:var(--green-bg);color:var(--green);border:1px solid var(--green-bd);}
+#toast.error{background:var(--red-bg);color:var(--red);border:1px solid var(--red-bd);}
+#toast.info{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bd);}
+
+/* ── LOADING ── */
+#loading-overlay{position:fixed;inset:0;z-index:500;background:rgba(255,255,255,.85);
+  backdrop-filter:blur(4px);display:none;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;}
+.spinner{width:36px;height:36px;border:3px solid #e2e8f0;
+  border-top-color:#0099cc;border-radius:50%;animation:spin .8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+#loading-overlay p{font-size:13px;color:var(--mt);font-weight:600;}
+
+/* ── SUBTIM INFO ── */
+.subtim-info-bar{display:flex;align-items:center;gap:12px;padding:16px 20px;
+  background:var(--card);border:1px solid var(--bd);border-radius:14px;
+  margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.subtim-badge{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;
+  justify-content:center;font-size:22px;font-weight:800;font-family:'IBM Plex Mono',monospace;
+  flex-shrink:0;}
+.subtim-info h2{font-size:16px;font-weight:800;}
+.subtim-info p{font-size:11px;color:var(--mt);}
+.last-save{font-size:10px;color:var(--mt);font-family:'IBM Plex Mono',monospace;
+  background:#f1f5f9;padding:3px 8px;border-radius:5px;display:none;}
+
+/* ── UNSAVED INDICATOR ── */
+.unsaved-dot{width:7px;height:7px;border-radius:50%;background:#d97706;
+  display:inline-block;margin-right:4px;display:none;}
+.has-changes .unsaved-dot{display:inline-block;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .item-row{flex-direction:column;}
+  .item-status-wrap{width:100%;}
+  .login-card{padding:24px 20px;}
+  .save-bar{flex-direction:column;}
+}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(15,23,42,.4);
+  backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;border-radius:16px;padding:28px;max-width:460px;width:100%;
+  box-shadow:0 12px 40px rgba(0,0,0,.15);}
+.modal h3{font-size:17px;font-weight:800;margin-bottom:8px;}
+.modal p{font-size:13px;color:var(--mt);line-height:1.6;margin-bottom:20px;}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;}
+
+/* ── LABEL CHIP ── */
+.chip{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:20px;
+  font-size:10px;font-weight:700;font-family:'IBM Plex Mono',monospace;}
+.chip-done{background:var(--green-bg);color:var(--green);border:1px solid var(--green-bd);}
+.chip-ongoing{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-bd);}
+.chip-upcoming{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-bd);}
+.chip-planned{background:var(--gray-bg);color:var(--gray);border:1px solid var(--gray-bd);}
+
+/* ── EMPTY / INIT ── */
+.init-banner{background:linear-gradient(135deg,#e0f2fe,#ede9fe);border:1px solid #bfdbfe;
+  border-radius:12px;padding:16px;margin-bottom:16px;display:flex;align-items:flex-start;gap:12px;}
+.init-banner .ico{font-size:24px;flex-shrink:0;}
+.init-banner h4{font-size:13px;font-weight:700;color:#1e40af;margin-bottom:4px;}
+.init-banner p{font-size:11px;color:#3b82f6;line-height:1.5;}
+</style>
+</head>
+<body>
+
+<!-- LOADING OVERLAY -->
+<div id="loading-overlay">
+  <div class="spinner"></div>
+  <p id="loading-msg">Memuat data...</p>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- CONFIRM MODAL -->
+<div class="modal-overlay" id="confirm-modal">
+  <div class="modal">
+    <h3 id="modal-title">Konfirmasi Simpan</h3>
+    <p id="modal-body">Pastikan semua perubahan sudah benar sebelum disimpan ke dashboard.</p>
+    <div class="modal-actions">
+      <button class="btn btn-outline" onclick="closeModal()">Batal</button>
+      <button class="btn btn-primary" id="modal-confirm-btn">Simpan Sekarang</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SETUP TOKEN (first time) ═══════════ -->
+<div id="setup-screen">
+  <div class="setup-card">
+    <div class="setup-logo">🔑</div>
+    <h2>Setup GitHub Token</h2>
+    <p class="setup-subtitle">Token hanya tersimpan di browser Anda.<br>Tidak pernah ada di kode atau server.</p>
+
+    <div class="steps-box">
+      <div class="steps-title">Cara membuat token:</div>
+      <ol>
+        <li>Buka <code>github.com</code> → login akun repo ZI</li>
+        <li>Klik foto profil → <code>Settings</code></li>
+        <li><code>Developer settings</code> → <code>Personal access tokens</code> → <code>Fine-grained</code></li>
+        <li>Klik <code>Generate new token</code></li>
+        <li>Pilih repo ZI → <code>Contents: Read and Write</code></li>
+        <li>Klik <code>Generate</code> → copy token</li>
+      </ol>
+    </div>
+
+    <div class="form-group">
+      <label>Paste Token di sini</label>
+      <div class="tok-wrap">
+        <input type="password" id="inp-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+          autocomplete="off" spellcheck="false"
+          onkeydown="if(event.key==='Enter')saveTokenAndContinue()">
+        <button class="tok-vis" onclick="toggleTokVis()">👁</button>
+      </div>
+    </div>
+
+    <div class="warn-box">
+      <span class="wi">⚠️</span>
+      <p>Token disimpan di <strong>localStorage browser ini saja</strong>. Setiap perangkat/browser baru perlu setup sekali. Jangan share token ke orang lain.</p>
+    </div>
+
+    <div class="setup-err" id="setup-err"></div>
+    <button class="setup-btn" onclick="saveTokenAndContinue()">Simpan & Lanjutkan →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════ LOGIN ═══════════════════ -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo">🛡️</div>
+    <h2>Admin Input ZI 2026</h2>
+    <p class="sub">KPPBC TMP Tanjung Emas · Rencana Kerja 2026</p>
+    <div class="form-group">
+      <label>Subtim</label>
+      <select id="sel-subtim">
+        <option value="">— Pilih Subtim Anda —</option>
+        <option value="I">Subtim I – Manajemen Perubahan</option>
+        <option value="II">Subtim II – Penataan Tatalaksana</option>
+        <option value="III">Subtim III – Penataan Sistem Manajemen SDM</option>
+        <option value="IV">Subtim IV – Penguatan Akuntabilitas Kinerja</option>
+        <option value="V">Subtim V – Penguatan Pengawasan</option>
+        <option value="VI">Subtim VI – Peningkatan Kualitas Pelayanan Publik</option>
+        <option value="ADMIN">🔐 Admin (Semua Subtim)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>PIN</label>
+      <div class="pin-wrap">
+        <input type="password" id="inp-pin" placeholder="Masukkan PIN" maxlength="20"
+          onkeydown="if(event.key==='Enter')doLogin()">
+        <button class="pin-toggle" onclick="togglePIN()" id="pin-toggle-btn">👁</button>
+      </div>
+    </div>
+    <button class="login-btn" onclick="doLogin()">Masuk →</button>
+    <div class="login-err" id="login-err">PIN salah atau subtim tidak dipilih.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<div id="main-screen">
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <div class="app-header">
+      <div class="hdr-left">
+        <div class="hdr-logo">🛡️</div>
+        <div class="hdr-title">
+          <h1>Admin Input ZI WBK/WBBM</h1>
+          <p>KPPBC TMP TANJUNG EMAS · 2026</p>
+        </div>
+      </div>
+      <div class="hdr-right">
+        <div id="tok-status-chip" class="tok-chip" onclick="showChangeToken()" title="Klik untuk ganti token"></div>
+        <button class="btn btn-outline btn-sm" onclick="refreshData()">↻ Refresh</button>
+        <button class="btn btn-danger btn-sm" onclick="doLogout()">Keluar</button>
+      </div>
+    </div>
+
+    <!-- SUBTIM INFO -->
+    <div class="subtim-info-bar" id="subtim-info-bar">
+      <div class="subtim-badge" id="si-badge"></div>
+      <div class="subtim-info">
+        <h2 id="si-nama"></h2>
+        <p id="si-desc"></p>
+      </div>
+      <div style="margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:4px">
+        <div class="last-save" id="last-save-label"></div>
+        <div style="font-size:10px;color:var(--mt);" id="si-subtim-selector" class="subtim-tabs"></div>
+      </div>
+    </div>
+
+    <!-- ADMIN: SUBTIM TABS (only for ADMIN role) -->
+    <div id="admin-tabs" style="display:none;margin-bottom:16px;display:none;">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;" id="tabs-container"></div>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid" id="stats-grid">
+      <div class="stat-item s-total">
+        <div class="stat-val" id="st-total">–</div>
+        <div class="stat-lbl">Total Kegiatan</div>
+      </div>
+      <div class="stat-item s-done">
+        <div class="stat-val" style="color:var(--green)" id="st-done">–</div>
+        <div class="stat-lbl">✅ Selesai</div>
+      </div>
+      <div class="stat-item s-ongoing">
+        <div class="stat-val" style="color:#0369a1" id="st-ongoing">–</div>
+        <div class="stat-lbl">🔥 Berjalan</div>
+      </div>
+      <div class="stat-item s-planned">
+        <div class="stat-val" style="color:var(--amber)" id="st-planned">–</div>
+        <div class="stat-lbl">📅 Direncanakan</div>
+      </div>
+    </div>
+
+    <!-- FORM CONTENT -->
+    <div id="form-content"></div>
+
+  </div><!-- /wrap -->
+
+  <!-- SAVE BAR -->
+  <div class="save-bar" id="save-bar">
+    <div class="save-info">
+      <span class="unsaved-dot" id="unsaved-dot"></span>
+      <strong id="save-bar-subtim">–</strong> · Perubahan akan langsung terlihat di Dashboard
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div id="save-status"></div>
+      <button class="btn btn-primary" id="save-btn" onclick="confirmSave()">
+        💾 Simpan & Kirim ke Dashboard
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════ DATA & LOGIC ═══════════════════ -->
+<script>
+// ============================================================
+// SCHEMA DATA — SAMA DENGAN DASHBOARD (struktur lengkap)
+// ============================================================
+const SUBTIMS_SCHEMA = [
+{
+  no:'I', nama:'Manajemen Perubahan', color:'#0099cc', icon:'🔄',
+  desc:'Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi',
+  prioritas:[
+    {no:'1',nama:'Program Akselerasi "1 Agent 1 Innovation"',waktu:'Feb – Nov 2026',pic:'Agen Perubahan'},
+    {no:'2',nama:'Program "Leaders Serve" (Pimpinan Melayani)',waktu:'Berkala',pic:'Kepala Kantor'},
+    {no:'3',nama:'Kampanye "Family Integrity"',waktu:'sd Q1 2026',pic:'Subtim I & Subbag Umum'},
+  ],
+  kategori:[
+    {nama:'Penyusunan Tim Kerja',icon:'👥',items:[
+      {sub:'i.a',uraian:'Menerbitkan SK Penetapan Tim Kerja ZI WBK/WBBM',waktu:'Januari 2026',pic:'Sekretariat Tim & Subtim I'},
+      {sub:'i.b',uraian:'Rapat dan Penetapan Pembentukan Tim Kerja ZI dan Tim Monev',waktu:'Januari 2026',pic:'Sekretariat Tim & Subtim I'},
+    ]},
+    {nama:'Rencana Pembangunan ZI',icon:'📐',items:[
+      {sub:'ii.a',uraian:'Permintaan masukan rencana kerja kepada seluruh Ketua Sub Tim',waktu:'Jan – Feb 2026',pic:'Sekretariat Tim & Subtim I'},
+      {sub:'ii.b',uraian:'Penyusunan rencana kerja dengan target prioritas relevan WBK/WBBM',waktu:'Jan – Feb 2026',pic:'Sekretariat Tim & Subtim I'},
+      {sub:'ii.c',uraian:'Sosialisasi pembangunan WBK/WBBM kepada pihak Internal dan Eksternal',waktu:'Q1 2026',pic:'Subbagian Umum & Subtim I'},
+    ]},
+    {nama:'Pemantauan & Evaluasi Pembangunan ZI',icon:'📊',items:[
+      {sub:'iii.a',uraian:'Menyusun laporan penyelesaian pembangunan ZI menuju WBK/WBBM',waktu:'Setiap bulan – Des 2026',pic:'Tim Kerja & Tim Monev'},
+      {sub:'iii.b',uraian:'Monitoring dan evaluasi pembangunan ZI secara berkala',waktu:'Setiap bulan 2026',pic:'Tim Kerja & Tim Monev'},
+      {sub:'iii.c',uraian:'Menindaklanjuti hasil Monitoring dan Evaluasi',waktu:'Setiap bulan 2026',pic:'Tim Kerja & Tim Monev'},
+    ]},
+    {nama:'Perubahan Pola Pikir & Budaya Kerja',icon:'💡',items:[
+      {sub:'iv.a',uraian:'Pengumpulan bukti pimpinan sebagai role model dalam WBK/WBBM',waktu:'Jan – Feb, Setiap bulan',pic:'Subtim I & Subbagian Umum'},
+      {sub:'iv.b',uraian:'Menetapkan Agen Perubahan, rencana kerja dan laporan pelaksanaan',waktu:'Q1 – Q4 2026',pic:'Subtim I & Seksi KI'},
+      {sub:'iv.c',uraian:'Melaksanakan kegiatan pembangunan budaya kerja dan pola pikir',waktu:'Q1 – Q4 2026 / Bulanan',pic:'Subtim I, Subbag Umum, Seksi KI'},
+      {sub:'iv.d',uraian:'Internalisasi ZI kepada seluruh Pejabat/Pegawai',waktu:'Q1 – Q4 2026',pic:'Subtim I & Subbagian Umum'},
+    ]},
+  ],
+  done:4,ongoing:9,planned:1
+},
+{
+  no:'II', nama:'Penataan Tatalaksana', color:'#7c3aed', icon:'📑',
+  desc:'SOP, SPBE, e-government, keterbukaan informasi publik',
+  prioritas:[
+    {no:'1',nama:'Evaluasi Prosedur Operasional Tetap (SOP)',waktu:'TW 2 & TW 4 2026',pic:'Seksi Kepatuhan Internal'},
+  ],
+  kategori:[
+    {nama:'Prosedur Operasional Tetap (SOP)',icon:'📋',items:[
+      {sub:'i.a',uraian:'Pembinaan & pemantauan evaluasi Instruksi Kerja/SOP ke Kanwil DJBC',waktu:'TW 4 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'i.b',uraian:'Pelaksanaan pembinaan tindak lanjut & eskalasi inovasi instruksi kerja mandiri ke Kantor Pusat',waktu:'TW 4 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'i.c',uraian:'Pelaksanaan Monitoring dan Evaluasi SOP',waktu:'TW 2 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+    {nama:'Sistem Pemerintahan Berbasis Elektronik (SPBE)',icon:'💻',items:[
+      {sub:'ii.a',uraian:'Pengembangan Aplikasi DIKENAL menjadi DIKENAL 3.0',waktu:'TW 2 – TW 4 2026',pic:'Seksi KI & Seksi PDAD'},
+      {sub:'ii.b',uraian:'Monitoring dan Evaluasi Aplikasi SILAT',waktu:'TW 1 – TW 4 2026',pic:'Subbagian Umum & Seksi PDAD'},
+      {sub:'ii.c',uraian:'Monitoring dan Evaluasi Inovasi Pelayanan berbasis TI',waktu:'TW 1 – TW 4 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'ii.d',uraian:'Monitoring dan evaluasi pemanfaatan TI dalam pengukuran kinerja secara berkala',waktu:'Jan – Des 2026 (per bulan)',pic:'Seksi Kepatuhan Internal'},
+    ]},
+    {nama:'Keterbukaan Informasi Publik',icon:'📡',items:[
+      {sub:'iii.a',uraian:'Memperbarui dokumentasi saluran informasi, sarana prasarana media',waktu:'Jan – Des 2026',pic:'Seksi Penyuluhan & Layanan Informasi'},
+      {sub:'iii.b',uraian:'Monitoring dan evaluasi pelaksanaan keterbukaan informasi publik',waktu:'Jan – Des 2026',pic:'Seksi KI & Seksi PLI'},
+    ]},
+    {nama:'Rencana Kerja Reform – Tatalaksana',icon:'🔧',items:[
+      {sub:'R-i',uraian:'Menyusun data perbandingan jumlah pejabat struktural dan fungsional',waktu:'TW 1 2026',pic:'Subbagian Umum'},
+      {sub:'R-ii.a',uraian:'Survei kepuasan masyarakat atas layanan (SPBE terintegrasi)',waktu:'TW 1 – TW 4 2026',pic:'Seksi KI & Seksi PLI'},
+      {sub:'R-ii.b',uraian:'Survei ke pegawai atas kepuasan layanan perkantoran (SPBE internal)',waktu:'TW 1 – TW 4 2026',pic:'Subbagian Umum & Seksi PDAD'},
+      {sub:'R-iii',uraian:'Monitoring dan Evaluasi Inovasi Pelayanan, SKM, dan Pemanfaatan TI',waktu:'Jan – Des 2026',pic:'Seksi KI & Seksi PLI'},
+    ]},
+  ],
+  done:0,ongoing:9,planned:3
+},
+{
+  no:'III', nama:'Penataan Sistem Manajemen SDM', color:'#16a34a', icon:'👤',
+  desc:'Perencanaan pegawai, mutasi, pengembangan kompetensi, kinerja individu, disiplin',
+  prioritas:[
+    {no:'1',nama:'Meningkatkan Kapasitas SDM melalui Diklat & Penilaian',waktu:'Jan – Des 2026',pic:'Subtim III & Subbag Umum'},
+  ],
+  kategori:[
+    {nama:'Perencanaan Kebutuhan Pegawai',icon:'📋',items:[
+      {sub:'i.a',uraian:'Penyusunan dokumen ABK dan permintaan kebutuhan pegawai',waktu:'Semester I, Sesuai Kebutuhan',pic:'Seksi KI & Subbagian Umum'},
+      {sub:'i.b',uraian:'Pelaksanaan Rolling/Mutasi Internal, Penempatan Pegawai Baru, Pemetaan dan sidang Grading',waktu:'TW I, Triwulanan, Setiap Mutasi',pic:'Subbagian Umum & Tim Pertimbangan Mutasi'},
+      {sub:'i.c',uraian:'Pemetaan & evaluasi penugasan, Penilaian Perilaku, Dialog Kinerja Individu, Penetapan Nilai Kinerja',waktu:'Triwulanan, Bulanan, TW I',pic:'Subbagian Umum & Seksi KI'},
+    ]},
+    {nama:'Pola Mutasi Internal',icon:'🔀',items:[
+      {sub:'ii.a',uraian:'Membentuk Tim Pertimbangan Rolling/Mutasi Internal',waktu:'TW I, Triwulanan',pic:'Subbagian Umum'},
+      {sub:'ii.b',uraian:'Pembahasan Mutasi Internal dengan memperhatikan kompetensi',waktu:'Triwulanan',pic:'Subbagian Umum & Tim Pertimbangan Mutasi'},
+      {sub:'ii.c',uraian:'Pemetaan & evaluasi penugasan terkait perbaikan kinerja pasca mutasi',waktu:'Triwulanan, Bulanan, TW I',pic:'Subbagian Umum'},
+    ]},
+    {nama:'Pengembangan Pegawai Berbasis Kompetensi',icon:'📚',items:[
+      {sub:'iii.a',uraian:'Pemetaan AKP Organisasi dan permintaan pelatihan insidentil',waktu:'Semester I, Sesuai Kebutuhan, Bulanan',pic:'Subbagian Umum'},
+      {sub:'iii.b',uraian:'Dialog Kinerja Individu dan Monitoring Evaluasi DKI',waktu:'Bulanan, Triwulanan',pic:'Subbagian Umum'},
+      {sub:'iii.c',uraian:'Pemetaan Kesenjangan Kompetensi dan Pengusulan Assessment Center',waktu:'Semester I & II',pic:'Subbagian Umum'},
+      {sub:'iii.d',uraian:'Seluruh pegawai memperoleh kesempatan diklat',waktu:'Semester I, Sesuai Kebutuhan, Bulanan',pic:'Subbagian Umum'},
+      {sub:'iii.e',uraian:'P2KP minimal 7x/tahun, CMC bulanan, Pemetaan AKP, Penugasan Diklat',waktu:'Bulanan',pic:'Subbagian Umum'},
+      {sub:'iii.f',uraian:'Monitoring dan evaluasi hasil pengembangan kompetensi',waktu:'Triwulanan',pic:'Subbagian Umum'},
+    ]},
+    {nama:'Penetapan Kinerja Individu',icon:'🎯',items:[
+      {sub:'iv.a',uraian:'Penetapan Perjanjian Kinerja (PK) dan SKP terintegrasi DIKENAL',waktu:'TW I',pic:'Subbagian Umum & Seksi KI'},
+      {sub:'iv.b',uraian:'Membuat matriks cascading kinerja dan reviu kualitas Kontrak Kinerja',waktu:'TW II, Triwulanan',pic:'Subbagian Umum & Seksi KI'},
+      {sub:'iv.c',uraian:'Laporan Capaian Kinerja Bulanan, Logbook, IPR, Dialog Kinerja Individu',waktu:'Bulanan',pic:'Subbagian Umum & Seksi KI'},
+      {sub:'iv.d',uraian:'Pemberian reward berdasarkan kinerja: Employee of the Month, Grading',waktu:'Bulanan, TW I',pic:'Subbagian Umum'},
+    ]},
+    {nama:'Penegakan Aturan Disiplin / Kode Etik',icon:'⚖️',items:[
+      {sub:'v.a',uraian:'Penegakan kode etik, monitoring ketertiban pegawai, Pakta Integritas, pelaporan SPT & LHKPN',waktu:'Semesteran, Bulanan',pic:'Subbagian Umum & Seksi KI'},
+    ]},
+    {nama:'Sistem Informasi Kepegawaian',icon:'🖥️',items:[
+      {sub:'vi.a',uraian:'Updating data kepegawaian secara berkala di HRIS setiap ada perubahan data',waktu:'Bulanan, Sesuai Kebutuhan',pic:'Subbagian Umum'},
+    ]},
+    {nama:'Rencana Kerja Reform – SDM',icon:'🔬',items:[
+      {sub:'R-i',uraian:'Penandatanganan, penetapan, dan penilaian kualitas Perjanjian Kerja',waktu:'TW I, Triwulanan',pic:'Subbagian Umum & Seksi KI'},
+      {sub:'R-ii',uraian:'Pemetaan Kesenjangan Kompetensi, Pengusulan Assessment Center',waktu:'Semester I & II, Triwulanan',pic:'Subbagian Umum & Tim Pertimbangan Mutasi'},
+      {sub:'R-iii',uraian:'Melaksanakan pelaporan pemberian penghargaan dan penjatuhan hukuman disiplin',waktu:'Bulanan, Ketika terjadi pelanggaran',pic:'Subbagian Umum & Seksi KI'},
+    ]},
+  ],
+  done:2,ongoing:15,planned:3
+},
+{
+  no:'IV', nama:'Penguatan Akuntabilitas Kinerja', color:'#d97706', icon:'📈',
+  desc:'Keterlibatan pimpinan, dokumen perencanaan kinerja, IKU, SAKIP, LAKIN',
+  prioritas:[
+    {no:'1',nama:'Meningkatkan Kapasitas SDM Pengelola Kinerja',waktu:'Jan – Des 2026',pic:'Subtim IV & Subbagian Umum'},
+  ],
+  kategori:[
+    {nama:'Keterlibatan Pimpinan',icon:'👑',items:[
+      {sub:'i.a',uraian:'Pimpinan terlibat langsung dalam penyusunan perencanaan kinerja',waktu:'Jan – Feb 2026',pic:'Subtim IV, Subbag Umum & Seksi KI'},
+      {sub:'i.b',uraian:'Pimpinan terlibat langsung dalam penetapan kinerja: SKP, IKI',waktu:'Jan – Feb 2026',pic:'Subtim IV, Subbag Umum & Seksi KI'},
+      {sub:'i.c',uraian:'Pimpinan memantau capaian kinerja setiap bulan',waktu:'Jan – Des 2026',pic:'Subtim IV & Seksi KI'},
+    ]},
+    {nama:'Pengelolaan Akuntabilitas Kinerja',icon:'📊',items:[
+      {sub:'ii.a',uraian:'Penyusunan matriks penyelarasan kerangka kinerja dan PK/SKP',waktu:'Jan – Mar 2026',pic:'Subtim IV & Seksi KI'},
+      {sub:'ii.b',uraian:'Perencanaan kinerja berorientasi hasil: matriks cascading, PK/SKP',waktu:'Jan – Mar 2026',pic:'Subtim IV & Seksi KI'},
+      {sub:'ii.c',uraian:'Penyusunan IKU: SKP, Manual IKU, LPMI',waktu:'Jan – Mar 2026',pic:'Subtim IV & Seksi KI'},
+      {sub:'ii.d',uraian:'Penyusunan IKI yang memenuhi kriteria SMART',waktu:'Jan – Feb 2026',pic:'Subtim IV, Subbag Umum & Seksi KI'},
+      {sub:'ii.e',uraian:'Penyusunan LCK dan LAKIN tepat waktu',waktu:'Jan – Des 2026',pic:'Subtim IV & Seksi KI'},
+      {sub:'ii.f',uraian:'Laporan kinerja memberikan informasi kinerja yang lengkap',waktu:'Jan – Des 2026',pic:'Subtim IV & Seksi KI'},
+      {sub:'ii.g',uraian:'Sistem informasi kinerja: Satu Kemenkeu, Cehris G-1, DIKENAL',waktu:'Jan – Feb 2026',pic:'Subtim IV & Seksi KI'},
+      {sub:'ii.h',uraian:'Meningkatkan kapasitas SDM pengelola akuntabilitas kinerja',waktu:'Jan – Des 2026',pic:'Subtim IV & Seksi KI'},
+    ]},
+    {nama:'Rencana Kerja Reform – Akuntabilitas',icon:'🏆',items:[
+      {sub:'R-i',uraian:'Mencapai sasaran kinerja 100% (20 dari 20 Sasaran Kinerja)',waktu:'Januari 2026',pic:'Subtim IV & Seksi KI'},
+      {sub:'R-ii',uraian:'Memberikan reward and punishment kepada pegawai sesuai capaian kinerja',waktu:'Jan – Des 2026',pic:'Subtim IV & Subbagian Umum'},
+      {sub:'R-iii',uraian:'Melakukan penjenjangan kinerja mengacu pada kinerja utama organisasi',waktu:'Jan – Feb 2026',pic:'Subtim IV & Seksi KI'},
+    ]},
+  ],
+  done:7,ongoing:4,planned:0
+},
+{
+  no:'V', nama:'Penguatan Pengawasan', color:'#dc2626', icon:'🔍',
+  desc:'Pengendalian gratifikasi, SPIP, pengaduan masyarakat, WBS, benturan kepentingan',
+  prioritas:[
+    {no:'1',nama:'Telah Dibangun Lingkungan Pengendalian (PKPT)',waktu:'Sesuai Jadwal PKPT, Februari 2026',pic:'Seksi Kepatuhan Internal'},
+    {no:'2',nama:'Pencegahan Pelanggaran melalui CMC',waktu:'Bulanan',pic:'Seksi Kepatuhan Internal'},
+  ],
+  kategori:[
+    {nama:'Pengendalian Gratifikasi',icon:'🎁',items:[
+      {sub:'i.a',uraian:'Public campaign anti gratifikasi dan sosialisasi ke pengguna jasa & internal',waktu:'Triwulanan, Jelang Lebaran & Nataru',pic:'Subtim V / Seksi KI'},
+      {sub:'i.b',uraian:'Penetapan Unit Pengendali Gratifikasi (UPG)',waktu:'Januari 2026',pic:'Subtim V / Seksi KI'},
+    ]},
+    {nama:'Sistem Pengendalian Intern Pemerintah (SPIP)',icon:'🛡️',items:[
+      {sub:'ii.a',uraian:'Membangun lingkungan pengendalian: Pakta integritas, Pemantauan PPKEPP, LHKPN',waktu:'Feb 2026, Bulanan',pic:'Seksi KI & Subbagian Umum'},
+      {sub:'ii.b',uraian:'Penilaian risiko: RCM, Tim PPIP, Pemetaan Titik Rawan, Rencana Aksi PPIP',waktu:'Maret 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'ii.c',uraian:'Kegiatan pengendalian: PKPT DJBC 2026, Monitoring MR, Pemeriksaan Mendadak',waktu:'TW I 2026, TW I-IV, 6x setahun',pic:'Seksi KI & Subbagian Umum'},
+      {sub:'ii.d',uraian:'SPI dikomunikasikan ke semua pihak dalam entry meeting PKPT Tematik 2026',waktu:'Feb 2026, Mar 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+    {nama:'Pengaduan Masyarakat',icon:'📣',items:[
+      {sub:'iii.a',uraian:'Mengimplementasikan kebijakan pengaduan masyarakat dan posting sosmed',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'iii.b',uraian:'Monitoring dan Tindak lanjut Pengaduan Masyarakat dan Whistle Blowing',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'iii.c',uraian:'Monitoring dan evaluasi penanganan pengaduan masyarakat secara berkala',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'iii.d',uraian:'Menindaklanjuti seluruh hasil evaluasi atas penanganan pengaduan',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+    {nama:'Whistle-Blowing System (WBS)',icon:'📢',items:[
+      {sub:'iv.a',uraian:'Menerapkan seluruh kebijakan WBS dan monitoring tindak lanjut',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'iv.b',uraian:'Monitoring dan evaluasi penerapan WBS secara berkala',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'iv.c',uraian:'Menindaklanjuti seluruh hasil evaluasi penerapan WBS',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+    {nama:'Penanganan Benturan Kepentingan',icon:'⚡',items:[
+      {sub:'v.a',uraian:'Identifikasi/pemetaan benturan kepentingan pada seluruh tugas fungsi utama',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'v.b',uraian:'Internalisasi benturan kepentingan dan permintaan laporan ke tiap seksi',waktu:'TW III, Setiap bulan',pic:'Seksi Kepatuhan Internal'},
+      {sub:'v.c',uraian:'Mengimplementasikan penanganan benturan kepentingan ke seluruh layanan',waktu:'Bulanan 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'v.d',uraian:'Monitoring dan Evaluasi penanganan benturan kepentingan',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'v.e',uraian:'Menindaklanjuti seluruh hasil evaluasi penanganan benturan kepentingan',waktu:'Triwulanan 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+    {nama:'Rencana Kerja Reform – Pengawasan',icon:'🔐',items:[
+      {sub:'R-i',uraian:'Melaksanakan mekanisme pengendalian aktivitas berjenjang: PKPT dan MR',waktu:'TW I 2026, Triwulanan',pic:'Seksi KI & Subbagian Umum'},
+      {sub:'R-ii',uraian:'Monitoring pengaduan masyarakat pada saluran pengaduan yang tersedia',waktu:'Bulanan',pic:'Seksi Kepatuhan Internal'},
+      {sub:'R-iii',uraian:'Monitoring pembuatan LHKPN dan LHKASN oleh pegawai yang diwajibkan',waktu:'Februari 2026, Maret 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+  ],
+  done:3,ongoing:10,planned:6
+},
+{
+  no:'VI', nama:'Peningkatan Kualitas Pelayanan Publik', color:'#2563eb', icon:'⭐',
+  desc:'Standar pelayanan, budaya prima, pengelolaan pengaduan, survei kepuasan, TI',
+  prioritas:[
+    {no:'1',nama:'Transformasi Contact Center – Benchmarking Strategis',waktu:'Jan – Des 2026',pic:'Sub Tim VI'},
+  ],
+  kategori:[
+    {nama:'Standar Pelayanan',icon:'📝',items:[
+      {sub:'i.a',uraian:'Menginventarisasi Standar Pelayanan yang berlaku pada KPPBC TMP Tanjung Emas',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'i.b',uraian:'Menyusun dan menetapkan Maklumat Pelayanan',waktu:'Jan – Des 2026',pic:'Seksi Penyuluhan & Layanan Informasi'},
+      {sub:'i.c',uraian:'Monitoring dan evaluasi Standar Pelayanan dan SOP',waktu:'Jul – Des 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'i.d',uraian:'Melakukan publikasi Standar Pelayanan dan Maklumat Pelayanan',waktu:'Jan – Jun 2026',pic:'Seksi Penyuluhan & Layanan Informasi'},
+    ]},
+    {nama:'Budaya Pelayanan Prima',icon:'🌟',items:[
+      {sub:'ii.a',uraian:'Pelatihan SLA, Briefing Pegawai Layanan Publik, PPKP, Pembentukan Duta Transformasi',waktu:'Jan – Des 2026',pic:'Seksi PLI, Seksi KI, Subbagian Umum'},
+      {sub:'ii.b',uraian:'Publikasi informasi pelayanan melalui berbagai media (website, sosmed, dll)',waktu:'Jan – Des 2026',pic:'Seksi Penyuluhan & Layanan Informasi'},
+      {sub:'ii.c',uraian:'Sistem penghargaan dan sanksi bagi petugas pelayanan',waktu:'Jan – Des 2026',pic:'Subbagian Umum'},
+      {sub:'ii.d',uraian:'Sistem kompensasi kepada penerima layanan bila layanan tidak sesuai standar',waktu:'Jan – Jun 2026',pic:'Seksi Penyuluhan & Layanan Informasi'},
+      {sub:'ii.e',uraian:'Integrasi Layanan Informasi melalui aplikasi Gendis Legi',waktu:'Jan – Jun 2026',pic:'Seksi PDAD & Seksi PLI'},
+      {sub:'ii.f',uraian:'Inovasi Posko KI Reborn – Pos Kepatuhan Internal KPPBC TMP Tanjung Emas',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+    {nama:'Pengelolaan Pengaduan Pelayanan',icon:'📬',items:[
+      {sub:'iii.a',uraian:'Media pengaduan terintegrasi SP4N-LAPOR!: SK unit & petugas, saluran online/offline',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'iii.b',uraian:'Penunjukan unit dan petugas pengaduan',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'iii.c',uraian:'Monitoring penanganan pengaduan dan konsultasi secara berkala',waktu:'Jan – Des 2026',pic:'Seksi PLI, Seksi KI, Subbagian Umum'},
+    ]},
+    {nama:'Penilaian Kepuasan Masyarakat',icon:'💬',items:[
+      {sub:'iv.a',uraian:'Pelaksanaan Survei Kepuasan Masyarakat (SKM) Triwulanan',waktu:'Apr – Des 2026',pic:'Seksi PLI, Seksi KI, Subbagian Umum'},
+      {sub:'iv.b',uraian:'Publikasi hasil SKM secara online (website, sosmed) dan offline',waktu:'Apr – Des 2026',pic:'Seksi Penyuluhan & Layanan Informasi'},
+      {sub:'iv.c',uraian:'Tindak lanjut Rekomendasi Hasil SKM Triwulanan',waktu:'Apr – Des 2026',pic:'Seksi PLI, Seksi KI, Subbagian Umum'},
+    ]},
+    {nama:'Pemanfaatan Teknologi Informasi',icon:'📱',items:[
+      {sub:'v.a',uraian:'Integrasi layanan melalui aplikasi Gendis Legi pada seluruh proses pemberian layanan',waktu:'Jan – Mar 2026',pic:'Seksi PDAD & Seksi PLI'},
+      {sub:'v.b',uraian:'Pembangunan Database atas Layanan Informasi Terpadu pada aplikasi SPLIT',waktu:'Jan – Des 2026',pic:'Seksi Penyuluhan & Layanan Informasi'},
+      {sub:'v.c',uraian:'Monitoring atas Pemanfaatan Teknologi Informasi secara berkala',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+    {nama:'Rencana Kerja Reform – Pelayanan Publik',icon:'🚀',items:[
+      {sub:'R-i',uraian:'Monitoring dan evaluasi penerapan inovasi pelayanan (Triwulanan)',waktu:'Apr – Des 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'R-ii',uraian:'Monitoring dan evaluasi penerapan inovasi perijinan/pelayanan yang telah dipermudah',waktu:'Apr – Des 2026',pic:'Seksi Kepatuhan Internal'},
+      {sub:'R-iii',uraian:'SK Penetapan Saluran Pengaduan dan penanganan pengaduan secara responsif',waktu:'Jan – Des 2026',pic:'Seksi Kepatuhan Internal'},
+    ]},
+  ],
+  done:0,ongoing:14,planned:5
+},
+];
+
+// ============================================================
+// APP STATE
+// ============================================================
+let currentSubtimNo = null;
+let currentRole     = null; // 'subtim' or 'admin'
+let liveData        = null;
+let fileSHA         = null;
+let hasChanges      = false;
+
+const STATUS_OPTIONS = [
+  {value:'done',    label:'✅ Selesai',    cls:'s-done'},
+  {value:'ongoing', label:'🔥 Berjalan',  cls:'s-ongoing'},
+  {value:'upcoming',label:'⏳ Segera',    cls:'s-upcoming'},
+  {value:'planned', label:'📅 Direncanakan',cls:'s-planned'},
+];
+
+// ============================================================
+// UTILITIES
+// ============================================================
+function showLoading(msg){ 
+  document.getElementById('loading-overlay').style.display='flex';
+  document.getElementById('loading-msg').textContent = msg||'Memuat data...';
+}
+function hideLoading(){ document.getElementById('loading-overlay').style.display='none'; }
+
+function toast(msg, type='info', duration=3000){
+  var el=document.getElementById('toast');
+  el.className='';el.classList.add(type);
+  el.textContent=msg;el.style.display='flex';
+  clearTimeout(el._t);
+  el._t=setTimeout(()=>{ el.style.display='none'; }, duration);
+}
+
+function showModal(title, body, onConfirm){
+  document.getElementById('modal-title').textContent=title;
+  document.getElementById('modal-body').textContent=body;
+  document.getElementById('modal-confirm-btn').onclick=function(){closeModal();onConfirm();};
+  document.getElementById('confirm-modal').classList.add('open');
+}
+function closeModal(){ document.getElementById('confirm-modal').classList.remove('open'); }
+
+function statusClass(s){ return {done:'s-done',ongoing:'s-ongoing',upcoming:'s-upcoming',planned:'s-planned'}[s]||'s-planned'; }
+function statusLabel(s){ return STATUS_OPTIONS.find(o=>o.value===s)?.label || s; }
+function chipHtml(s){ return `<span class="chip chip-${s}">${statusLabel(s)}</span>`; }
+
+// ============================================================
+// TOKEN SETUP
+// ============================================================
+function toggleTokVis(){
+  var inp=document.getElementById('inp-token');
+  inp.type = inp.type==='password' ? 'text' : 'password';
+}
+
+function saveTokenAndContinue(){
+  var val=document.getElementById('inp-token').value.trim();
+  var err=document.getElementById('setup-err');
+  if(!val || !val.startsWith('ghp_') && !val.startsWith('github_pat_')){
+    err.style.display='block';
+    err.textContent='Token tidak valid. Harus diawali ghp_ atau github_pat_';
+    return;
+  }
+  saveToken(val);
+  document.getElementById('setup-screen').style.display='none';
+  document.getElementById('login-screen').style.display='flex';
+  err.style.display='none';
+}
+
+function showChangeToken(){
+  if(!confirm('Ganti GitHub Token? Token lama akan dihapus dari browser ini.')) return;
+  clearToken();
+  // go back to setup
+  document.getElementById('main-screen').style.display='none';
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('setup-screen').style.display='flex';
+  document.getElementById('inp-token').value='';
+}
+
+function updateTokenChip(){
+  var chip=document.getElementById('tok-status-chip');
+  if(!chip) return;
+  if(getToken()){
+    chip.className='tok-chip';
+    chip.innerHTML='🔑 Token aktif';
+    chip.title='Klik untuk ganti token';
+  } else {
+    chip.className='tok-chip tok-missing';
+    chip.innerHTML='⚠️ Token belum diset';
+    chip.title='Klik untuk setup token';
+  }
+}
+
+// ============================================================
+// LOGIN
+// ============================================================
+function togglePIN(){
+  var inp=document.getElementById('inp-pin');
+  var btn=document.getElementById('pin-toggle-btn');
+  if(inp.type==='password'){ inp.type='text'; btn.textContent='🙈'; }
+  else { inp.type='password'; btn.textContent='👁'; }
+}
+
+function doLogin(){
+  var no=document.getElementById('sel-subtim').value;
+  var pin=document.getElementById('inp-pin').value;
+  var err=document.getElementById('login-err');
+  if(!no||!pin){ err.style.display='block'; err.textContent='Pilih subtim dan masukkan PIN.'; return; }
+  if(CONFIG.PINS[no]!==pin){ err.style.display='block'; err.textContent='PIN salah. Coba lagi.'; return; }
+  err.style.display='none';
+  currentSubtimNo = (no==='ADMIN') ? 'I' : no;
+  currentRole = (no==='ADMIN') ? 'admin' : 'subtim';
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('main-screen').style.display='block';
+  updateTokenChip();
+  init();
+}
+
+function doLogout(){
+  if(hasChanges){
+    if(!confirm('Ada perubahan yang belum disimpan. Yakin keluar?')) return;
+  }
+  currentSubtimNo=null; currentRole=null; hasChanges=false;
+  document.getElementById('login-screen').style.display='flex';
+  document.getElementById('main-screen').style.display='none';
+  document.getElementById('inp-pin').value='';
+}
+
+// ============================================================
+// INIT & DATA FETCH
+// ============================================================
+async function init(){
+  showLoading('Menghubungkan ke GitHub...');
+  await fetchDataJSON();
+  hideLoading();
+  renderSubtimInfo();
+  if(currentRole==='admin') renderAdminTabs();
+  renderForm(currentSubtimNo);
+}
+
+async function fetchDataJSON(){
+  try{
+    var url='https://api.github.com/repos/'+CONFIG.GITHUB_OWNER+'/'+CONFIG.GITHUB_REPO+'/contents/'+CONFIG.DATA_FILE+'?ref='+CONFIG.GITHUB_BRANCH;
+    var res=await fetch(url,{headers:{
+      'Authorization':'token '+getToken(),
+      'Accept':'application/vnd.github.v3+json'
+    }});
+    if(res.status===404){
+      toast('⚠️ data.json belum ada di repo. Akan dibuat otomatis saat pertama kali simpan.','info',5000);
+      liveData=null; fileSHA=null; return;
+    }
+    if(!res.ok){ throw new Error('HTTP '+res.status); }
+    var json=await res.json();
+    fileSHA = json.sha;
+    var decoded = atob(json.content.replace(/\n/g,''));
+    liveData = JSON.parse(decoded);
+    toast('✅ Data berhasil dimuat dari GitHub','success');
+  }catch(e){
+    console.error(e);
+    toast('⚠️ Gagal terhubung ke GitHub. Pastikan token & nama repo benar.','error',6000);
+    liveData=null;
+  }
+}
+
+async function refreshData(){
+  hasChanges=false;
+  showLoading('Menyegarkan data...');
+  await fetchDataJSON();
+  hideLoading();
+  renderForm(currentSubtimNo);
+  updateStats(currentSubtimNo);
+}
+
+// ============================================================
+// BUILD CURRENT DATA OBJECT (merge schema + live)
+// ============================================================
+function getCurrentStatuses(subtimNo){
+  // Returns array of {sub, status} per kategori item, and prioritas statuses
+  var schema = SUBTIMS_SCHEMA.find(s=>s.no===subtimNo);
+  if(!schema) return null;
+  var result = {
+    no: subtimNo,
+    done: schema.done,
+    ongoing: schema.ongoing,
+    planned: schema.planned,
+    prioritas: (schema.prioritas||[]).map(p=>({no:p.no, status:p.status||'planned'})),
+    kategori: schema.kategori.map(kat=>({
+      nama: kat.nama,
+      items: kat.items.map(it=>({sub:it.sub, status:it.status||'planned'}))
+    }))
+  };
+  // Overlay live data if available
+  if(liveData && liveData.subtims){
+    var live = liveData.subtims.find(s=>s.no===subtimNo);
+    if(live){
+      if(typeof live.done==='number') result.done=live.done;
+      if(typeof live.ongoing==='number') result.ongoing=live.ongoing;
+      if(typeof live.planned==='number') result.planned=live.planned;
+      if(live.prioritas) live.prioritas.forEach(lp=>{
+        var p=result.prioritas.find(x=>x.no===lp.no);
+        if(p&&lp.status) p.status=lp.status;
+      });
+      if(live.kategori) live.kategori.forEach((lk,ki)=>{
+        if(!result.kategori[ki]) return;
+        if(lk.items) lk.items.forEach((li,ii)=>{
+          if(result.kategori[ki].items[ii]&&li.status)
+            result.kategori[ki].items[ii].status=li.status;
+        });
+      });
+    }
+  }
+  return result;
+}
+
+// ============================================================
+// RENDER SUBTIM INFO BAR
+// ============================================================
+function renderSubtimInfo(){
+  var schema = SUBTIMS_SCHEMA.find(s=>s.no===currentSubtimNo);
+  if(!schema) return;
+  var badge=document.getElementById('si-badge');
+  badge.textContent=schema.no;
+  badge.style.background=`color-mix(in srgb, ${schema.color} 15%, #fff)`;
+  badge.style.color=schema.color;
+  badge.style.border=`2px solid color-mix(in srgb, ${schema.color} 30%, #fff)`;
+  document.getElementById('si-nama').textContent='Subtim '+schema.no+' – '+schema.nama;
+  document.getElementById('si-desc').textContent=schema.desc;
+  document.getElementById('save-bar-subtim').textContent='Subtim '+schema.no;
+  if(liveData&&liveData.lastUpdated){
+    var d=new Date(liveData.lastUpdated);
+    var lbl=document.getElementById('last-save-label');
+    lbl.style.display='block';
+    lbl.textContent='Terakhir disimpan: '+d.toLocaleDateString('id-ID',{day:'2-digit',month:'short'})
+      +' '+d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
+  }
+}
+
+// ============================================================
+// ADMIN TABS
+// ============================================================
+function renderAdminTabs(){
+  var container=document.getElementById('tabs-container');
+  var wrap=document.getElementById('admin-tabs');
+  wrap.style.display='block';
+  container.innerHTML='';
+  SUBTIMS_SCHEMA.forEach(s=>{
+    var btn=document.createElement('button');
+    btn.className='btn btn-sm '+(s.no===currentSubtimNo?'btn-primary':'btn-outline');
+    btn.innerHTML=s.icon+' '+s.no;
+    btn.title='Subtim '+s.no+' – '+s.nama;
+    btn.onclick=function(){ switchSubtim(s.no); };
+    container.appendChild(btn);
+  });
+}
+
+function switchSubtim(no){
+  if(hasChanges){
+    if(!confirm('Ada perubahan yang belum disimpan di Subtim '+currentSubtimNo+'. Pindah subtim?')) return;
+    hasChanges=false;
+  }
+  currentSubtimNo=no;
+  renderSubtimInfo();
+  if(currentRole==='admin') renderAdminTabs();
+  renderForm(no);
+  updateStats(no);
+}
+
+// ============================================================
+// STATS
+// ============================================================
+function updateStats(subtimNo){
+  // Re-calculate from current form values
+  var items = document.querySelectorAll('.item-status-sel');
+  var done=0,ongoing=0,upcoming=0,planned=0;
+  items.forEach(sel=>{
+    switch(sel.value){
+      case 'done': done++; break;
+      case 'ongoing': ongoing++; break;
+      case 'upcoming': upcoming++; break;
+      case 'planned': planned++; break;
+    }
+  });
+  var total=done+ongoing+upcoming+planned;
+  document.getElementById('st-total').textContent=total;
+  document.getElementById('st-done').textContent=done;
+  document.getElementById('st-ongoing').textContent=ongoing;
+  document.getElementById('st-planned').textContent=upcoming+planned;
+}
+
+// ============================================================
+// RENDER FORM
+// ============================================================
+function renderForm(subtimNo){
+  var schema = SUBTIMS_SCHEMA.find(s=>s.no===subtimNo);
+  if(!schema) return;
+  var current = getCurrentStatuses(subtimNo);
+  var color = schema.color;
+  var html='';
+
+  // --- PRIORITAS ---
+  if(schema.prioritas && schema.prioritas.length>0){
+    html+=`<div class="section-card" style="border-top:4px solid ${color}">`;
+    html+=`<div class="section-head open" onclick="toggleSection(this)">
+      <span class="section-icon">🎯</span>
+      <span class="section-title">Rencana Kerja Prioritas</span>
+      <span class="section-count" style="background:${color}22;color:${color};border-color:${color}55">${schema.prioritas.length} prioritas</span>
+      <span class="section-arr">▼</span>
+    </div>`;
+    html+=`<div class="section-body open" id="sec-prio-${subtimNo}">`;
+    schema.prioritas.forEach((p,pi)=>{
+      var curStatus = current.prioritas[pi]?.status||'planned';
+      html+=`<div class="prio-card" style="--c:${color}">
+        <div class="prio-no">Prioritas #${p.no}</div>
+        <div class="prio-nama">${esc(p.nama)}</div>
+        <div class="prio-row">
+          <div class="prio-label">⏱ ${esc(p.waktu)} · 👤 ${esc(p.pic)}</div>
+          <select class="status-select item-status-sel ${statusClass(curStatus)}"
+            data-type="prio" data-subtim="${subtimNo}" data-pi="${pi}"
+            onchange="onStatusChange(this)">
+            ${STATUS_OPTIONS.map(o=>`<option value="${o.value}" ${curStatus===o.value?'selected':''}>${o.label}</option>`).join('')}
+          </select>
+        </div>
+      </div>`;
+    });
+    html+='</div></div>';
+  }
+
+  // --- KATEGORI ---
+  schema.kategori.forEach((kat,ki)=>{
+    var katColor=color;
+    html+=`<div class="section-card" style="border-top:4px solid ${katColor}">`;
+    html+=`<div class="section-head" onclick="toggleSection(this)">
+      <span class="section-icon">${kat.icon}</span>
+      <span class="section-title">${esc(kat.nama)}</span>
+      <span class="section-count" style="background:${katColor}22;color:${katColor};border-color:${katColor}55">${kat.items.length} item</span>
+      <span class="section-arr">▼</span>
+    </div>`;
+    html+=`<div class="section-body" id="sec-${subtimNo}-${ki}">`;
+    kat.items.forEach((item,ii)=>{
+      var curStatus = current.kategori[ki]?.items[ii]?.status || 'planned';
+      html+=`<div class="item-row">
+        <div class="item-sub">${esc(item.sub)}</div>
+        <div class="item-info">
+          <div class="item-uraian">${esc(item.uraian)}</div>
+          <div class="item-meta">
+            <span>⏱ ${esc(item.waktu)}</span>
+            <span>👤 ${esc(item.pic)}</span>
+          </div>
+        </div>
+        <div class="item-status-wrap">
+          <select class="status-select item-status-sel ${statusClass(curStatus)}"
+            data-type="item" data-subtim="${subtimNo}" data-ki="${ki}" data-ii="${ii}"
+            onchange="onStatusChange(this)">
+            ${STATUS_OPTIONS.map(o=>`<option value="${o.value}" ${curStatus===o.value?'selected':''}>${o.label}</option>`).join('')}
+          </select>
+        </div>
+      </div>`;
+    });
+    html+='</div></div>';
+  });
+
+  document.getElementById('form-content').innerHTML=html;
+  updateStats(subtimNo);
+  // Open first section
+  var firstHead=document.querySelector('.section-head');
+  var firstBody=document.querySelector('.section-body');
+  if(firstHead&&firstBody){ firstHead.classList.add('open'); firstBody.classList.add('open'); }
+}
+
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function toggleSection(head){
+  var bodyId=head.nextElementSibling?.id;
+  if(!bodyId) return;
+  var body=document.getElementById(bodyId);
+  if(!body) return;
+  var isOpen=head.classList.contains('open');
+  head.classList.toggle('open',!isOpen);
+  body.classList.toggle('open',!isOpen);
+}
+
+// ============================================================
+// STATUS CHANGE
+// ============================================================
+function onStatusChange(sel){
+  // Update visual class
+  sel.className='status-select item-status-sel '+statusClass(sel.value);
+  hasChanges=true;
+  document.getElementById('unsaved-dot').style.display='inline-block';
+  updateStats(currentSubtimNo);
+}
+
+// ============================================================
+// COLLECT FORM DATA
+// ============================================================
+function collectFormData(subtimNo){
+  var schema=SUBTIMS_SCHEMA.find(s=>s.no===subtimNo);
+  var sels=document.querySelectorAll('.item-status-sel');
+  var prioStatuses={};
+  var katStatuses={};
+  var done=0,ongoing=0,planned=0;
+
+  sels.forEach(sel=>{
+    var type=sel.dataset.type;
+    var st=sel.value;
+    if(st==='done') done++;
+    else if(st==='ongoing') ongoing++;
+    else planned++;
+
+    if(type==='prio'){
+      prioStatuses[sel.dataset.pi]=st;
+    } else if(type==='item'){
+      var ki=parseInt(sel.dataset.ki);
+      var ii=parseInt(sel.dataset.ii);
+      if(!katStatuses[ki]) katStatuses[ki]=[];
+      katStatuses[ki][ii]=st;
+    }
+  });
+
+  var result={
+    no: subtimNo,
+    done: done,
+    ongoing: ongoing,
+    planned: planned,
+    prioritas: (schema.prioritas||[]).map((p,pi)=>({no:p.no, status:prioStatuses[pi]||'planned'})),
+    kategori: schema.kategori.map((kat,ki)=>({
+      nama: kat.nama,
+      items: kat.items.map((item,ii)=>({sub:item.sub, status:(katStatuses[ki]&&katStatuses[ki][ii])||'planned'}))
+    }))
+  };
+  return result;
+}
+
+// ============================================================
+// SAVE TO GITHUB
+// ============================================================
+function confirmSave(){
+  var schema=SUBTIMS_SCHEMA.find(s=>s.no===currentSubtimNo);
+  showModal(
+    '💾 Simpan ke Dashboard',
+    `Data Subtim ${currentSubtimNo} (${schema?.nama}) akan langsung diperbarui di Dashboard ZI. Lanjutkan?`,
+    doSave
+  );
+}
+
+async function doSave(){
+  showLoading('Menyimpan ke GitHub...');
+  document.getElementById('save-btn').disabled=true;
+  document.getElementById('save-status').innerHTML='<div class="spinner" style="width:16px;height:16px;border-width:2px"></div> Menyimpan...';
+  try{
+    // Re-fetch SHA first to avoid conflicts
+    await fetchDataJSON();
+
+    // Build new data object
+    var updatedSubtim = collectFormData(currentSubtimNo);
+    var now = new Date().toISOString();
+
+    // Merge with existing liveData
+    var newData = liveData ? JSON.parse(JSON.stringify(liveData)) : {version:'1.0', subtims:[]};
+    newData.lastUpdated = now;
+    newData.updatedBy = 'Subtim '+currentSubtimNo;
+    if(!Array.isArray(newData.subtims)) newData.subtims=[];
+
+    var idx = newData.subtims.findIndex(s=>s.no===currentSubtimNo);
+    if(idx>=0) newData.subtims[idx]=updatedSubtim;
+    else newData.subtims.push(updatedSubtim);
+
+    // Ensure all subtims exist in data
+    SUBTIMS_SCHEMA.forEach(schema=>{
+      if(!newData.subtims.find(s=>s.no===schema.no)){
+        newData.subtims.push(getCurrentStatuses(schema.no));
+      }
+    });
+
+    // Sort by roman numeral order
+    var order={I:0,II:1,III:2,IV:3,V:4,VI:5};
+    newData.subtims.sort((a,b)=>(order[a.no]||99)-(order[b.no]||99));
+
+    var content = JSON.stringify(newData, null, 2);
+    var encoded = btoa(unescape(encodeURIComponent(content)));
+
+    var body = {
+      message: `update: Subtim ${currentSubtimNo} – ${now.slice(0,16).replace('T',' ')}`,
+      content: encoded,
+      branch: CONFIG.GITHUB_BRANCH
+    };
+    if(fileSHA) body.sha = fileSHA;
+
+    var url='https://api.github.com/repos/'+CONFIG.GITHUB_OWNER+'/'+CONFIG.GITHUB_REPO+'/contents/'+CONFIG.DATA_FILE;
+    var res=await fetch(url,{
+      method:'PUT',
+      headers:{
+        'Authorization':'token '+getToken(),
+        'Accept':'application/vnd.github.v3+json',
+        'Content-Type':'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if(res.ok){
+      var json=await res.json();
+      fileSHA = json.content?.sha;
+      liveData = newData;
+      hasChanges=false;
+      document.getElementById('unsaved-dot').style.display='none';
+      var d=new Date(now);
+      var savedStr=d.toLocaleDateString('id-ID',{day:'2-digit',month:'short'})+' '+d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
+      var lbl=document.getElementById('last-save-label');
+      lbl.style.display='block';
+      lbl.textContent='Terakhir disimpan: '+savedStr;
+      document.getElementById('save-status').innerHTML='<span style="color:var(--green)">✅ Tersimpan '+savedStr+'</span>';
+      toast('✅ Data Subtim '+currentSubtimNo+' berhasil disimpan ke dashboard!','success',4000);
+    } else {
+      var errJson=await res.json().catch(()=>({}));
+      throw new Error(errJson.message||'HTTP '+res.status);
+    }
+  }catch(e){
+    console.error(e);
+    document.getElementById('save-status').innerHTML='<span style="color:var(--red)">❌ Gagal: '+e.message+'</span>';
+    toast('❌ Gagal menyimpan: '+e.message,'error',6000);
+  }finally{
+    hideLoading();
+    document.getElementById('save-btn').disabled=false;
+  }
+}
+// ============================================================
+// STARTUP — cek token saat halaman dibuka
+// ============================================================
+(function startup(){
+  if(!getToken()){
+    // Belum ada token → tampilkan setup screen
+    document.getElementById('setup-screen').style.display='flex';
+    document.getElementById('login-screen').style.display='none';
+  } else {
+    // Token sudah ada → langsung ke login
+    document.getElementById('setup-screen').style.display='none';
+    document.getElementById('login-screen').style.display='flex';
+  }
+})();
+</script>
