@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-01T08:25:52.677Z",
+  "lastUpdated": "2026-03-01T08:43:15.988Z",
   "updatedBy": "Subtim I",
   "subtims": [
     {
@@ -67,7 +67,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â Tatalaksana",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ Tatalaksana",
           "items": [
             {
               "sub": "R-i",
@@ -204,7 +204,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â SDM",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ SDM",
           "items": [
             {
               "sub": "R-i",
@@ -289,7 +289,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â Akuntabilitas",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ Akuntabilitas",
           "items": [
             {
               "sub": "R-i",
@@ -421,7 +421,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â Pengawasan",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ Pengawasan",
           "items": [
             {
               "sub": "R-i",
@@ -553,7 +553,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â Pelayanan Publik",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ Pelayanan Publik",
           "items": [
             {
               "sub": "R-i",
@@ -573,21 +573,21 @@
     },
     {
       "no": "I",
-      "done": 4,
+      "done": 7,
       "ongoing": 8,
-      "planned": 3,
+      "planned": 0,
       "prioritas": [
         {
           "no": "1",
-          "status": "upcoming"
+          "status": "done"
         },
         {
           "no": "2",
-          "status": "planned"
+          "status": "done"
         },
         {
           "no": "3",
-          "status": "upcoming"
+          "status": "done"
         }
       ],
       "kategori": [
