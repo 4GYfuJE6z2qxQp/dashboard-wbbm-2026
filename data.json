@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-03-01T00:00:00.000Z",
+  "updatedBy": "System Init",
+  "subtims": [
+    {
+      "no": "I",
+      "done": 4, "ongoing": 9, "planned": 1,
+      "prioritas": [
+        {"no":"1","status":"ongoing"},
+        {"no":"2","status":"upcoming"},
+        {"no":"3","status":"ongoing"}
+      ],
+      "kategori": [
+        {"nama":"Penyusunan Tim Kerja","items":[{"sub":"i.a","status":"done"},{"sub":"i.b","status":"done"}]},
+        {"nama":"Rencana Pembangunan ZI","items":[{"sub":"ii.a","status":"done"},{"sub":"ii.b","status":"done"},{"sub":"ii.c","status":"ongoing"}]},
+        {"nama":"Pemantauan & Evaluasi Pembangunan ZI","items":[{"sub":"iii.a","status":"ongoing"},{"sub":"iii.b","status":"ongoing"},{"sub":"iii.c","status":"ongoing"}]},
+        {"nama":"Perubahan Pola Pikir & Budaya Kerja","items":[{"sub":"iv.a","status":"ongoing"},{"sub":"iv.b","status":"ongoing"},{"sub":"iv.c","status":"ongoing"},{"sub":"iv.d","status":"ongoing"}]}
+      ]
+    },
+    {
+      "no": "II",
+      "done": 0, "ongoing": 9, "planned": 3,
+      "prioritas": [
+        {"no":"1","status":"planned"}
+      ],
+      "kategori": [
+        {"nama":"Prosedur Operasional Tetap (SOP)","items":[{"sub":"i.a","status":"planned"},{"sub":"i.b","status":"planned"},{"sub":"i.c","status":"planned"}]},
+        {"nama":"Sistem Pemerintahan Berbasis Elektronik (SPBE)","items":[{"sub":"ii.a","status":"planned"},{"sub":"ii.b","status":"ongoing"},{"sub":"ii.c","status":"ongoing"},{"sub":"ii.d","status":"ongoing"}]},
+        {"nama":"Keterbukaan Informasi Publik","items":[{"sub":"iii.a","status":"ongoing"},{"sub":"iii.b","status":"ongoing"}]},
+        {"nama":"Rencana Kerja Reform – Tatalaksana","items":[{"sub":"R-i","status":"ongoing"},{"sub":"R-ii.a","status":"ongoing"},{"sub":"R-ii.b","status":"ongoing"},{"sub":"R-iii","status":"ongoing"}]}
+      ]
+    },
+    {
+      "no": "III",
+      "done": 2, "ongoing": 15, "planned": 3,
+      "prioritas": [
+        {"no":"1","status":"ongoing"}
+      ],
+      "kategori": [
+        {"nama":"Perencanaan Kebutuhan Pegawai","items":[{"sub":"i.a","status":"ongoing"},{"sub":"i.b","status":"ongoing"},{"sub":"i.c","status":"ongoing"}]},
+        {"nama":"Pola Mutasi Internal","items":[{"sub":"ii.a","status":"ongoing"},{"sub":"ii.b","status":"ongoing"},{"sub":"ii.c","status":"ongoing"}]},
+        {"nama":"Pengembangan Pegawai Berbasis Kompetensi","items":[{"sub":"iii.a","status":"ongoing"},{"sub":"iii.b","status":"ongoing"},{"sub":"iii.c","status":"planned"},{"sub":"iii.d","status":"ongoing"},{"sub":"iii.e","status":"ongoing"},{"sub":"iii.f","status":"upcoming"}]},
+        {"nama":"Penetapan Kinerja Individu","items":[{"sub":"iv.a","status":"done"},{"sub":"iv.b","status":"upcoming"},{"sub":"iv.c","status":"ongoing"},{"sub":"iv.d","status":"ongoing"}]},
+        {"nama":"Penegakan Aturan Disiplin / Kode Etik","items":[{"sub":"v.a","status":"ongoing"}]},
+        {"nama":"Sistem Informasi Kepegawaian","items":[{"sub":"vi.a","status":"ongoing"}]},
+        {"nama":"Rencana Kerja Reform – SDM","items":[{"sub":"R-i","status":"done"},{"sub":"R-ii","status":"upcoming"},{"sub":"R-iii","status":"ongoing"}]}
+      ]
+    },
+    {
+      "no": "IV",
+      "done": 7, "ongoing": 4, "planned": 0,
+      "prioritas": [
+        {"no":"1","status":"ongoing"}
+      ],
+      "kategori": [
+        {"nama":"Keterlibatan Pimpinan","items":[{"sub":"i.a","status":"done"},{"sub":"i.b","status":"done"},{"sub":"i.c","status":"ongoing"}]},
+        {"nama":"Pengelolaan Akuntabilitas Kinerja","items":[{"sub":"ii.a","status":"done"},{"sub":"ii.b","status":"done"},{"sub":"ii.c","status":"done"},{"sub":"ii.d","status":"done"},{"sub":"ii.e","status":"ongoing"},{"sub":"ii.f","status":"ongoing"},{"sub":"ii.g","status":"done"},{"sub":"ii.h","status":"ongoing"}]},
+        {"nama":"Rencana Kerja Reform – Akuntabilitas","items":[{"sub":"R-i","status":"done"},{"sub":"R-ii","status":"ongoing"},{"sub":"R-iii","status":"done"}]}
+      ]
+    },
+    {
+      "no": "V",
+      "done": 3, "ongoing": 10, "planned": 6,
+      "prioritas": [
+        {"no":"1","status":"ongoing"},
+        {"no":"2","status":"ongoing"}
+      ],
+      "kategori": [
+        {"nama":"Pengendalian Gratifikasi","items":[{"sub":"i.a","status":"ongoing"},{"sub":"i.b","status":"done"}]},
+        {"nama":"Sistem Pengendalian Intern Pemerintah (SPIP)","items":[{"sub":"ii.a","status":"ongoing"},{"sub":"ii.b","status":"upcoming"},{"sub":"ii.c","status":"ongoing"},{"sub":"ii.d","status":"done"}]},
+        {"nama":"Pengaduan Masyarakat","items":[{"sub":"iii.a","status":"ongoing"},{"sub":"iii.b","status":"ongoing"},{"sub":"iii.c","status":"upcoming"},{"sub":"iii.d","status":"upcoming"}]},
+        {"nama":"Whistle-Blowing System (WBS)","items":[{"sub":"iv.a","status":"ongoing"},{"sub":"iv.b","status":"upcoming"},{"sub":"iv.c","status":"upcoming"}]},
+        {"nama":"Penanganan Benturan Kepentingan","items":[{"sub":"v.a","status":"ongoing"},{"sub":"v.b","status":"upcoming"},{"sub":"v.c","status":"ongoing"},{"sub":"v.d","status":"upcoming"},{"sub":"v.e","status":"upcoming"}]},
+        {"nama":"Rencana Kerja Reform – Pengawasan","items":[{"sub":"R-i","status":"ongoing"},{"sub":"R-ii","status":"ongoing"},{"sub":"R-iii","status":"done"}]}
+      ]
+    },
+    {
+      "no": "VI",
+      "done": 0, "ongoing": 14, "planned": 5,
+      "prioritas": [
+        {"no":"1","status":"upcoming"}
+      ],
+      "kategori": [
+        {"nama":"Standar Pelayanan","items":[{"sub":"i.a","status":"ongoing"},{"sub":"i.b","status":"ongoing"},{"sub":"i.c","status":"planned"},{"sub":"i.d","status":"ongoing"}]},
+        {"nama":"Budaya Pelayanan Prima","items":[{"sub":"ii.a","status":"ongoing"},{"sub":"ii.b","status":"ongoing"},{"sub":"ii.c","status":"ongoing"},{"sub":"ii.d","status":"ongoing"},{"sub":"ii.e","status":"ongoing"},{"sub":"ii.f","status":"ongoing"}]},
+        {"nama":"Pengelolaan Pengaduan Pelayanan","items":[{"sub":"iii.a","status":"ongoing"},{"sub":"iii.b","status":"ongoing"},{"sub":"iii.c","status":"ongoing"}]},
+        {"nama":"Penilaian Kepuasan Masyarakat","items":[{"sub":"iv.a","status":"upcoming"},{"sub":"iv.b","status":"upcoming"},{"sub":"iv.c","status":"upcoming"}]},
+        {"nama":"Pemanfaatan Teknologi Informasi","items":[{"sub":"v.a","status":"ongoing"},{"sub":"v.b","status":"ongoing"},{"sub":"v.c","status":"ongoing"}]},
+        {"nama":"Rencana Kerja Reform – Pelayanan Publik","items":[{"sub":"R-i","status":"upcoming"},{"sub":"R-ii","status":"upcoming"},{"sub":"R-iii","status":"ongoing"}]}
+      ]
+    }
+  ]
+}
