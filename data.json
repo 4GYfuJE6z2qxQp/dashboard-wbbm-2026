@@ -1,7 +1,7 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-01T09:57:44.551Z",
-  "updatedBy": "Subtim IV",
+  "lastUpdated": "2026-03-01T09:58:48.547Z",
+  "updatedBy": "Subtim V",
   "subtims": [
     {
       "no": "II",
@@ -532,17 +532,16 @@
     },
     {
       "no": "V",
-      "nama": "Penguatan Pengawasan",
-      "color": "#dc2626",
-      "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
-      "desc": "Pengendalian gratifikasi, SPIP, pengaduan masyarakat, WBS, benturan kepentingan",
+      "done": 2,
+      "ongoing": 12,
+      "planned": 8,
       "prioritas": [
         {
           "no": "1",
           "nama": "Telah dibangun lingkungan pengendalian",
           "uraian": "- Pelaksanaan Program Kerja Pengawasan Tahunan (PKPT) sesuai KEP-284/BC/2026 sesuai dengan jadwal yang ditentukan\n- Monitoring Tingkat Pelaporan LHKPN dan LHK 100% secara tepat waktu",
-          "output": "Laporan kegiatan terkait PKPT 2026\nNota Dinas Pelaporan LHKPN LHASN 2026",
-          "waktu": "- Mengikuti jadwal PKPT 2026\n- Februari 2026",
+          "output": "Laporan kegiatan terkait PKPT 2026Nota Dinas Pelaporan LHKPN LHASN 2026",
+          "waktu": "- Mengikuti jadwal PKPT 2026- Februari 2026",
           "pic": "Seksi Kepatuhan Internal",
           "status": "ongoing"
         },
@@ -559,13 +558,12 @@
       "kategori": [
         {
           "nama": "Pengendalian Gratifikasi",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¥",
           "items": [
             {
               "sub": "i.a",
               "uraian": "-Menyisipkan kampanye/ pesan anti gratifikasi pada event internal maupun eksternal\n- Menyusun kegiatan sosialisasi anti gratifikasi kepada pengguna jasa\n- Menyusun kegiatan sosialisasi anti gratifikasi kepada pegawai internal\n- Menyusun kegiatan edukasi kepatuhan internal bertemakan budaya integritas dan anti korupsi\n- Himbauan tidak menerima parcel/ bingkisan pada hari raya/ hari besar\n- Menyisipkan pada setiap postingan di sosial media terkait \"TOLAK dan LAPOR gratifikasi\"",
               "output": "- Laporan Pelaksanaan Sosialisasi\n- Postingan \"TOLAK dan LAPOR gratifikasi\" pada sosial media\n- Nota Dinas/ Pengumuman himbauan tidak menerima parcel/ bingkisan pada hari raya/ hari besar",
-              "waktu": "- Sesuai jadwal sosialisasi\n- Setiap postingan pada sosial media\n- Edukasi Kepatuhan Internal tiap triwulan\n- Menjelang hari raya idul fitri dan libur nataru",
+              "waktu": "- Sesuai jadwal sosialisasi- Setiap postingan pada sosial media- Edukasi Kepatuhan Internal tiap triwulan- Menjelang hari raya idul fitri dan libur nataru",
               "pic": "Tim Kerja dan Tim Monev Pembangunan ZI menuju WBK/WBBM Subtim V/Seksi Kepatuhan Internal",
               "status": "ongoing"
             },
@@ -581,13 +579,12 @@
         },
         {
           "nama": "Penerapan Sistem Pengendalian Intern Pemerintah (SPIP)",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "ii.a",
               "uraian": "-Penandatanganan pakta integritas dengan penadatangana pada banner sebagai bentuk dukungan dan komitmen untuk mewujudkan ZI WBBM\n- Pelaksanaan Pemantauan Kode Etik dan Kode Perilaku Pegawai\n- Monitoring Tingkat Pelaporan LHKPN dan LHK 100% secara tepat waktu\n- Pelaksanaan DKRO",
               "output": "- Pakta integritas dan banner yang telah ditandatangani\n- Laporan PPKEPP\n- Nota Dinas Monitoring LHKPN dan LHK\n- Nota Dinas Ikhtisar DKRO",
-              "waktu": "-Februari 2026\n- Maret, Juni, September, Desember 2026\n- Setiap Bulan",
+              "waktu": "-Februari 2026- Maret, Juni, September, Desember 2026- Setiap Bulan",
               "pic": "Seksi Kepatuhan Internal, Sub bagian Umum",
               "status": "ongoing"
             },
@@ -603,7 +600,7 @@
               "sub": "ii.c",
               "uraian": "1. Pelaksanaan kegiatan dalam lingkup PKPT DJBC tahun 2026 (PPKEKP, Profiling Pegawai, RCM, Tematik PKPT, PUTIK)\n2. Monitoring Implementasi MR\n3. Pelaksanaan Pemeriksaan Mendadak",
               "output": "1. Laporan Pelaksanaan Kegiatan PKPT\n2. Laporan Implementasi Manajemen Risiko\n3. Laporan Pemeriksaan Mendadak",
-              "waktu": "1. Triwulan I 2026\n 2. Triwulan I,II,III,IV\n 3. 6 Kali dalam setahun",
+              "waktu": "1. Triwulan I 2026 2. Triwulan I,II,III,IV 3. 6 Kali dalam setahun",
               "pic": "Seksi Kepatuhan Internal, Sub bagian Umum",
               "status": "ongoing"
             },
@@ -619,7 +616,6 @@
         },
         {
           "nama": "Pengaduan Masyarakat",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "iii.a",
@@ -657,7 +653,6 @@
         },
         {
           "nama": "Whistle-Blowing System",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¡",
           "items": [
             {
               "sub": "iv.a",
@@ -687,7 +682,6 @@
         },
         {
           "nama": "Penanganan Benturan Kepentingan",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "v.a",
@@ -701,7 +695,7 @@
               "sub": "v.b",
               "uraian": "1. Internalisasi Benturan Kepentingan\n2. Membuat permintaan laporan penanganan benturan kepantingan kepada tiap seksi",
               "output": "ND Permintaan laporan benturan kepentingan",
-              "waktu": "1. Triwulan III \n2. Setiap bulan",
+              "waktu": "1. Triwulan III 2. Setiap bulan",
               "pic": "Seksi Kepatuhan Internal",
               "status": "upcoming"
             },
@@ -732,14 +726,13 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Pengawasan",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
+          "nama": "Rencana Kerja Reform 2026 Pengawasan",
           "items": [
             {
               "sub": "R-i",
               "uraian": "1. Pelaksanaan Program Kerja Pengawasan Tahunan\n 2. Pelaksanaan Managemen Risiko dengan melakukan mitigasi terhadap risiko yang dapat menghambat tercapainya tujuan organisasi. Dimulai dari penyusunan profil dan peta risiko oleh seksi terkait, penetapan piagam MR oleh Kepala Kantor serta pelaporan kepada Direktorat Kepatuhan Internal.",
               "output": "1. Laporan Pelaksanaan PKPT\n 2. Laporan Implementasi pelaksanaan MR",
-              "waktu": "1. Triwulan I 2026\n 2. Triwulanan 2026",
+              "waktu": "1. Triwulan I 2026 2. Triwulanan 2026",
               "pic": "Seksi Kepatuhan Internal dan Sub Bagian Umum",
               "status": "ongoing"
             },
@@ -753,10 +746,7 @@
             }
           ]
         }
-      ],
-      "done": 2,
-      "ongoing": 10,
-      "planned": 8
+      ]
     },
     {
       "no": "VI",
@@ -987,7 +977,7 @@
       "no": "I",
       "nama": "Manajemen Perubahan",
       "color": "#0099cc",
-      "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
+      "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ",
       "desc": "Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi",
       "prioritas": [
         {
@@ -1021,7 +1011,7 @@
       "kategori": [
         {
           "nama": "Penyusunan Tim Kerja",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¥",
+          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¥",
           "items": [
             {
               "sub": "i.a",
@@ -1043,7 +1033,7 @@
         },
         {
           "nama": "Rencana Pembangunan Zona Integritas",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
+          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -1073,7 +1063,7 @@
         },
         {
           "nama": "Pemantauan dan Evaluasi Pembangunan WBK/WBBM",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
+          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "iii.a",
@@ -1103,7 +1093,7 @@
         },
         {
           "nama": "Perubahan pola pikir dan budaya kerja",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¡",
+          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¡",
           "items": [
             {
               "sub": "iv.a",
@@ -1140,8 +1130,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Manajemen Perubahan",
-          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
+          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Manajemen Perubahan",
+          "icon": "ÃÂÃÂÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "R-i",
