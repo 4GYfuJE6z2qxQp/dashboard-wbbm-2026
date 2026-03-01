@@ -1206,6 +1206,33 @@ function applyLiveData(liveData) {
 }
 
 async function fetchLiveData() {
+  // Coba metode 1: GitHub Contents API (punya CORS header yg benar)
+  var success = await tryGitHubAPI();
+  // Fallback metode 2: raw URL
+  if (!success) await tryRawURL();
+}
+
+async function tryGitHubAPI() {
+  try {
+    var url = 'https://api.github.com/repos/'
+      + DASH_CONFIG.GITHUB_OWNER + '/'
+      + DASH_CONFIG.GITHUB_REPO  + '/contents/'
+      + DASH_CONFIG.DATA_FILE
+      + '?ref=' + DASH_CONFIG.GITHUB_BRANCH
+      + '&t=' + Date.now();
+    var res = await fetch(url, { headers: { 'Accept': 'application/vnd.github.v3.raw' } });
+    if (res.ok) {
+      var data = await res.json();
+      applyLiveData(data);
+      showUpdatedBadge(data);
+      console.log('✅ Data loaded via GitHub API');
+      return true;
+    }
+  } catch(e) { console.log('GitHub API gagal, coba raw URL...'); }
+  return false;
+}
+
+async function tryRawURL() {
   try {
     var url = 'https://raw.githubusercontent.com/'
       + DASH_CONFIG.GITHUB_OWNER + '/'
@@ -1217,17 +1244,23 @@ async function fetchLiveData() {
     if (res.ok) {
       var data = await res.json();
       applyLiveData(data);
-      // Show last-updated badge
-      if (data.lastUpdated) {
-        var el = document.getElementById('last-updated-badge');
-        if (el) {
-          var d = new Date(data.lastUpdated);
-          el.textContent = '↻ ' + d.toLocaleDateString('id-ID',{day:'2-digit',month:'short',year:'numeric'}) + ' ' + d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
-          el.style.display = 'flex';
-        }
-      }
+      showUpdatedBadge(data);
+      console.log('✅ Data loaded via raw URL');
+      return true;
     }
   } catch(e) { console.log('Menggunakan data offline/bawaan.'); }
+  return false;
+}
+
+function showUpdatedBadge(data) {
+  if (data.lastUpdated) {
+    var el = document.getElementById('last-updated-badge');
+    if (el) {
+      var d = new Date(data.lastUpdated);
+      el.textContent = '↻ ' + d.toLocaleDateString('id-ID',{day:'2-digit',month:'short',year:'numeric'}) + ' ' + d.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
+      el.style.display = 'flex';
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', async function(){
