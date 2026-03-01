@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-03-01T09:12:53.365Z",
+  "lastUpdated": "2026-03-01T09:14:39.336Z",
   "updatedBy": "Subtim I",
   "subtims": [
     {
@@ -67,7 +67,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Tatalaksana",
+          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Tatalaksana",
           "items": [
             {
               "sub": "R-i",
@@ -204,7 +204,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ SDM",
+          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ SDM",
           "items": [
             {
               "sub": "R-i",
@@ -289,7 +289,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Akuntabilitas",
+          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Akuntabilitas",
           "items": [
             {
               "sub": "R-i",
@@ -421,7 +421,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Pengawasan",
+          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Pengawasan",
           "items": [
             {
               "sub": "R-i",
@@ -553,7 +553,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Pelayanan Publik",
+          "nama": "Rencana Kerja Reform ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ Pelayanan Publik",
           "items": [
             {
               "sub": "R-i",
@@ -574,20 +574,20 @@
     {
       "no": "I",
       "done": 4,
-      "ongoing": 11,
-      "planned": 0,
+      "ongoing": 8,
+      "planned": 3,
       "prioritas": [
         {
           "no": "1",
-          "status": "ongoing"
+          "status": "upcoming"
         },
         {
           "no": "2",
-          "status": "ongoing"
+          "status": "upcoming"
         },
         {
           "no": "3",
-          "status": "ongoing"
+          "status": "upcoming"
         }
       ],
       "kategori": [
