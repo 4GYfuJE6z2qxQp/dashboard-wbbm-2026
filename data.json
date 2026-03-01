@@ -1,7 +1,7 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-01T09:55:50.281Z",
-  "updatedBy": "Subtim III",
+  "lastUpdated": "2026-03-01T09:57:44.551Z",
+  "updatedBy": "Subtim IV",
   "subtims": [
     {
       "no": "II",
@@ -386,10 +386,9 @@
     },
     {
       "no": "IV",
-      "nama": "Penguatan Akuntabilitas Kinerja",
-      "color": "#d97706",
-      "icon": "ÃÂ°ÃÂÃÂÃÂ",
-      "desc": "Keterlibatan pimpinan, dokumen perencanaan kinerja, IKU, SAKIP, LAKIN",
+      "done": 9,
+      "ongoing": 6,
+      "planned": 0,
       "prioritas": [
         {
           "no": "1",
@@ -404,22 +403,21 @@
       "kategori": [
         {
           "nama": "Keterlibatan Pimpinan",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ¥",
           "items": [
             {
               "sub": "i.a",
               "uraian": "Pimpinan terlibat secara langsung dalam penyusunan perencanaan kerja seperti penyusunan matriks penyelarasan kerangka kinerja, penyusunan RKA-KL, pembahasan penyusunan dan penetapan IKI, penyusunan profil dan peta risiko",
               "output": "1. Matriks penyelarasan kerangka kinerja\n2. Dokumen RKA-KL\n3. ND Pembahasan Penyusunan IKI\n4. Perjanjian Kerja, SKP dan Pakta Integritas\n5. ND Rapat Pembahasan ZI menuju WBBM\n6. Profil dan Peta Risiko KPPBC TMP Tanjung Emas",
-              "waktu": "Januari s.d. Februari\n2026",
-              "pic": "Subtim IV, Subbagian Umum dan\nSeksi Kepatuhan Internal",
+              "waktu": "Januari s.d. Februari2026",
+              "pic": "Subtim IV, Subbagian Umum danSeksi Kepatuhan Internal",
               "status": "done"
             },
             {
               "sub": "i.b",
               "uraian": "Pimpinan terlibat secara langsung dalam penetapan kinerja",
               "output": "1. ND Penyusunan SKP\n2. ND Pembahasan Penyusunan IKI\n3. Penandatanganan SKP\n4. ND Penyampaian SKP\"",
-              "waktu": "Januari s.d. Februari\n2026",
-              "pic": "Subtim IV, Subbagian Umum dan\nSeksi Kepatuhan Internal",
+              "waktu": "Januari s.d. Februari2026",
+              "pic": "Subtim IV, Subbagian Umum danSeksi Kepatuhan Internal",
               "status": "done"
             },
             {
@@ -434,7 +432,6 @@
         },
         {
           "nama": "Pengelolaan Akuntabilitas Kinerja",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -503,8 +500,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂ¢ÃÂÃÂ Akuntabilitas",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
+          "nama": "Rencana Kerja Reform 2026 Akuntabilitas",
           "items": [
             {
               "sub": "R-i",
@@ -532,16 +528,13 @@
             }
           ]
         }
-      ],
-      "done": 9,
-      "ongoing": 5,
-      "planned": 0
+      ]
     },
     {
       "no": "V",
       "nama": "Penguatan Pengawasan",
       "color": "#dc2626",
-      "icon": "ÃÂ°ÃÂÃÂÃÂ",
+      "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
       "desc": "Pengendalian gratifikasi, SPIP, pengaduan masyarakat, WBS, benturan kepentingan",
       "prioritas": [
         {
@@ -566,7 +559,7 @@
       "kategori": [
         {
           "nama": "Pengendalian Gratifikasi",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ¥",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¥",
           "items": [
             {
               "sub": "i.a",
@@ -588,7 +581,7 @@
         },
         {
           "nama": "Penerapan Sistem Pengendalian Intern Pemerintah (SPIP)",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -626,7 +619,7 @@
         },
         {
           "nama": "Pengaduan Masyarakat",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "iii.a",
@@ -664,7 +657,7 @@
         },
         {
           "nama": "Whistle-Blowing System",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ¡",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¡",
           "items": [
             {
               "sub": "iv.a",
@@ -694,7 +687,7 @@
         },
         {
           "nama": "Penanganan Benturan Kepentingan",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "v.a",
@@ -739,8 +732,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂ¢ÃÂÃÂ Pengawasan",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
+          "nama": "Rencana Kerja Reform ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Pengawasan",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "R-i",
@@ -994,7 +987,7 @@
       "no": "I",
       "nama": "Manajemen Perubahan",
       "color": "#0099cc",
-      "icon": "ÃÂ°ÃÂÃÂÃÂ",
+      "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
       "desc": "Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi",
       "prioritas": [
         {
@@ -1028,7 +1021,7 @@
       "kategori": [
         {
           "nama": "Penyusunan Tim Kerja",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ¥",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¥",
           "items": [
             {
               "sub": "i.a",
@@ -1050,7 +1043,7 @@
         },
         {
           "nama": "Rencana Pembangunan Zona Integritas",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -1080,7 +1073,7 @@
         },
         {
           "nama": "Pemantauan dan Evaluasi Pembangunan WBK/WBBM",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "iii.a",
@@ -1110,7 +1103,7 @@
         },
         {
           "nama": "Perubahan pola pikir dan budaya kerja",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ¡",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ¡",
           "items": [
             {
               "sub": "iv.a",
@@ -1147,8 +1140,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform ÃÂ¢ÃÂÃÂ Manajemen Perubahan",
-          "icon": "ÃÂ°ÃÂÃÂÃÂ",
+          "nama": "Rencana Kerja Reform ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ Manajemen Perubahan",
+          "icon": "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂ",
           "items": [
             {
               "sub": "R-i",
