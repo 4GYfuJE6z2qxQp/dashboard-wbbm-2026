@@ -1,219 +1,19 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-01T09:00:00.000Z",
-  "updatedBy": "System Import from Excel",
+  "lastUpdated": "2026-03-01T09:52:28.168Z",
+  "updatedBy": "Subtim II",
   "subtims": [
     {
-      "no": "I",
-      "nama": "Manajemen Perubahan",
-      "color": "#0099cc",
-      "icon": "🔄",
-      "desc": "Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi",
-      "prioritas": [
-        {
-          "no": "1",
-          "nama": "Program Akselerasi \"1 Agent 1 Innovation\"",
-          "uraian": "Agen Perubahan merancang & mengimplementasikan satu proyek perubahan yang konkret dan terukur dampaknya pada kinerja/layanan.",
-          "output": "Dokumen Proposal & Laporan Implementasi Agen Perubahan",
-          "waktu": "Feb - Nov",
-          "pic": "Agen Perubahan",
-          "status": "ongoing"
-        },
-        {
-          "no": "2",
-          "nama": "Program \"Leaders Serve\" (Pimpinan Melayani)",
-          "uraian": "Pejabat Eselon IV/III  turun langsung memberikan pelayanan di front desk/lapangan selama 1 hari dalam periode tertentu sebagai wujud keteladanan nyata.",
-          "output": "ND Usulan Program \"Leaders Serve\" / dokumentasi pelaksanaan",
-          "waktu": "Berkala",
-          "pic": "Kepala Kantor / Pejabat",
-          "status": "upcoming"
-        },
-        {
-          "no": "3",
-          "nama": "Kampanye \"Family Integrity\"",
-          "uraian": "Penyampaian pesan integritas dari Kepala Kantor kepada keluarga pegawai untuk membangun benteng moral dari rumah.",
-          "output": "Dokumentasi pelaksanaan kegiatan",
-          "waktu": "sd Q1",
-          "pic": "Subtim I dan Subbagian Umum",
-          "status": "ongoing"
-        }
-      ],
-      "kategori": [
-        {
-          "nama": "Penyusunan Tim Kerja",
-          "icon": "👥",
-          "items": [
-            {
-              "sub": "i.a",
-              "uraian": "Menerbitkan Surat Keputusan Penetapan Tim Kerja Pembangunan Zona Integritas Menuju Wilayah Bebas Dari Korupsi (WBK) dan Wilayah Birokrasi Bersih dan Melayani (WBBM)",
-              "output": "Surat Keputusan Kepala KPPBC TMP Tanjung Emas tentang Pembentukan Tim Kerja Pembangunan ZI menuju WBK/WBBM Tahun 2026",
-              "waktu": "Januari 2026",
-              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
-              "status": "done"
-            },
-            {
-              "sub": "i.b",
-              "uraian": "Rapat dan Penetapan Pembentukan Tim Kerja Pembangunan Zona Integritas Menuju Wilayah Bebas Dari Korupsi (WBK) dan Wilayah Birokrasi Bersih Dan Melayani (WBBM) dan Tim Monitoring dan Evaluasi Pembangunan Zona Integritas Menuju Wilayah Bebas Dari Korupsi (WBK) dan Wilayah Birokrasi Bersih Dan Melayani (WBBM)",
-              "output": "1. Nota Dinas Undangan Rapat Pembentukan Tim Kerja dan Tim Monev Pembangunan ZI WBK WBBM\n2. Absensi Rapat Persiapan ZI WBK WBBM\n3. Dokumentasi Rapat ZI WBK WBBM\n4. Notula Rapat Persiapan ZI WBK\n5. Surat Keputusan Pembentukan Tim Kerja dan Tim Monev Pembangunan ZI WBK WBBM",
-              "waktu": "Januari 2026",
-              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
-              "status": "done"
-            }
-          ]
-        },
-        {
-          "nama": "Rencana Pembangunan Zona Integritas",
-          "icon": "📐",
-          "items": [
-            {
-              "sub": "ii.a",
-              "uraian": "Melakukan permintaan masukan rencana kerja kepada seluruh Ketua Sub Tim yang terukur dan terencana",
-              "output": "1. Nota Dinas Permintaan Rencana Kerja\n2. Nota Dinas Penyampaian Rencana Kerja dari masing-masing Sub Tim\n3. Rapat Pembahasan Rencana Kerja Tahun 2026\n4. Nota Dinas Penyampaian Rencana Kerja  Tahun 2026\n5. Dokumen Rencana Kerja  Tahun 2026",
-              "waktu": "Januari s.d. Februari 2026",
-              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
-              "status": "done"
-            },
-            {
-              "sub": "ii.b",
-              "uraian": "Melakukan penyusunan rencana kerja dengan target prioritas yang relevan dengan tujuan Pembangunan ZI menuju WBK/WBBM",
-              "output": "1. Nota Dinas Penyampaian Rencana Kerja dan Rencana Kerja Prioritas Pembangunan ZI menuju WBK dan WBBM\n2. Dokumen Rencana Kerja dan Rencana Kerja Prioritas\n3. Time Frame WBK/WBBM 2025",
-              "waktu": "Januari s.d. Februari 2026",
-              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
-              "status": "done"
-            },
-            {
-              "sub": "ii.c",
-              "uraian": "Melakukan sosialisasi pembangunan WBK/WBBM kepada pihak Internal dan Eksternal, baik dengan kegiatan fisik atau melaui media sosial",
-              "output": "1. Nota Dinas Pencanangan WBBM\n2. Dokumentasi Kegiatan Pencanangan\n3. Daftar Hadir Pencanangan\n4. Piagam Deklarasi WBBM",
-              "waktu": "Q1 tahun 2026",
-              "pic": "Subbagian Umum dan Subtim I",
-              "status": "ongoing"
-            }
-          ]
-        },
-        {
-          "nama": "Pemantauan dan Evaluasi Pembangunan WBK/WBBM",
-          "icon": "📊",
-          "items": [
-            {
-              "sub": "iii.a",
-              "uraian": "Menyusun laporan penyelesaian pembangunan ZI menuju WBK dan WBBM",
-              "output": "1. Nota Dinas undangan rapat monev\n2. Daftar Hadir rapat monev\n3. Dokumentasi rapat monev\n4. Notula hasil rapat Monev",
-              "waktu": "Setiap bulan pada tahun 2026",
-              "pic": "Tim Kerja dan Tim Monev Pembangunan ZI menuju WBK/WBBM",
-              "status": "ongoing"
-            },
-            {
-              "sub": "iii.b",
-              "uraian": "Melakukan monitoring dan evaluasi pembangunan ZI menuju WBK dan WBBM secara berkala",
-              "output": "1. Nota Dinas undangan rapat monev\n2. Daftar Hadir rapat monev\n3. Dokumentasi rapat monev\n4. Notula hasil rapat Monev",
-              "waktu": "Setiap bulan pada tahun 2026",
-              "pic": "Tim Kerja dan Tim Monev Pembangunan ZI menuju WBK/WBBM",
-              "status": "ongoing"
-            },
-            {
-              "sub": "iii.c",
-              "uraian": "Melakukan monitoring dan evaluasi pembangunan ZI menuju WBK dan WBBM secara berkala",
-              "output": "1. Nota Dinas undangan rapat monev\n2. Daftar Hadir rapat monev\n3. Dokumentasi rapat monev\n4. Notula hasil rapat Monev\n5. Matriks Tindak Lanjut Monev",
-              "waktu": "Setiap bulan pada tahun 2026",
-              "pic": "Tim Kerja dan Tim Monev Pembangunan ZI menuju WBK/WBBM",
-              "status": "ongoing"
-            }
-          ]
-        },
-        {
-          "nama": "Perubahan pola pikir dan budaya kerja",
-          "icon": "💡",
-          "items": [
-            {
-              "sub": "iv.a",
-              "uraian": "Pengumpulan dokumen pendukung bukti pimpinan sebagai role model dalam pelaksanaan WBK/WBBM",
-              "output": "1. Laporan LHKPN\n2. Laporan SPT",
-              "waktu": "Januari s.d. Februari 2026",
-              "pic": "Subtim I dan Subbagian Umum",
-              "status": "ongoing"
-            },
-            {
-              "sub": "iv.b",
-              "uraian": "Menetapkan Agen Perubahan, rencana kerja dan laporan pelaksanaan kegiatan",
-              "output": "1. Surat Keputusan Kepala KPPBC TMP Tanjung Emas tentang Penetapan Agen Perubahan\n2. Nota Dinas Pengusulan Agen Perubahan",
-              "waktu": "Q1 s.d. Q4 Tahun 2026",
-              "pic": "Subtim I dan Seksi Kepatuhan Internal",
-              "status": "ongoing"
-            },
-            {
-              "sub": "iv.c",
-              "uraian": "Melaksanakan kegiatan terkait pembangunan budaya kerja dan pola pikir di lingkungan KPPBC TMP Tanjung Emas",
-              "output": "1. Laporan Kegiatan Bintal",
-              "waktu": "Q1 s.d. Q4 Tahun 2026",
-              "pic": "Subtim I dan Seksi Kepatuhan Internal",
-              "status": "ongoing"
-            },
-            {
-              "sub": "iv.d",
-              "uraian": "Internalisasi pembangunan ZI menuju WBK/WBBM kepada seluruh Pejabat/Pegawai KPPBC TMP Tanjung Emas",
-              "output": "1. Pelaksanaan Upacara, dilanjutkan acara Pencanangan Pembangunan ZI Menuju WBK/WBBM",
-              "waktu": "Q1 tahun 2026",
-              "pic": "Subtim I dan Sekretariat",
-              "status": "ongoing"
-            }
-          ]
-        },
-        {
-          "nama": "Rencana Kerja Reform – Manajemen Perubahan",
-          "icon": "🔄",
-          "items": [
-            {
-              "sub": "R-i",
-              "uraian": "Menerapkan kebijakan \"One Agent One Innovation\" di mana setiap Agen Perubahan  merancang dan mengimplementasikan satu proyek perubahan konkret.",
-              "output": "1. Nota Dinas Penyampaian Rencana Kerja Agen Perubahan \n2. Laporan Capaian Program Kerja Agen Perubahan\n3. Bukti Implementasi Inovasi",
-              "waktu": "Februari s.d. November 2026",
-              "pic": "Agen Perubahan",
-              "status": "ongoing"
-            },
-            {
-              "sub": "R-ii",
-              "uraian": "Melakukan pelembagaan inovasi Agen Perubahan ke dalam Standar Operasional Prosedur (SOP) atau sistem aplikasi kantor agar berkelanjutan",
-              "output": "Dokumen SOP / Fitur Aplikasi / SK Penetapan Inovasi",
-              "waktu": "November 2026",
-              "pic": "Subtim I dan Seksi Kepatuhan Internal",
-              "status": "ongoing"
-            },
-            {
-              "sub": "R-iii",
-              "uraian": "Melakukan monitoring berkala untuk memastikan capaian target lebih dari 80%.",
-              "output": "Laporan Capaian Kinerja (LCK) WBK WBBM",
-              "waktu": "Desember 2026 s.d. Januari 2027",
-              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
-              "status": "ongoing"
-            },
-            {
-              "sub": "R-iv",
-              "uraian": "1. Melakukan internalisasi budaya kerja (Core Values) dan nilai-nilai organisasi secara intensif\n2. Mencantumkan nilai Budaya Kerja dalam Standar Layanan  KPPBC TMP Tanjung Emas\n3. Memperkenalkan Budaya Kerja kepada stakeholder pada setiap acara yang melibatkan pihak eksternal",
-              "output": "1. Laporan Internalisasi/ CMC setiap bulan\n2. Standar Layanan KPPBC TMP Tanjung Emas\n3. Dokumentasi kegiatan",
-              "waktu": "Januari s.d. Desember 2026",
-              "pic": "Subtim I dan Seksi Kepatuhan Internal",
-              "status": "ongoing"
-            }
-          ]
-        }
-      ],
-      "done": 4,
-      "ongoing": 12,
-      "planned": 0
-    },
-    {
       "no": "II",
-      "nama": "Penataan Tatalaksana",
-      "color": "#7c3aed",
-      "icon": "📑",
-      "desc": "SOP, SPBE, e-government, keterbukaan informasi publik",
+      "done": 0,
+      "ongoing": 11,
+      "planned": 5,
       "prioritas": [
         {
           "no": "1",
           "nama": "Prosedur operasional tetap (SOP) telah dievaluasi",
           "uraian": "Pelaksanaan Monitoring dan Evaluasi SOP dan/atau Instruksi Kerja\n1. Pemberitahuan Pelaksanaan Monev SOP\n2. Review seluruh SOP utama / SOP terkait pelayanan dan pengawasan\n3. Rekapitulasi Rekomendasi hasil Monev SOP\n4. Menyampaikan Rekomendasi hasil Monev SOP\n5. Mengusulkan perbaikan SOP ke Kantor Wilayah atau Sekretariat DJBC",
-          "output": "1. Laporan/ND yang berisi bahwa Rekomendasi dari Laporan/ND Monev , yang seluruhnya telah ditindaklanjuti\n2. ND usulan perbaikan SOP ke Kantor Wilayah atau Sekretariat DJBC",
+          "output": "1. Laporan/ND yang berisi bahwa Rekomendasi dari Laporan/ND Monev , yang seluruhnya telah ditindaklanjuti2. ND usulan perbaikan SOP ke Kantor Wilayah atau Sekretariat DJBC",
           "waktu": "Triwulan 2 dan Triwulan 4 Tahun 2026",
           "pic": "Seksi Kepatuhan Internal",
           "status": "planned"
@@ -222,7 +22,6 @@
       "kategori": [
         {
           "nama": "Prosedur Operasional Tetap (SOP) Kegiatan Utama",
-          "icon": "👥",
           "items": [
             {
               "sub": "i.a",
@@ -252,7 +51,6 @@
         },
         {
           "nama": "Sistem Pemerintahan Berbasis Elektronik (SPBE) dulunya e-government",
-          "icon": "📐",
           "items": [
             {
               "sub": "ii.a",
@@ -290,7 +88,6 @@
         },
         {
           "nama": "Keterbukaan Informasi Publik",
-          "icon": "📊",
           "items": [
             {
               "sub": "iii.a",
@@ -311,8 +108,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform – Tatalaksana",
-          "icon": "🔧",
+          "nama": "Rencana Kerja Reform 2026 Tatalaksana",
           "items": [
             {
               "sub": "R-i",
@@ -364,16 +160,13 @@
             }
           ]
         }
-      ],
-      "done": 0,
-      "ongoing": 11,
-      "planned": 4
+      ]
     },
     {
       "no": "III",
       "nama": "Penataan Sistem Manajemen SDM",
       "color": "#16a34a",
-      "icon": "👤",
+      "icon": "ð¤",
       "desc": "Perencanaan pegawai, mutasi, pengembangan kompetensi, kinerja individu, disiplin",
       "prioritas": [
         {
@@ -389,7 +182,7 @@
       "kategori": [
         {
           "nama": "Perencanaan Kebutuhan Pegawai sesuai dengan Kebutuhan Organisasi",
-          "icon": "👥",
+          "icon": "ð¥",
           "items": [
             {
               "sub": "i.a",
@@ -419,7 +212,7 @@
         },
         {
           "nama": "Pola Mutasi Internal",
-          "icon": "📐",
+          "icon": "ð",
           "items": [
             {
               "sub": "ii.a",
@@ -449,7 +242,7 @@
         },
         {
           "nama": "Pengembangan Pegawai Berbasis Kompetensi",
-          "icon": "📊",
+          "icon": "ð",
           "items": [
             {
               "sub": "iii.a",
@@ -503,7 +296,7 @@
         },
         {
           "nama": "Penetapan Kinerja Individu",
-          "icon": "💡",
+          "icon": "ð¡",
           "items": [
             {
               "sub": "iv.a",
@@ -541,7 +334,7 @@
         },
         {
           "nama": "Penegakan Aturan Disiplin/Kode Etik/Kode Perilaku Pegawai",
-          "icon": "📋",
+          "icon": "ð",
           "items": [
             {
               "sub": "v.a",
@@ -555,7 +348,7 @@
         },
         {
           "nama": "Sistem Informasi Kepegawaian",
-          "icon": "💻",
+          "icon": "ð»",
           "items": [
             {
               "sub": "vi.a",
@@ -568,8 +361,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform – SDM",
-          "icon": "🔬",
+          "nama": "Rencana Kerja Reform â SDM",
+          "icon": "ð¬",
           "items": [
             {
               "sub": "R-i",
@@ -606,7 +399,7 @@
       "no": "IV",
       "nama": "Penguatan Akuntabilitas Kinerja",
       "color": "#d97706",
-      "icon": "📈",
+      "icon": "ð",
       "desc": "Keterlibatan pimpinan, dokumen perencanaan kinerja, IKU, SAKIP, LAKIN",
       "prioritas": [
         {
@@ -622,7 +415,7 @@
       "kategori": [
         {
           "nama": "Keterlibatan Pimpinan",
-          "icon": "👥",
+          "icon": "ð¥",
           "items": [
             {
               "sub": "i.a",
@@ -652,7 +445,7 @@
         },
         {
           "nama": "Pengelolaan Akuntabilitas Kinerja",
-          "icon": "📐",
+          "icon": "ð",
           "items": [
             {
               "sub": "ii.a",
@@ -721,8 +514,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform – Akuntabilitas",
-          "icon": "🏆",
+          "nama": "Rencana Kerja Reform â Akuntabilitas",
+          "icon": "ð",
           "items": [
             {
               "sub": "R-i",
@@ -759,7 +552,7 @@
       "no": "V",
       "nama": "Penguatan Pengawasan",
       "color": "#dc2626",
-      "icon": "🔍",
+      "icon": "ð",
       "desc": "Pengendalian gratifikasi, SPIP, pengaduan masyarakat, WBS, benturan kepentingan",
       "prioritas": [
         {
@@ -784,7 +577,7 @@
       "kategori": [
         {
           "nama": "Pengendalian Gratifikasi",
-          "icon": "👥",
+          "icon": "ð¥",
           "items": [
             {
               "sub": "i.a",
@@ -806,7 +599,7 @@
         },
         {
           "nama": "Penerapan Sistem Pengendalian Intern Pemerintah (SPIP)",
-          "icon": "📐",
+          "icon": "ð",
           "items": [
             {
               "sub": "ii.a",
@@ -844,7 +637,7 @@
         },
         {
           "nama": "Pengaduan Masyarakat",
-          "icon": "📊",
+          "icon": "ð",
           "items": [
             {
               "sub": "iii.a",
@@ -882,7 +675,7 @@
         },
         {
           "nama": "Whistle-Blowing System",
-          "icon": "💡",
+          "icon": "ð¡",
           "items": [
             {
               "sub": "iv.a",
@@ -912,7 +705,7 @@
         },
         {
           "nama": "Penanganan Benturan Kepentingan",
-          "icon": "📋",
+          "icon": "ð",
           "items": [
             {
               "sub": "v.a",
@@ -957,8 +750,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform – Pengawasan",
-          "icon": "🔐",
+          "nama": "Rencana Kerja Reform â Pengawasan",
+          "icon": "ð",
           "items": [
             {
               "sub": "R-i",
@@ -987,7 +780,7 @@
       "no": "VI",
       "nama": "Peningkatan Kualitas Pelayanan Publik",
       "color": "#2563eb",
-      "icon": "⭐",
+      "icon": "â­",
       "desc": "Standar pelayanan, budaya prima, pengelolaan pengaduan, survei kepuasan, TI",
       "prioritas": [
         {
@@ -1003,7 +796,7 @@
       "kategori": [
         {
           "nama": "Standar Pelayanan",
-          "icon": "👥",
+          "icon": "ð¥",
           "items": [
             {
               "sub": "i.a",
@@ -1041,7 +834,7 @@
         },
         {
           "nama": "Budaya Pelayanan Prima",
-          "icon": "📐",
+          "icon": "ð",
           "items": [
             {
               "sub": "ii.a",
@@ -1095,7 +888,7 @@
         },
         {
           "nama": "Pengelolaan Pengaduan",
-          "icon": "📊",
+          "icon": "ð",
           "items": [
             {
               "sub": "iii.a",
@@ -1125,7 +918,7 @@
         },
         {
           "nama": "Penilaian Kepuasan terhadap Pelayanan",
-          "icon": "💡",
+          "icon": "ð¡",
           "items": [
             {
               "sub": "iv.a",
@@ -1155,7 +948,7 @@
         },
         {
           "nama": "Pemanfaatan Teknologi Informasi",
-          "icon": "📋",
+          "icon": "ð",
           "items": [
             {
               "sub": "v.a",
@@ -1184,8 +977,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform – Pelayanan Publik",
-          "icon": "🚀",
+          "nama": "Rencana Kerja Reform â Pelayanan Publik",
+          "icon": "ð",
           "items": [
             {
               "sub": "R-i",
@@ -1217,6 +1010,205 @@
       "done": 0,
       "ongoing": 16,
       "planned": 6
+    },
+    {
+      "no": "I",
+      "nama": "Manajemen Perubahan",
+      "color": "#0099cc",
+      "icon": "ð",
+      "desc": "Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi",
+      "prioritas": [
+        {
+          "no": "1",
+          "nama": "Program Akselerasi \"1 Agent 1 Innovation\"",
+          "uraian": "Agen Perubahan merancang & mengimplementasikan satu proyek perubahan yang konkret dan terukur dampaknya pada kinerja/layanan.",
+          "output": "Dokumen Proposal & Laporan Implementasi Agen Perubahan",
+          "waktu": "Feb - Nov",
+          "pic": "Agen Perubahan",
+          "status": "ongoing"
+        },
+        {
+          "no": "2",
+          "nama": "Program \"Leaders Serve\" (Pimpinan Melayani)",
+          "uraian": "Pejabat Eselon IV/III  turun langsung memberikan pelayanan di front desk/lapangan selama 1 hari dalam periode tertentu sebagai wujud keteladanan nyata.",
+          "output": "ND Usulan Program \"Leaders Serve\" / dokumentasi pelaksanaan",
+          "waktu": "Berkala",
+          "pic": "Kepala Kantor / Pejabat",
+          "status": "upcoming"
+        },
+        {
+          "no": "3",
+          "nama": "Kampanye \"Family Integrity\"",
+          "uraian": "Penyampaian pesan integritas dari Kepala Kantor kepada keluarga pegawai untuk membangun benteng moral dari rumah.",
+          "output": "Dokumentasi pelaksanaan kegiatan",
+          "waktu": "sd Q1",
+          "pic": "Subtim I dan Subbagian Umum",
+          "status": "ongoing"
+        }
+      ],
+      "kategori": [
+        {
+          "nama": "Penyusunan Tim Kerja",
+          "icon": "ð¥",
+          "items": [
+            {
+              "sub": "i.a",
+              "uraian": "Menerbitkan Surat Keputusan Penetapan Tim Kerja Pembangunan Zona Integritas Menuju Wilayah Bebas Dari Korupsi (WBK) dan Wilayah Birokrasi Bersih dan Melayani (WBBM)",
+              "output": "Surat Keputusan Kepala KPPBC TMP Tanjung Emas tentang Pembentukan Tim Kerja Pembangunan ZI menuju WBK/WBBM Tahun 2026",
+              "waktu": "Januari 2026",
+              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
+              "status": "done"
+            },
+            {
+              "sub": "i.b",
+              "uraian": "Rapat dan Penetapan Pembentukan Tim Kerja Pembangunan Zona Integritas Menuju Wilayah Bebas Dari Korupsi (WBK) dan Wilayah Birokrasi Bersih Dan Melayani (WBBM) dan Tim Monitoring dan Evaluasi Pembangunan Zona Integritas Menuju Wilayah Bebas Dari Korupsi (WBK) dan Wilayah Birokrasi Bersih Dan Melayani (WBBM)",
+              "output": "1. Nota Dinas Undangan Rapat Pembentukan Tim Kerja dan Tim Monev Pembangunan ZI WBK WBBM\n2. Absensi Rapat Persiapan ZI WBK WBBM\n3. Dokumentasi Rapat ZI WBK WBBM\n4. Notula Rapat Persiapan ZI WBK\n5. Surat Keputusan Pembentukan Tim Kerja dan Tim Monev Pembangunan ZI WBK WBBM",
+              "waktu": "Januari 2026",
+              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
+              "status": "done"
+            }
+          ]
+        },
+        {
+          "nama": "Rencana Pembangunan Zona Integritas",
+          "icon": "ð",
+          "items": [
+            {
+              "sub": "ii.a",
+              "uraian": "Melakukan permintaan masukan rencana kerja kepada seluruh Ketua Sub Tim yang terukur dan terencana",
+              "output": "1. Nota Dinas Permintaan Rencana Kerja\n2. Nota Dinas Penyampaian Rencana Kerja dari masing-masing Sub Tim\n3. Rapat Pembahasan Rencana Kerja Tahun 2026\n4. Nota Dinas Penyampaian Rencana Kerja  Tahun 2026\n5. Dokumen Rencana Kerja  Tahun 2026",
+              "waktu": "Januari s.d. Februari 2026",
+              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
+              "status": "done"
+            },
+            {
+              "sub": "ii.b",
+              "uraian": "Melakukan penyusunan rencana kerja dengan target prioritas yang relevan dengan tujuan Pembangunan ZI menuju WBK/WBBM",
+              "output": "1. Nota Dinas Penyampaian Rencana Kerja dan Rencana Kerja Prioritas Pembangunan ZI menuju WBK dan WBBM\n2. Dokumen Rencana Kerja dan Rencana Kerja Prioritas\n3. Time Frame WBK/WBBM 2025",
+              "waktu": "Januari s.d. Februari 2026",
+              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
+              "status": "done"
+            },
+            {
+              "sub": "ii.c",
+              "uraian": "Melakukan sosialisasi pembangunan WBK/WBBM kepada pihak Internal dan Eksternal, baik dengan kegiatan fisik atau melaui media sosial",
+              "output": "1. Nota Dinas Pencanangan WBBM\n2. Dokumentasi Kegiatan Pencanangan\n3. Daftar Hadir Pencanangan\n4. Piagam Deklarasi WBBM",
+              "waktu": "Q1 tahun 2026",
+              "pic": "Subbagian Umum dan Subtim I",
+              "status": "ongoing"
+            }
+          ]
+        },
+        {
+          "nama": "Pemantauan dan Evaluasi Pembangunan WBK/WBBM",
+          "icon": "ð",
+          "items": [
+            {
+              "sub": "iii.a",
+              "uraian": "Menyusun laporan penyelesaian pembangunan ZI menuju WBK dan WBBM",
+              "output": "1. Nota Dinas undangan rapat monev\n2. Daftar Hadir rapat monev\n3. Dokumentasi rapat monev\n4. Notula hasil rapat Monev",
+              "waktu": "Setiap bulan pada tahun 2026",
+              "pic": "Tim Kerja dan Tim Monev Pembangunan ZI menuju WBK/WBBM",
+              "status": "ongoing"
+            },
+            {
+              "sub": "iii.b",
+              "uraian": "Melakukan monitoring dan evaluasi pembangunan ZI menuju WBK dan WBBM secara berkala",
+              "output": "1. Nota Dinas undangan rapat monev\n2. Daftar Hadir rapat monev\n3. Dokumentasi rapat monev\n4. Notula hasil rapat Monev",
+              "waktu": "Setiap bulan pada tahun 2026",
+              "pic": "Tim Kerja dan Tim Monev Pembangunan ZI menuju WBK/WBBM",
+              "status": "ongoing"
+            },
+            {
+              "sub": "iii.c",
+              "uraian": "Melakukan monitoring dan evaluasi pembangunan ZI menuju WBK dan WBBM secara berkala",
+              "output": "1. Nota Dinas undangan rapat monev\n2. Daftar Hadir rapat monev\n3. Dokumentasi rapat monev\n4. Notula hasil rapat Monev\n5. Matriks Tindak Lanjut Monev",
+              "waktu": "Setiap bulan pada tahun 2026",
+              "pic": "Tim Kerja dan Tim Monev Pembangunan ZI menuju WBK/WBBM",
+              "status": "ongoing"
+            }
+          ]
+        },
+        {
+          "nama": "Perubahan pola pikir dan budaya kerja",
+          "icon": "ð¡",
+          "items": [
+            {
+              "sub": "iv.a",
+              "uraian": "Pengumpulan dokumen pendukung bukti pimpinan sebagai role model dalam pelaksanaan WBK/WBBM",
+              "output": "1. Laporan LHKPN\n2. Laporan SPT",
+              "waktu": "Januari s.d. Februari 2026",
+              "pic": "Subtim I dan Subbagian Umum",
+              "status": "ongoing"
+            },
+            {
+              "sub": "iv.b",
+              "uraian": "Menetapkan Agen Perubahan, rencana kerja dan laporan pelaksanaan kegiatan",
+              "output": "1. Surat Keputusan Kepala KPPBC TMP Tanjung Emas tentang Penetapan Agen Perubahan\n2. Nota Dinas Pengusulan Agen Perubahan",
+              "waktu": "Q1 s.d. Q4 Tahun 2026",
+              "pic": "Subtim I dan Seksi Kepatuhan Internal",
+              "status": "ongoing"
+            },
+            {
+              "sub": "iv.c",
+              "uraian": "Melaksanakan kegiatan terkait pembangunan budaya kerja dan pola pikir di lingkungan KPPBC TMP Tanjung Emas",
+              "output": "1. Laporan Kegiatan Bintal",
+              "waktu": "Q1 s.d. Q4 Tahun 2026",
+              "pic": "Subtim I dan Seksi Kepatuhan Internal",
+              "status": "ongoing"
+            },
+            {
+              "sub": "iv.d",
+              "uraian": "Internalisasi pembangunan ZI menuju WBK/WBBM kepada seluruh Pejabat/Pegawai KPPBC TMP Tanjung Emas",
+              "output": "1. Pelaksanaan Upacara, dilanjutkan acara Pencanangan Pembangunan ZI Menuju WBK/WBBM",
+              "waktu": "Q1 tahun 2026",
+              "pic": "Subtim I dan Sekretariat",
+              "status": "ongoing"
+            }
+          ]
+        },
+        {
+          "nama": "Rencana Kerja Reform â Manajemen Perubahan",
+          "icon": "ð",
+          "items": [
+            {
+              "sub": "R-i",
+              "uraian": "Menerapkan kebijakan \"One Agent One Innovation\" di mana setiap Agen Perubahan  merancang dan mengimplementasikan satu proyek perubahan konkret.",
+              "output": "1. Nota Dinas Penyampaian Rencana Kerja Agen Perubahan \n2. Laporan Capaian Program Kerja Agen Perubahan\n3. Bukti Implementasi Inovasi",
+              "waktu": "Februari s.d. November 2026",
+              "pic": "Agen Perubahan",
+              "status": "ongoing"
+            },
+            {
+              "sub": "R-ii",
+              "uraian": "Melakukan pelembagaan inovasi Agen Perubahan ke dalam Standar Operasional Prosedur (SOP) atau sistem aplikasi kantor agar berkelanjutan",
+              "output": "Dokumen SOP / Fitur Aplikasi / SK Penetapan Inovasi",
+              "waktu": "November 2026",
+              "pic": "Subtim I dan Seksi Kepatuhan Internal",
+              "status": "ongoing"
+            },
+            {
+              "sub": "R-iii",
+              "uraian": "Melakukan monitoring berkala untuk memastikan capaian target lebih dari 80%.",
+              "output": "Laporan Capaian Kinerja (LCK) WBK WBBM",
+              "waktu": "Desember 2026 s.d. Januari 2027",
+              "pic": "Sekretariat Tim Pembangunan dan Subtim I",
+              "status": "ongoing"
+            },
+            {
+              "sub": "R-iv",
+              "uraian": "1. Melakukan internalisasi budaya kerja (Core Values) dan nilai-nilai organisasi secara intensif\n2. Mencantumkan nilai Budaya Kerja dalam Standar Layanan  KPPBC TMP Tanjung Emas\n3. Memperkenalkan Budaya Kerja kepada stakeholder pada setiap acara yang melibatkan pihak eksternal",
+              "output": "1. Laporan Internalisasi/ CMC setiap bulan\n2. Standar Layanan KPPBC TMP Tanjung Emas\n3. Dokumentasi kegiatan",
+              "waktu": "Januari s.d. Desember 2026",
+              "pic": "Subtim I dan Seksi Kepatuhan Internal",
+              "status": "ongoing"
+            }
+          ]
+        }
+      ],
+      "done": 4,
+      "ongoing": 12,
+      "planned": 0
     }
   ]
 }
