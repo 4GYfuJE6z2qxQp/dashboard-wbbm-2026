@@ -1,7 +1,7 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-01T09:52:28.168Z",
-  "updatedBy": "Subtim II",
+  "lastUpdated": "2026-03-01T09:54:21.779Z",
+  "updatedBy": "Subtim VI",
   "subtims": [
     {
       "no": "II",
@@ -166,7 +166,7 @@
       "no": "III",
       "nama": "Penataan Sistem Manajemen SDM",
       "color": "#16a34a",
-      "icon": "ð¤",
+      "icon": "Ã°ÂÂÂ¤",
       "desc": "Perencanaan pegawai, mutasi, pengembangan kompetensi, kinerja individu, disiplin",
       "prioritas": [
         {
@@ -182,7 +182,7 @@
       "kategori": [
         {
           "nama": "Perencanaan Kebutuhan Pegawai sesuai dengan Kebutuhan Organisasi",
-          "icon": "ð¥",
+          "icon": "Ã°ÂÂÂ¥",
           "items": [
             {
               "sub": "i.a",
@@ -212,7 +212,7 @@
         },
         {
           "nama": "Pola Mutasi Internal",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -242,7 +242,7 @@
         },
         {
           "nama": "Pengembangan Pegawai Berbasis Kompetensi",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "iii.a",
@@ -296,7 +296,7 @@
         },
         {
           "nama": "Penetapan Kinerja Individu",
-          "icon": "ð¡",
+          "icon": "Ã°ÂÂÂ¡",
           "items": [
             {
               "sub": "iv.a",
@@ -334,7 +334,7 @@
         },
         {
           "nama": "Penegakan Aturan Disiplin/Kode Etik/Kode Perilaku Pegawai",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "v.a",
@@ -348,7 +348,7 @@
         },
         {
           "nama": "Sistem Informasi Kepegawaian",
-          "icon": "ð»",
+          "icon": "Ã°ÂÂÂ»",
           "items": [
             {
               "sub": "vi.a",
@@ -361,8 +361,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â SDM",
-          "icon": "ð¬",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ SDM",
+          "icon": "Ã°ÂÂÂ¬",
           "items": [
             {
               "sub": "R-i",
@@ -399,7 +399,7 @@
       "no": "IV",
       "nama": "Penguatan Akuntabilitas Kinerja",
       "color": "#d97706",
-      "icon": "ð",
+      "icon": "Ã°ÂÂÂ",
       "desc": "Keterlibatan pimpinan, dokumen perencanaan kinerja, IKU, SAKIP, LAKIN",
       "prioritas": [
         {
@@ -415,7 +415,7 @@
       "kategori": [
         {
           "nama": "Keterlibatan Pimpinan",
-          "icon": "ð¥",
+          "icon": "Ã°ÂÂÂ¥",
           "items": [
             {
               "sub": "i.a",
@@ -445,7 +445,7 @@
         },
         {
           "nama": "Pengelolaan Akuntabilitas Kinerja",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -514,8 +514,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â Akuntabilitas",
-          "icon": "ð",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ Akuntabilitas",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "R-i",
@@ -552,7 +552,7 @@
       "no": "V",
       "nama": "Penguatan Pengawasan",
       "color": "#dc2626",
-      "icon": "ð",
+      "icon": "Ã°ÂÂÂ",
       "desc": "Pengendalian gratifikasi, SPIP, pengaduan masyarakat, WBS, benturan kepentingan",
       "prioritas": [
         {
@@ -577,7 +577,7 @@
       "kategori": [
         {
           "nama": "Pengendalian Gratifikasi",
-          "icon": "ð¥",
+          "icon": "Ã°ÂÂÂ¥",
           "items": [
             {
               "sub": "i.a",
@@ -599,7 +599,7 @@
         },
         {
           "nama": "Penerapan Sistem Pengendalian Intern Pemerintah (SPIP)",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -637,7 +637,7 @@
         },
         {
           "nama": "Pengaduan Masyarakat",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "iii.a",
@@ -675,7 +675,7 @@
         },
         {
           "nama": "Whistle-Blowing System",
-          "icon": "ð¡",
+          "icon": "Ã°ÂÂÂ¡",
           "items": [
             {
               "sub": "iv.a",
@@ -705,7 +705,7 @@
         },
         {
           "nama": "Penanganan Benturan Kepentingan",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "v.a",
@@ -750,8 +750,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â Pengawasan",
-          "icon": "ð",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ Pengawasan",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "R-i",
@@ -778,16 +778,15 @@
     },
     {
       "no": "VI",
-      "nama": "Peningkatan Kualitas Pelayanan Publik",
-      "color": "#2563eb",
-      "icon": "â­",
-      "desc": "Standar pelayanan, budaya prima, pengelolaan pengaduan, survei kepuasan, TI",
+      "done": 0,
+      "ongoing": 16,
+      "planned": 7,
       "prioritas": [
         {
           "no": "1",
           "nama": "Transformasi Contact Center",
           "uraian": "Internalisasi Budaya Pelayanan Unggul melalui Benchmarking Strategis",
-          "output": "Nota Dinas Pelaksanaan Benchmarking Pelayanan Contact Center dan Service Level\nAgreement",
+          "output": "Nota Dinas Pelaksanaan Benchmarking Pelayanan Contact Center dan Service LevelAgreement",
           "waktu": "Januari - Desember 2026",
           "pic": "Sub Tim VI",
           "status": "upcoming"
@@ -796,7 +795,6 @@
       "kategori": [
         {
           "nama": "Standar Pelayanan",
-          "icon": "ð¥",
           "items": [
             {
               "sub": "i.a",
@@ -834,7 +832,6 @@
         },
         {
           "nama": "Budaya Pelayanan Prima",
-          "icon": "ð",
           "items": [
             {
               "sub": "ii.a",
@@ -888,7 +885,6 @@
         },
         {
           "nama": "Pengelolaan Pengaduan",
-          "icon": "ð",
           "items": [
             {
               "sub": "iii.a",
@@ -918,7 +914,6 @@
         },
         {
           "nama": "Penilaian Kepuasan terhadap Pelayanan",
-          "icon": "ð¡",
           "items": [
             {
               "sub": "iv.a",
@@ -948,7 +943,6 @@
         },
         {
           "nama": "Pemanfaatan Teknologi Informasi",
-          "icon": "ð",
           "items": [
             {
               "sub": "v.a",
@@ -977,8 +971,7 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â Pelayanan Publik",
-          "icon": "ð",
+          "nama": "Rencana Kerja Reform 2026 Pelayanan Publik",
           "items": [
             {
               "sub": "R-i",
@@ -1006,16 +999,13 @@
             }
           ]
         }
-      ],
-      "done": 0,
-      "ongoing": 16,
-      "planned": 6
+      ]
     },
     {
       "no": "I",
       "nama": "Manajemen Perubahan",
       "color": "#0099cc",
-      "icon": "ð",
+      "icon": "Ã°ÂÂÂ",
       "desc": "Pembangunan budaya kerja, agen perubahan, internalisasi nilai organisasi",
       "prioritas": [
         {
@@ -1049,7 +1039,7 @@
       "kategori": [
         {
           "nama": "Penyusunan Tim Kerja",
-          "icon": "ð¥",
+          "icon": "Ã°ÂÂÂ¥",
           "items": [
             {
               "sub": "i.a",
@@ -1071,7 +1061,7 @@
         },
         {
           "nama": "Rencana Pembangunan Zona Integritas",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "ii.a",
@@ -1101,7 +1091,7 @@
         },
         {
           "nama": "Pemantauan dan Evaluasi Pembangunan WBK/WBBM",
-          "icon": "ð",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "iii.a",
@@ -1131,7 +1121,7 @@
         },
         {
           "nama": "Perubahan pola pikir dan budaya kerja",
-          "icon": "ð¡",
+          "icon": "Ã°ÂÂÂ¡",
           "items": [
             {
               "sub": "iv.a",
@@ -1168,8 +1158,8 @@
           ]
         },
         {
-          "nama": "Rencana Kerja Reform â Manajemen Perubahan",
-          "icon": "ð",
+          "nama": "Rencana Kerja Reform Ã¢ÂÂ Manajemen Perubahan",
+          "icon": "Ã°ÂÂÂ",
           "items": [
             {
               "sub": "R-i",
