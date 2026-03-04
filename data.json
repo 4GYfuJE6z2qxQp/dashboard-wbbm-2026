@@ -1,13 +1,13 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-03T21:29:41.232Z",
-  "updatedBy": "Subtim I",
+  "lastUpdated": "2026-03-04T10:23:30.446Z",
+  "updatedBy": "Subtim II",
   "subtims": [
     {
       "no": "II",
       "done": 0,
       "ongoing": 11,
-      "planned": 4,
+      "planned": 5,
       "prioritas": [
         {
           "no": "1",
@@ -16,7 +16,7 @@
           "output": "1. Laporan/ND yang berisi bahwa Rekomendasi dari Laporan/ND Monev , yang seluruhnya telah ditindaklanjuti2. ND usulan perbaikan SOP ke Kantor Wilayah atau Sekretariat DJBC",
           "waktu": "Triwulan 2 dan Triwulan 4 Tahun 2026",
           "pic": "Seksi Kepatuhan Internal",
-          "status": "planned"
+          "status": "upcoming"
         }
       ],
       "kategori": [
